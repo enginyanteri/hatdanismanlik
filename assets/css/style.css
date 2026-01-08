@@ -15,7 +15,6 @@ body {
 /* Navbar */
 .navbar {
   width: 100%;
-  background-color: rgba(26, 115, 232, 0.85); /* gradient’e uyumlu mavi ton */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,12 +23,13 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  background: transparent; /* artık alt taban rengi yok */
 }
 
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: #0A2A66; /* yazı rengi gradient ile uyumlu */
 }
 
 .navbar .nav-links {
@@ -43,16 +43,14 @@ body {
 
 .navbar .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #0A2A66; /* yazı rengi */
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #ffdd57; /* hover rengi, göze hoş gelir */
+  color: #ffdd57; /* hover rengi */
 }
-
-/* ---------------------------- */
 
 /* Hamburger ikon */
 .hamburger {
@@ -64,7 +62,7 @@ body {
 .hamburger span {
   height: 3px;
   width: 25px;
-  background: white;
+  background: #0A2A66; /* hamburger çizgi rengi */
   margin: 4px 0;
   border-radius: 2px;
   transition: 0.3s;
@@ -78,7 +76,7 @@ body {
     top: 70px; /* navbar yüksekliği */
     height: 100vh;
     width: 200px;
-    background-color: rgba(26, 115, 232, 0.95);
+    background: rgba(255,255,255,0.95); /* menü beyaz, içindekiler #0A2A66 */
     flex-direction: column;
     align-items: start;
     padding: 20px;
@@ -87,6 +85,14 @@ body {
 
   .nav-links li {
     margin: 20px 0;
+  }
+
+  .nav-links a {
+    color: #0A2A66;
+  }
+
+  .nav-links a:hover {
+    color: #ffdd57;
   }
 
   .hamburger {
@@ -99,6 +105,7 @@ body {
   }
 }
 
+/* ---------------------------- */
 /* Arka plan gradient */
 .page-bg {
   min-height: 100vh;
@@ -111,4 +118,6 @@ body {
 
   /* navbar üstünü kaplamaması için padding ekleyelim */
   padding-top: 70px; /* navbar yüksekliği kadar boşluk */
+  text-align: center;
+  color: #0A2A66; /* içerik yazı rengi */
 }

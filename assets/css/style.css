@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL RESET
-================================ */
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +10,7 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
 }
 
-/* ================================
-   TOP BAR (Logo + Menü + Bayrak)
-================================ */
+/* TOP BAR */
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -23,6 +19,7 @@ body {
   height: 140px;
   background: transparent;
   z-index: 100;
+  position: relative;
 }
 
 /* LOGO */
@@ -30,13 +27,10 @@ body {
   height: 150px;
   max-width: 350px;
   width: auto;
-  display: block;
-  margin-right: 20px;
 }
 
 /* NAVBAR MENÜ */
 .navbar {
-  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -93,7 +87,7 @@ body {
   display: block;
 }
 
-/* FLAGS (DİL SEÇİMİ) */
+/* FLAGS */
 .flags {
   display: flex;
   gap: 10px;
@@ -106,9 +100,7 @@ body {
   cursor: pointer;
 }
 
-/* ================================
-   PAGE BACKGROUND
-================================ */
+/* PAGE BACKGROUND */
 .page-bg {
   min-height: calc(100vh - 160px);
   display: flex;
@@ -136,4 +128,62 @@ body {
 .nav-links a:hover,
 .dropdown-toggle:hover {
   text-decoration: underline;
+}
+
+/* HAMBURGER MENÜ (MOBIL) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #0A2A66;
+  border-radius: 2px;
+}
+
+/* ================================
+   RESPONSIVE (MOBİL)
+================================ */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    width: 200px;
+    gap: 0;
+    display: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-links li a, .dropdown-toggle {
+    padding: 12px 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .flags {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
 }

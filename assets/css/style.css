@@ -144,3 +144,84 @@ body {
     margin-left: 15px;
   }
 }
+/* ================================
+   TOP BAR
+================================ */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+/* ================================
+   NAVBAR (ALT BAR)
+================================ */
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0A2A66;
+  font-weight: 500;
+}
+
+/* ================================
+   SUBMENU (KURUMSAL)
+================================ */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.submenu li a {
+  display: block;
+  padding: 8px 20px;
+  color: #0A2A66;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+  }
+}

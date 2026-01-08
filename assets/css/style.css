@@ -25,9 +25,10 @@ body {
 
 /* LOGO */
 .logo img {
-  height: 70px;  /* Logo boyutu */
+  height: 100px;        /* Logoyu büyütüyoruz */
   width: auto;
-  max-width: 240px;
+  max-width: 300px;     /* Taşmayı engeller */
+  display: block;
 }
 
 /* FLAGS */
@@ -37,7 +38,8 @@ body {
 }
 
 .flags img {
-  width: 26px;
+  width: 18px;      /* Küçültüldü */
+  height: auto;
   cursor: pointer;
 }
 
@@ -72,29 +74,17 @@ body {
   position: relative;
 }
 
-/* Kurumsal yazısı + ok */
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  position: relative;
+.has-submenu:hover .submenu,
+.has-submenu.show .submenu {   /* .show JS için mobilde */
+  display: block;
 }
 
-/* Aşağı ok */
-.dropdown-toggle::after {
-  content: "▼";
-  font-size: 10px;
-  margin-left: 4px;
-}
-
-/* Alt menü */
 .submenu {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 100%;          /* Dropdown, Kurumsal menünün altına doğru */
   left: 0;
   background-color: #ffffff;
-  list-style: none;
   min-width: 180px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   z-index: 99;
@@ -103,6 +93,11 @@ body {
 .submenu li a {
   display: block;
   padding: 10px 18px;
+  color: #0A2A66;
+}
+
+.submenu li a:hover {
+  background-color: #f0f4f8;   /* Hover olduğunda fark ettirsin */
   color: #0A2A66;
 }
 

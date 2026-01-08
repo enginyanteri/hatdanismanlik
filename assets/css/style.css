@@ -25,9 +25,9 @@ body {
 
 /* LOGO */
 .logo img {
-  height: 36px;      /* LOGO BOYUTU – buradan ayarlayabilirsin */
+  height: 55px;      /* LOGO BOYUTU – buradan ayarlayabilirsin */
   width: auto;
-  max-width: 160px;  /* TAŞMAYI ENGELLER */
+  max-width: 240px;  /* TAŞMAYI ENGELLER */
   display: block;
 }
 

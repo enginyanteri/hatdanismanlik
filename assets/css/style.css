@@ -9,6 +9,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
 }
 
 /* ================================
@@ -18,9 +19,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
-  position: relative;
+  padding: 12px 30px; /* Bar biraz daraltıldı */
+  background: transparent;
   z-index: 100;
 }
 
@@ -30,7 +30,7 @@ body {
   max-width: 350px;
   width: auto;
   display: block;
-  margin-right: 40px;  /* Logo biraz sağa kaydır */
+  margin-right: 40px;  /* Sağ tarafa kaydır */
 }
 
 /* NAVBAR MENÜ */
@@ -61,7 +61,7 @@ body {
 }
 
 .dropdown-toggle::after {
-  content: "▼";
+  content: "▼";      /* Ok işareti */
   font-size: 10px;
   margin-left: 4px;
 }
@@ -75,6 +75,8 @@ body {
   min-width: 180px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   z-index: 99;
+  list-style: none;  /* Yuvarlak işaretleri kaldırır */
+  padding: 0;
 }
 
 .submenu li a {
@@ -101,7 +103,7 @@ body {
 }
 
 .flags img {
-  width: 16px;
+  width: 18px;      /* Bayrak boyutu */
   height: auto;
   cursor: pointer;
 }
@@ -110,7 +112,7 @@ body {
    PAGE BACKGROUND
 ================================ */
 .page-bg {
-  min-height: calc(100vh - 170px); /* Tek bar yüksekliği kadar düşüyoruz */
+  min-height: calc(100vh - 160px); /* Tek bar yüksekliği kadar */
   display: flex;
   flex-direction: column;
   justify-content: center;

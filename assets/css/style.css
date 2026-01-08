@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 30px; /* Bar biraz daraltıldı */
+  padding: 6px 20px; /* Bar biraz daraltıldı */
   height: 140px;      /* Bar yüksekliği */
   background: transparent;
   z-index: 100;

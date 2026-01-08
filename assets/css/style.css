@@ -91,7 +91,6 @@ body {
 .flags {
   display: flex;
   gap: 10px;
-  margin-right: 20px;
 }
 
 .flags img {
@@ -130,7 +129,7 @@ body {
   text-decoration: underline;
 }
 
-/* HAMBURGER MENÜ (MOBIL) */
+/* HAMBURGER MENÜ (MOBİL) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -145,20 +144,24 @@ body {
   border-radius: 2px;
 }
 
-/* ================================
-   RESPONSIVE (MOBİL)
-================================ */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 140px;
-    right: 0;
+    right: -250px;
     background: #ffffff;
     flex-direction: column;
     width: 200px;
     gap: 0;
-    display: none;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    height: calc(100% - 140px);
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
   }
 
   .nav-links li {
@@ -166,11 +169,7 @@ body {
   }
 
   .nav-links li a, .dropdown-toggle {
-    padding: 12px 20px;
-  }
-
-  .nav-links.active {
-    display: flex;
+    padding: 15px 20px;
   }
 
   .hamburger {

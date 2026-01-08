@@ -141,3 +141,17 @@ body {
 .dropdown-toggle:hover {
   text-decoration: underline;
 }
+
+/* ================================
+   HERO / ÜST BÖLÜM VE HİZMETLER
+================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(0, 42, 102, 0.05); /* Hafif mavi arka plan */
+  border-radius: 10px;
+}

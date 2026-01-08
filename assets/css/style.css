@@ -1,4 +1,6 @@
-/* GLOBAL RESET */
+/* ================================
+   GLOBAL RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,9 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
 }
 
-/* TOP BAR */
+/* ================================
+   TOP BAR (Logo + Menü + Bayrak)
+================================ */
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -21,6 +25,7 @@ body {
   z-index: 100;
 }
 
+/* LOGO */
 .logo img {
   height: 150px;
   max-width: 350px;
@@ -29,6 +34,7 @@ body {
   margin-right: 20px;
 }
 
+/* NAVBAR MENÜ */
 .navbar {
   flex: 1;
   display: flex;
@@ -48,6 +54,7 @@ body {
   cursor: pointer;
 }
 
+/* DROPDOWN MENÜLER */
 .has-submenu {
   position: relative;
 }
@@ -86,6 +93,7 @@ body {
   display: block;
 }
 
+/* FLAGS (DİL SEÇİMİ) */
 .flags {
   display: flex;
   gap: 10px;
@@ -98,7 +106,9 @@ body {
   cursor: pointer;
 }
 
-/* PAGE BACKGROUND */
+/* ================================
+   PAGE BACKGROUND
+================================ */
 .page-bg {
   min-height: calc(100vh - 160px);
   display: flex;
@@ -120,18 +130,6 @@ body {
 .hero h1 {
   color: #0A2A66;
   font-size: 36px;
-}
-
-/* Hizmetler başlık ve paragraf */
-.page-bg h2 {
-  color: #0A2A66;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.page-bg p {
-  color: #0A2A66;
-  font-size: 18px;
 }
 
 /* HOVER EFECTS */

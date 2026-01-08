@@ -1,6 +1,6 @@
-/* ---------------------------- */
-/* Global reset */
-/* ---------------------------- */
+/* ================================
+   GLOBAL RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -11,48 +11,60 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ---------------------------- */
-/* Navbar */
+/* ================================
+   NAVBAR
+================================ */
 .navbar {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
-  position: fixed; /* sayfanın üstünde sabit */
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: transparent; /* artık alt taban rengi yok */
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  position: relative;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0A2A66; /* yazı rengi gradient ile uyumlu */
+/* LOGO */
+.logo img {
+  height: 40px;      /* LOGO BOYUTU – buradan ayarlayabilirsin */
+  width: auto;
+  display: block;
 }
 
-.navbar .nav-links {
+/* NAV LINKS */
+.nav-links {
   list-style: none;
   display: flex;
+  gap: 25px;
 }
 
-.navbar .nav-links li {
-  margin-left: 20px;
-}
-
-.navbar .nav-links a {
+.nav-links li a {
   text-decoration: none;
-  color: #0A2A66; /* yazı rengi */
+  color: #0A2A66;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
-.navbar .nav-links a:hover {
-  color: #ffdd57; /* hover rengi */
+.nav-links li a:hover {
+  text-decoration: underline;
 }
 
-/* Hamburger ikon */
+/* ================================
+   FLAGS (DİL SEÇİMİ)
+================================ */
+.flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flags img {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* ================================
+   HAMBURGER MENU
+================================ */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -60,64 +72,74 @@ body {
 }
 
 .hamburger span {
-  height: 3px;
   width: 25px;
-  background: #0A2A66; /* hamburger çizgi rengi */
-  margin: 4px 0;
+  height: 3px;
+  background-color: #0A2A66;
+  margin-bottom: 4px;
   border-radius: 2px;
-  transition: 0.3s;
 }
 
-/* Responsive */
+/* ================================
+   PAGE BACKGROUND
+================================ */
+.page-bg {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #a0d8f3 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-bg h1 {
+  color: #0A2A66;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-bg p {
+  color: #0A2A66;
+  font-size: 18px;
+}
+
+/* ================================
+   MOBILE (RESPONSIVE)
+================================ */
 @media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    right: -100%;
-    top: 70px; /* navbar yüksekliği */
-    height: 100vh;
-    width: 200px;
-    background: transparent; /* artık tamamen şeffaf */
-    flex-direction: column;
-    align-items: start;
-    padding: 20px;
-    transition: right 0.3s ease;
-  }
 
-  .nav-links li {
-    margin: 20px 0;
-  }
-
-  .nav-links a {
-    color: #0A2A66;
-  }
-
-  .nav-links a:hover {
-    color: #ffdd57;
-  }
-
+  /* Hamburger görünür */
   .hamburger {
     display: flex;
   }
 
-  /* Menü açıkken */
-  .nav-links.active {
-    right: 0;
+  /* Menü gizli */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: transparent; /* ŞEFFAF */
   }
-}
 
-/* ---------------------------- */
-/* Arka plan gradient */
-.page-bg {
-  min-height: 100vh;
-  background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  .nav-links.show {
+    display: flex;
+  }
 
-  /* navbar üstünü kaplamaması için padding ekleyelim */
-  padding-top: 70px; /* navbar yüksekliği kadar boşluk */
-  text-align: center;
-  color: #0A2A66; /* içerik yazı rengi */
+  .nav-links li a {
+    padding: 12px 20px;
+    color: #0A2A66;
+  }
+
+  /* Bayraklar mobilde de kalsın */
+  .flags {
+    margin-left: 15px;
+  }
 }

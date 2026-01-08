@@ -1,4 +1,6 @@
+/* ---------------------------- */
 /* Global reset */
+/* ---------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,48 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ---------------------------- */
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: rgba(26, 115, 232, 0.85); /* gradient’e uyumlu mavi ton */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: fixed; /* sayfanın üstünde sabit */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffdd57; /* hover rengi, göze hoş gelir */
+}
+
+/* ---------------------------- */
 /* Arka plan gradient */
 .page-bg {
   min-height: 100vh;
@@ -18,5 +62,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
 
+  /* navbar üstünü kaplamaması için padding ekleyelim */
+  padding-top: 70px; /* navbar yüksekliği kadar boşluk */
+}

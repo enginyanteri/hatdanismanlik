@@ -31,7 +31,7 @@ body {
   max-width: 350px;
   width: auto;
   display: block;
-  margin-right: 40px;  /* Sağ tarafa kaydır */
+  margin-right: 20px;  /* Sağ tarafa kaydır */
 }
 
 /* NAVBAR MENÜ */
@@ -101,6 +101,7 @@ body {
 .flags {
   display: flex;
   gap: 10px;
+  margin-right: 20px;  /* Sağ boşluk ile konumu ayarla */
 }
 
 .flags img {

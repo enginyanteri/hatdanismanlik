@@ -12,52 +12,37 @@ body {
 }
 
 /* ================================
-   TOP BAR (LOGO + FLAGS)
+   TOP BAR (Logo + Menü + Bayrak)
 ================================ */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30px;
-  background-color: transparent; /* Arka plan gradient devam eder */
+  padding: 20px 40px;
+  background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
+  position: relative;
   z-index: 100;
 }
 
 /* LOGO */
 .logo img {
-  height: 150px;        /* Logoyu büyütüyoruz */
+  height: 150px;       /* Logo boyutu */
+  max-width: 350px;
   width: auto;
-  max-width: 350px;     /* Taşmayı engeller */
   display: block;
 }
 
-/* FLAGS */
-.flags {
-  display: flex;
-  gap: 10px;
-}
-
-.flags img {
-  width: 18px;      /* Küçültüldü */
-  height: auto;
-  cursor: pointer;
-}
-
-/* ================================
-   NAVBAR (ALT SATIR)
-================================ */
+/* NAVBAR MENÜ */
 .navbar {
-  background: transparent; /* gradient arka plan devam */
-  position: relative;
-  z-index: 99;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 35px;
-  padding: 14px 0;
+  list-style: none;
+  gap: 40px;
 }
 
 .nav-links a, .dropdown-toggle {
@@ -65,88 +50,64 @@ body {
   color: #0A2A66;
   font-weight: 500;
   cursor: pointer;
-  list-style: none; /* küçük yuvarlakları kaldırır */
 }
 
-/* ================================
-   KURUMSAL DROPDOWN
-================================ */
+/* KURUMSAL DROPDOWN */
 .has-submenu {
   position: relative;
 }
 
-/* Kurumsal yazısı + ok */
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  color: #0A2A66;
-  font-weight: 500;
-}
-
 .dropdown-toggle::after {
-  content: "▼"; /* Ok işareti */
+  content: "▼";
   font-size: 10px;
+  margin-left: 4px;
 }
 
-/* Alt menü */
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;          
+  top: 100%;
   left: 0;
   background-color: #ffffff;
   min-width: 180px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   z-index: 99;
-  list-style: none; /* yuvarlakları kaldır */
-  padding: 0;
 }
 
 .submenu li a {
   display: block;
   padding: 10px 18px;
   color: #0A2A66;
+  text-decoration: none;
 }
 
 .submenu li a:hover {
-  background-color: #f0f4f8;   
-  color: #0A2A66;
+  background-color: #f0f4f8;
 }
 
-/* Desktop hover ile açılır */
 .has-submenu:hover .submenu {
-  display: block;
+  display: block; /* Hover ile açılır */
 }
 
 /* ================================
-   HAMBURGER MENU
+   FLAGS (DİL SEÇİMİ)
 ================================ */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
+.flags {
+  display: flex;
+  gap: 10px;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #0A2A66;
-  border-radius: 2px;
+.flags img {
+  width: 16px;
+  height: auto;
+  cursor: pointer;
 }
 
 /* ================================
    PAGE BACKGROUND
 ================================ */
 .page-bg {
-  min-height: calc(100vh - 120px); 
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #a0d8f3 100%
-  );
+  min-height: calc(100vh - 170px); /* Tek bar yüksekliği kadar düşüyoruz */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,57 +128,9 @@ body {
 }
 
 /* ================================
-   MOBILE RESPONSIVE
+   HOVER EFECTS
 ================================ */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255,255,255,0.95); 
-    padding: 10px 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .submenu {
-    position: static;
-    box-shadow: none;
-    background-color: transparent;
-  }
-
-  .submenu.show {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dropdown-toggle::after {
-    transform: rotate(0deg);
-    transition: transform 0.3s;
-  }
-
-  .has-submenu.active .dropdown-toggle::after {
-    transform: rotate(180deg);
-  }
-
-  .flags {
-    order: -1; 
-    justify-content: flex-end;
-    margin-bottom: 10px;
-  }
+.nav-links a:hover,
+.dropdown-toggle:hover {
+  text-decoration: underline;
 }

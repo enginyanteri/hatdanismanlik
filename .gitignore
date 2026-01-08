@@ -1,0 +1,30 @@
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# Editör ve IDE dosyaları
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.bak
+*.tmp
+
+# Log dosyaları
+*.log
+
+# Node.js bağımlılık klasörü (eğer ileride kullanırsan)
+node_modules/
+
+# Derleme çıktı dosyaları (örnek)
+dist/
+build/
+
+# Diğer geçici dosyalar
+*.tmp
+*.temp
+*.cache
+
+# Kişisel ayarlar
+*.env

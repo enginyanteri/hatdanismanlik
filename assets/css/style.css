@@ -12,163 +12,50 @@ body {
 }
 
 /* ================================
-   NAVBAR
-================================ */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background-color: #ffffff;
-  position: relative;
-}
-
-/* LOGO */
-.logo img {
-  height: 55px;      /* LOGO BOYUTU – buradan ayarlayabilirsin */
-  width: auto;
-  max-width: 240px;  /* TAŞMAYI ENGELLER */
-  display: block;
-}
-
-/* NAV LINKS */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #0A2A66;
-  font-weight: 500;
-}
-
-.nav-links li a:hover {
-  text-decoration: underline;
-}
-
-/* ================================
-   FLAGS (DİL SEÇİMİ)
-================================ */
-.flags {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.flags img {
-  width: 25px;
-  height: auto;
-  cursor: pointer;
-}
-
-/* ================================
-   HAMBURGER MENU
-================================ */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #0A2A66;
-  margin-bottom: 4px;
-  border-radius: 2px;
-}
-
-/* ================================
-   PAGE BACKGROUND
-================================ */
-.page-bg {
-  min-height: calc(100vh - 80px);
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #a0d8f3 100%
-  );
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.page-bg h1 {
-  color: #0A2A66;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.page-bg p {
-  color: #0A2A66;
-  font-size: 18px;
-}
-
-/* ================================
-   MOBILE (RESPONSIVE)
-================================ */
-@media (max-width: 768px) {
-
-  /* Hamburger görünür */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Menü gizli */
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    display: none;
-    background-color: transparent; /* ŞEFFAF */
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li a {
-    padding: 12px 20px;
-    color: #0A2A66;
-  }
-
-  /* Bayraklar mobilde de kalsın */
-  .flags {
-    margin-left: 15px;
-  }
-}
-/* ================================
-   TOP BAR
+   TOP BAR (LOGO + FLAGS)
 ================================ */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 14px 30px;
   background-color: #ffffff;
   border-bottom: 1px solid #eee;
 }
 
+/* LOGO */
+.logo img {
+  height: 60px;          /* LOGO BÜYÜK */
+  width: auto;
+  max-width: 240px;
+}
+
+/* FLAGS */
+.flags {
+  display: flex;
+  gap: 12px;
+}
+
+.flags img {
+  width: 26px;
+  cursor: pointer;
+}
+
 /* ================================
-   NAVBAR (ALT BAR)
+   NAVBAR (ALT SATIR)
 ================================ */
 .navbar {
   background-color: #ffffff;
-  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
   position: relative;
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 14px 0;
 }
 
 .nav-links a {
@@ -178,50 +65,52 @@ body {
 }
 
 /* ================================
-   SUBMENU (KURUMSAL)
+   KURUMSAL DROPDOWN
 ================================ */
 .has-submenu {
   position: relative;
 }
 
+/* Kurumsal yazısı + ok */
+.dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Aşağı ok */
+.dropdown-toggle::after {
+  content: "▼";
+  font-size: 10px;
+}
+
+/* Alt menu */
 .submenu {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 32px;
   left: 0;
   background-color: #ffffff;
   list-style: none;
-  padding: 10px 0;
   min-width: 180px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  z-index: 99;
 }
 
 .submenu li a {
   display: block;
-  padding: 8px 20px;
+  padding: 10px 18px;
   color: #0A2A66;
 }
 
-.has-submenu:hover .submenu {
+.submenu.show {
   display: block;
 }
 
 /* ================================
-   MOBILE
+   HAMBURGER
 ================================ */
-@media (max-width: 768px) {
-
-  .nav-links {
-    flex-direction: column;
-    display: none;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .submenu {
-    position: static;
-    box-shadow: none;
-  }
-}
+.hamburger {
+  display: none;
+  flex-dire

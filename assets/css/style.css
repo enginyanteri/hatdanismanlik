@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL RESET
-================================ */
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,39 +10,35 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
 }
 
-/* ================================
-   TOP BAR (Logo + Menü + Bayrak)
-================================ */
+/* TOP BAR */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 20px; /* Bar biraz daraltıldı */
-  height: 140px;      /* Bar yüksekliği */
+  padding: 6px 20px;
+  height: 140px;
   background: transparent;
   z-index: 100;
 }
 
-/* LOGO */
 .logo img {
-  height: 150px;       /* Logo boyutu */
+  height: 150px;
   max-width: 350px;
   width: auto;
   display: block;
-  margin-right: 20px;  /* Sağ tarafa kaydır */
+  margin-right: 20px;
 }
 
-/* NAVBAR MENÜ */
 .navbar {
   flex: 1;
   display: flex;
-  justify-content: center; /* Menü ortalanıyor */
+  justify-content: center;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 60px;/* Ana Sayfa ile diğerleri arası boşluk */
+  gap: 60px;
 }
 
 .nav-links a, .dropdown-toggle {
@@ -54,15 +48,12 @@ body {
   cursor: pointer;
 }
 
-/* ================================
-   DROPDOWN MENÜLER
-================================ */
 .has-submenu {
   position: relative;
 }
 
 .dropdown-toggle::after {
-  content: "▼";      /* Ok işareti */
+  content: "▼";
   font-size: 10px;
   margin-left: 4px;
 }
@@ -76,7 +67,7 @@ body {
   min-width: 180px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   z-index: 99;
-  list-style: none;  /* Yuvarlak işaretleri kaldırır */
+  list-style: none;
   padding: 0;
 }
 
@@ -92,29 +83,24 @@ body {
 }
 
 .has-submenu:hover .submenu {
-  display: block; /* Desktop hover ile açılır */
+  display: block;
 }
 
-/* ================================
-   FLAGS (DİL SEÇİMİ)
-================================ */
 .flags {
   display: flex;
   gap: 10px;
-  margin-right: 20px;  /* Sağ boşluk ile konumu ayarla */
+  margin-right: 20px;
 }
 
 .flags img {
-  width: 18px;      /* Bayrak boyutu */
+  width: 18px;
   height: auto;
   cursor: pointer;
 }
 
-/* ================================
-   PAGE BACKGROUND
-================================ */
+/* PAGE BACKGROUND */
 .page-bg {
-  min-height: calc(100vh - 160px); /* Tek bar yüksekliği kadar */
+  min-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,7 +109,21 @@ body {
   padding: 0 20px;
 }
 
-.page-bg h1 {
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  color: #0A2A66;
+  font-size: 36px;
+}
+
+/* Hizmetler başlık ve paragraf */
+.page-bg h2 {
   color: #0A2A66;
   font-size: 36px;
   margin-bottom: 10px;
@@ -134,24 +134,8 @@ body {
   font-size: 18px;
 }
 
-/* ================================
-   HOVER EFECTS
-================================ */
+/* HOVER EFECTS */
 .nav-links a:hover,
 .dropdown-toggle:hover {
   text-decoration: underline;
-}
-
-/* ================================
-   HERO / ÜST BÖLÜM VE HİZMETLER
-================================ */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 20px;
-  background: rgba(0, 42, 102, 0.05); /* Hafif mavi arka plan */
-  border-radius: 10px;
 }

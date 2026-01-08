@@ -44,7 +44,7 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 50px;/* Ana Sayfa ile diğerleri arası boşluk */
+  gap: 60px;/* Ana Sayfa ile diğerleri arası boşluk */
 }
 
 .nav-links a, .dropdown-toggle {

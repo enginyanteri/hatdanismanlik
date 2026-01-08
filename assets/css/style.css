@@ -19,8 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 14px 30px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  background-color: transparent;   /* ARTIK ARKA PLAN AKIYOR */
 }
 
 /* LOGO */
@@ -45,8 +44,7 @@ body {
    NAVBAR (ALT SATIR)
 ================================ */
 .navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  background: transparent;   /* GRADIENT DEVAM */
   position: relative;
 }
 
@@ -77,6 +75,8 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #0A2A66;
+  font-weight: 500;
 }
 
 /* Aşağı ok */

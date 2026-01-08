@@ -20,6 +20,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 8px 30px; /* Bar biraz daraltıldı */
+  height: 140px;      /* Bar yüksekliği */
   background: transparent;
   z-index: 100;
    border-bottom: 2px dashed red;  /* <-- GEÇİCİ ÇİZGİ */

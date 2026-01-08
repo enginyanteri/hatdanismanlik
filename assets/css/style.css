@@ -23,7 +23,6 @@ body {
   height: 140px;      /* Bar yüksekliği */
   background: transparent;
   z-index: 100;
-   border-bottom: 2px dashed red;  /* <-- GEÇİCİ ÇİZGİ */
 }
 
 /* LOGO */

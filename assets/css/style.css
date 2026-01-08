@@ -38,13 +38,13 @@ body {
 .navbar {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Menü ortalanıyor */
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 50px;/* Ana Sayfa ile diğerleri arası boşluk */
 }
 
 .nav-links a, .dropdown-toggle {

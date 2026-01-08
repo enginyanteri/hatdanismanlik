@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px; /* Bar biraz daraltıldı */
+  padding: 8px 30px; /* Bar biraz daraltıldı */
   background: transparent;
   z-index: 100;
 }

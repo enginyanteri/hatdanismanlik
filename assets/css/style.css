@@ -1,1 +1,22 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Arka plan gradient */
+.page-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 

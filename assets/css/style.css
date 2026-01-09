@@ -15,8 +15,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  min-height: 120px;
+  padding: 8px 20px;
+  min-height: 100px;
   background: transparent;
   z-index: 100;
   position: relative;
@@ -24,7 +24,7 @@ body {
 
 /* LOGO */
 .logo img {
-  max-height: 140px;
+  max-height: 120px;
   max-width: 350px;
   width: auto;
 }

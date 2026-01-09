@@ -22,6 +22,17 @@ body {
   position: relative;
 }
 
+/* TOP BAR INNER (WRAPPER) */
+.top-bar-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* LOGO */
 .logo img {
   max-height: 120px;

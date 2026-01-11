@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL RESET
+   RESET
 ========================= */
 * {
   margin: 0;
@@ -20,7 +20,6 @@ body {
   height: 140px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 40px;
 }
 
@@ -29,7 +28,6 @@ body {
 ========================= */
 .logo img {
   height: 120px;
-  width: auto;
 }
 
 /* =========================
@@ -47,6 +45,7 @@ body {
   gap: 60px;
 }
 
+/* Menü item */
 .nav-links li {
   position: relative;
 }
@@ -54,32 +53,31 @@ body {
 /* Menü yazıları */
 .nav-links a,
 .dropdown-toggle {
-  text-decoration: none;
-  color: #0A2A66;
   font-size: 16px;
-  font-weight: 400; /* KALINLAŞMA YOK */
+  font-weight: 400;
+  color: #0A2A66;
+  text-decoration: none;
+  background: none;
+  border: none;
   cursor: pointer;
-  padding-bottom: 6px;
+  padding: 0;
 }
 
 /* =========================
    HOVER ALT ÇİZGİ (TEK)
 ========================= */
-.nav-links a::after,
-.dropdown-toggle::after {
+.nav-links li::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -8px;
   width: 0;
   height: 2px;
   background-color: #0A2A66;
   transition: width 0.25s ease;
 }
 
-/* Hover olunca sadece TEK çizgi */
-.nav-links a:hover::after,
-.has-submenu:hover .dropdown-toggle::after {
+.nav-links li:hover::after {
   width: 100%;
 }
 
@@ -93,17 +91,28 @@ body {
 .submenu {
   display: none;
   position: absolute;
-  top: 120%;
+  top: 130%;
   left: 0;
   background: #ffffff;
   min-width: 180px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   list-style: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* dropdown içindekiler */
+.submenu li {
+  padding: 0;
+}
+
+/* dropdown'da çizgi olmasın */
+.submenu li::after {
+  display: none;
 }
 
 .submenu li a {
   display: block;
   padding: 10px 18px;
+  font-size: 14px;
   color: #0A2A66;
 }
 
@@ -140,19 +149,19 @@ body {
 
 .hero h1 {
   font-size: 36px;
+  font-weight: 600;
   color: #0A2A66;
 }
 
 /* =========================
-   HAMBURGER (ŞİMDİLİK PASİF)
+   HAMBURGER (PASİF)
 ========================= */
 .hamburger {
   display: none;
 }
 
 /* =========================
-   RESPONSIVE (DOKUNMADIK)
+   RESPONSIVE (KİLİTLİ – DOKUNMUYORUZ)
 ========================= */
 @media (max-width: 768px) {
-  /* Mobili bir sonraki adımda ele alacağız */
 }

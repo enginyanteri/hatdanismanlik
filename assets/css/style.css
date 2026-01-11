@@ -278,6 +278,10 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 
 .trust-item {
   text-align: center;

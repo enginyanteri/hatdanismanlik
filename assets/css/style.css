@@ -10,6 +10,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
+  padding-top: 140px; /* ✅ header yüksekliği */
 }
 
 /* =========================
@@ -26,12 +27,7 @@ body {
   display: flex;
   align-items: center;
 }
-/* =========================
-   HEADER SPACER (KRİTİK)
-========================= */
-.header-spacer {
-  height: 140px;
-}
+
 /* =========================
    LOGO (LEFT 0)
 ========================= */

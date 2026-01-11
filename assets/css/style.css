@@ -156,6 +156,7 @@ body {
   flex-direction: column; /* 👈 EKLENEN SATIR */
   justify-content: center;
   align-items: center;
+  padding-top: 140px; /* 👈 header yüksekliği kadar */
 }
 
 .hero h1 {

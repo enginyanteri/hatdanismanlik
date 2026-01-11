@@ -168,3 +168,27 @@ body {
 @media (max-width: 768px) {
   /* mobil aşamasına henüz girmiyoruz */
 }
+/* =========================
+   DEBUG – KIRMIZI ÇİZGİLER
+   (GEÇİCİ)
+========================= */
+
+/* Üst barın tamamı */
+.top-bar {
+  outline: 2px solid red;
+}
+
+/* Ortadaki menü alanı (1320px) */
+.navbar {
+  outline: 2px dashed red;
+}
+
+/* Logo alanı */
+.logo {
+  outline: 2px solid crimson;
+}
+
+/* Bayrak alanı */
+.flags {
+  outline: 2px solid darkred;
+}

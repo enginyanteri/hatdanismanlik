@@ -171,3 +171,26 @@ body {
 ========================= */
 @media (max-width: 768px) {
 }
+/* === OPTİK HİZALAMA DOKUNUŞLARI === */
+
+/* Menü yazılarını biraz aşağı al */
+.nav-links a,
+.dropdown-toggle {
+  line-height: 1;
+}
+
+/* Alt çizgiyi daha zarif konumlandır */
+.nav-links li::after {
+  bottom: -6px;     /* -8 yerine */
+  height: 1.5px;    /* 2 yerine */
+}
+
+/* Menü grubunu optik merkeze al */
+.navbar {
+  margin-top: 6px;
+}
+
+/* Logo çok baskınsa hafif küçült */
+.logo img {
+  height: 85px;     /* 90 yerine */
+}

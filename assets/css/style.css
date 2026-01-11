@@ -18,7 +18,11 @@ body {
 .top-bar {
   width: 100%;
   height: 140px;
-  position: relative;
+  position: fixed;        /* 👈 sabitlendi */
+  top: 0;
+  left: 0;
+  z-index: 1000;          /* 👈 her şeyin üstünde */
+  background: #ffffff;   /* 👈 scroll’da kaybolmasın */
   display: flex;
   align-items: center;
 }

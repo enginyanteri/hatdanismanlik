@@ -17,7 +17,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#0A2A66;background:linear-grad
 .navbar{position:absolute;top:50%;left:220px;right:120px;transform:translateY(-50%);display:flex;justify-content:center}
 .nav-links{list-style:none;display:flex;gap:60px}
 .nav-links li{position:relative}
-.nav-links a,.dropdown-toggle{background:none;border:none;color:#0A2A66;text-decoration:none;font-size:16px;cursor:pointer;padding-bottom:8px}
+.nav-links a,.dropdown-toggle{background:none;border:none;color:#0A2A66;text-decoration:none;font-size:18px;cursor:pointer;padding-bottom:8px}
 .nav-links li::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:#0A2A66;transition:.25s}
 .nav-links li:hover::after{width:100%}
 

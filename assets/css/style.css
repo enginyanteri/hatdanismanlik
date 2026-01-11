@@ -165,9 +165,6 @@ body {
   min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column; /* 👈 EKLENEN SATIR */
-  justify-content: center;
-  align-items: center;
-  padding-top: 140px; /* 👈 header yüksekliği kadar */
 }
 
 .hero h1 {

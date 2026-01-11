@@ -62,8 +62,10 @@ body {
 ========================= */
 .navbar {
   position: absolute;
-  left: 220px;   /* logo alanı */
-  right: 120px;  /* bayrak alanı */
+  left: 220px;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
 }

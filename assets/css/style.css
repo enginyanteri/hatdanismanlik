@@ -154,7 +154,6 @@ body {
   min-height: 70vh; /* veya hero-lg ile zaten geliyor */
 }
 .page-bg {
-  padding-top: 140px; /* ✅ HEADER YÜKSEKLİĞİ */
   display: flex;
   flex-direction: column;
 }

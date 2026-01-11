@@ -1,7 +1,6 @@
-/* ===============================
-   RESET
-   =============================== */
-
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,134 +8,173 @@
 }
 
 body {
-  font-family: "Inter", Arial, sans-serif;
-  color: #0A2A66;
-  background-color: #ffffff;
-  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
 }
 
-/* ===============================
-   GENEL CONTAINER
-   =============================== */
-
-.container {
-  max-width: 1320px; /* KİLİTLENDİ */
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ===============================
-   HEADER / ÜST BAR
-   =============================== */
-
-header {
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.header-inner {
-  height: 90px;
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
+  height: 140px;
 }
 
-/* ===============================
+/* =========================
    LOGO
-   =============================== */
-
+========================= */
 .logo img {
-  max-height: 48px;
-  display: block;
+  height: 150px;
+  max-width: 350px;
+  width: auto;
 }
 
-/* ===============================
-   NAVIGATION
-   =============================== */
-
-nav {
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 36px;
+  gap: 60px;
 }
 
-.nav-links li {
+.nav-links a,
+.dropdown-toggle {
   position: relative;
-}
-
-/* LINKLER – SABİT GÖRÜNÜM */
-.nav-links a {
-  position: relative;
-  font-size: 16px;
-  font-weight: 500;          /* SABİT – KALINLAŞMA YOK */
-  color: #0A2A66;
   text-decoration: none;
-  padding: 4px 0;
-}
-
-/* TARAYICI ALT ÇİZGİSİ KAPALI */
-.nav-links a:visited,
-.nav-links a:hover,
-.nav-links a:active {
   color: #0A2A66;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  cursor: pointer;
 }
 
-/* ===============================
-   HOVER ALT ÇİZGİ (TEK ÇİZGİ)
-   =============================== */
-
-.nav-links a::after {
+/* === HOVER ALT ÇİZGİ (TEK ÇİZGİ) === */
+.nav-links a::after,
+.dropdown-toggle::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: 0;
   width: 0;
-  height: 3px;              /* ____ çizgi kalınlığı */
+  height: 2px;
   background-color: #0A2A66;
   transition: width 0.25s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.dropdown-toggle:hover::after {
   width: 100%;
 }
 
-/* ===============================
-   HERO / ANA SAYFA ALANI
-   =============================== */
+/* =========================
+   DROPDOWN MENÜ
+========================= */
+.has-submenu {
+  position: relative;
+}
 
-.hero {
-  width: 100%;
-  min-height: 420px;
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  list-style: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 18px;
+  color: #0A2A66;
+}
+
+.submenu li a:hover {
+  background-color: #f0f4f8;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* =========================
+   FLAGS
+========================= */
+.flags {
   display: flex;
+  gap: 10px;
+}
+
+.flags img {
+  width: 18px;
+  cursor: pointer;
+}
+
+/* =========================
+   PAGE BG
+========================= */
+.page-bg {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #f5f7fa;
+  text-align: center;
 }
 
-.hero-content {
-  max-width: 700px;
-}
-
+/* =========================
+   HERO
+========================= */
 .hero h1 {
-  font-size: 42px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 36px;
+  color: #0A2A66;
 }
 
-.hero p {
-  font-size: 18px;
-  color: #444;
+/* =========================
+   HAMBURGER (MOBİL)
+========================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
 }
 
-/* ===============================
-   FOOTER (ŞİMDİLİK BOŞ)
-   =============================== */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #0A2A66;
+}
 
-footer {
-  margin-top: 120px;
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 140px;
+    right: -240px;
+    width: 200px;
+    height: calc(100% - 140px);
+    background: #ffffff;
+    flex-direction: column;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

@@ -289,3 +289,61 @@ body {
 .debug {
   border: 2px dashed red;
 }
+/* ==================================================
+   9. REFERENCES
+================================================== */
+.references {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.references-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* ÜST BAŞLIK */
+.references-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.references-header h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.references-header p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* LOGO GRID */
+.references-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+/* TEK LOGO */
+.reference-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px dashed red; /* DEBUG */
+}
+
+.reference-item img {
+  max-width: 140px;
+  max-height: 80px;
+  opacity: 0.85;
+  filter: grayscale(100%);
+}

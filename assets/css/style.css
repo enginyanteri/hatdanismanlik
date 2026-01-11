@@ -17,14 +17,13 @@ body {
 ========================= */
 .top-bar {
   width: 100%;
-  height: 120px;
+  height: 140px;
   display: flex;
   justify-content: center;
 }
 
 .top-bar-inner {
-  width: 1320px;              /* 1240 → 1320 */
-  margin: 0 auto;
+  width: 1320px;                 /* SABİT GENİŞLİK */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,29 +32,29 @@ body {
 /* =========================
    LOGO
 ========================= */
-
 .logo {
-  margin-left: 0;
+  flex: 0 0 auto;
 }
 
 .logo img {
-  height: 140px;              /* LOGO BÜYÜK */
+  height: 120px;                 /* BAR İLE UYUMLU */
   width: auto;
+  display: block;
 }
 
 /* =========================
    NAVBAR
 ========================= */
 .navbar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 60px;                  /* İSTEDİĞİN 60px */
+  gap: 60px;                     /* İSTEDİĞİN 60px */
 }
 
 .nav-links li {
@@ -70,7 +69,7 @@ body {
   text-decoration: none;
   color: #0A2A66;
   font-size: 16px;
-  font-weight: 400;           /* KALINLAŞMA YOK */
+  font-weight: 400;              /* KALINLAŞMA YOK */
   cursor: pointer;
   padding-bottom: 8px;
 }
@@ -78,7 +77,8 @@ body {
 /* =========================
    TEK ALT ÇİZGİ HOVER
 ========================= */
-.nav-links li::after {
+.nav-links a::after,
+.dropdown-toggle::after {
   content: "";
   position: absolute;
   left: 0;
@@ -89,7 +89,8 @@ body {
   transition: width 0.25s ease;
 }
 
-.nav-links li:hover::after {
+.nav-links a:hover::after,
+.has-submenu:hover .dropdown-toggle::after {
   width: 100%;
 }
 
@@ -109,6 +110,7 @@ body {
   min-width: 180px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   list-style: none;
+  z-index: 100;
 }
 
 .submenu li a {
@@ -129,23 +131,23 @@ body {
    FLAGS
 ========================= */
 .flags {
-  margin-right: 0;
-}
-.flags {
+  flex: 0 0 auto;
   display: flex;
   gap: 10px;
 }
 
 .flags img {
   width: 18px;
+  height: auto;
   cursor: pointer;
+  display: block;
 }
 
 /* =========================
    HERO
 ========================= */
 .page-bg {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,15 +159,15 @@ body {
 }
 
 /* =========================
-   HAMBURGER (PASİF)
+   HAMBURGER (ŞİMDİLİK PASİF)
 ========================= */
 .hamburger {
   display: none;
 }
 
 /* =========================
-   RESPONSIVE (SONRA)
+   RESPONSIVE (ŞİMDİLİK DOKUNMUYORUZ)
 ========================= */
 @media (max-width: 768px) {
-  /* Mobil aşamasına henüz girmiyoruz */
+  /* Mobil düzeni sonra ele alacağız */
 }

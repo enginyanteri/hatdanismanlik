@@ -26,11 +26,6 @@ body {
   display: flex;
   align-items: center;
 }
-.top-bar.scrolled {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
 /* =========================
    LOGO (LEFT 0)
 ========================= */
@@ -155,11 +150,7 @@ body {
    HERO
 ========================= */
 .hero {
-  height: 100vh;
-  overflow: hidden;
-}
-.hero-inner {
-  padding-top: 140px; /* header yüksekliği */
+  min-height: calc(100vh - 140px);
 }
 .page-bg {
   min-height: calc(100vh - 120px);

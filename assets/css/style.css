@@ -162,6 +162,7 @@ body {
   min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .hero h1 {

@@ -149,6 +149,7 @@ body {
 .page-bg {
   min-height: calc(100vh - 120px);
   display: flex;
+  flex-direction: column; /* 👈 EKLENEN SATIR */
   justify-content: center;
   align-items: center;
 }

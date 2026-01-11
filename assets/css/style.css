@@ -24,15 +24,20 @@ body {
 
 .top-bar-inner {
   width: 1320px;              /* 1240 → 1320 */
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;   /* SAĞA & SOLA YAKLAŞTIRDIK */
 }
 
 /* =========================
    LOGO
 ========================= */
+
+.logo {
+  margin-left: 0;
+}
+
 .logo img {
   height: 140px;              /* LOGO BÜYÜK */
   width: auto;
@@ -123,6 +128,9 @@ body {
 /* =========================
    FLAGS
 ========================= */
+.flags {
+  margin-right: 0;
+}
 .flags {
   display: flex;
   gap: 10px;

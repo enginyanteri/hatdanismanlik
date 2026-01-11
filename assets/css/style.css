@@ -18,50 +18,52 @@ body {
 .top-bar {
   width: 100%;
   height: 140px;
+  position: relative;
   display: flex;
   justify-content: center;
 }
 
 .top-bar-inner {
-  width: 1320px;                 /* SABİT GENİŞLİK */
+  width: 1320px;
+  height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* =========================
-   LOGO
+   LOGO (SOL)
 ========================= */
 .logo {
-  flex: 0 0 auto;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  height: 120px;                 /* BAR İLE UYUMLU */
+  height: 140px;        /* LOGO GERÇEKTEN BÜYÜK */
   width: auto;
   display: block;
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (ORTA)
 ========================= */
 .navbar {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 60px;                     /* İSTEDİĞİN 60px */
+  gap: 60px;
 }
 
 .nav-links li {
   position: relative;
 }
 
-/* Menü yazıları */
 .nav-links a,
 .dropdown-toggle {
   background: none;
@@ -69,14 +71,12 @@ body {
   text-decoration: none;
   color: #0A2A66;
   font-size: 16px;
-  font-weight: 400;              /* KALINLAŞMA YOK */
+  font-weight: 400;
   cursor: pointer;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
-/* =========================
-   TEK ALT ÇİZGİ HOVER
-========================= */
+/* TEK ALT ÇİZGİ */
 .nav-links a::after,
 .dropdown-toggle::after {
   content: "";
@@ -128,19 +128,20 @@ body {
 }
 
 /* =========================
-   FLAGS
+   FLAGS (SAĞ)
 ========================= */
 .flags {
-  flex: 0 0 auto;
+  position: absolute;
+  right: 0;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .flags img {
   width: 18px;
   height: auto;
   cursor: pointer;
-  display: block;
 }
 
 /* =========================
@@ -159,7 +160,7 @@ body {
 }
 
 /* =========================
-   HAMBURGER (ŞİMDİLİK PASİF)
+   HAMBURGER (PASİF)
 ========================= */
 .hamburger {
   display: none;
@@ -169,5 +170,5 @@ body {
    RESPONSIVE (ŞİMDİLİK DOKUNMUYORUZ)
 ========================= */
 @media (max-width: 768px) {
-  /* Mobil düzeni sonra ele alacağız */
+  /* Mobil aşamasına sonra geçeceğiz */
 }

@@ -1,104 +1,134 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <!-- =====================
+       META & HEAD
+  ====================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hat Danışmanlık – Ana Sayfa</title>
+
+  <!-- Ana Stil Dosyası -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-  <!-- Üst Bar: Logo + Menü + Dil -->
+  <!-- ==================================================
+       FIXED HEADER (LOGO + NAV + DİL)
+       Not: Şu an transparan ve sabit
+  ================================================== -->
   <header class="top-bar">
+
+    <!-- İç Konteyner (ileride gerekirse genişlik için) -->
     <div class="top-bar-inner">
-      
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo/logo.png" alt="Hat Danışmanlık Logo">
-      </a>
-    </div>
 
-    <!-- Hamburger Menü Butonu (Mobil için) -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/logo.png" alt="Hat Danışmanlık Logo">
+        </a>
+      </div>
 
-    <!-- Menü -->
-    <nav class="navbar" id="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Ana Sayfa</a></li>
+      <!-- HAMBURGER (Mobil – şimdilik pasif) -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-        <li class="has-submenu">
-          <button class="dropdown-toggle" aria-expanded="false">
-            Kurumsal
-          </button>
-          <ul class="submenu">
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="misyonumuz.html">Misyonumuz</a></li>
-            <li><a href="vizyonumuz.html">Vizyonumuz</a></li>
-          </ul>
-        </li>
+      <!-- NAVIGATION -->
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
 
-       <li class="has-submenu">
-        <button class="dropdown-toggle" aria-expanded="false">
-          Hizmetlerimiz
-        </button>
-          <ul class="submenu">
-            <li><a href="our-services.html">Our Services</a></li>
-            <li><a href="consulting.html">Danışmanlık</a></li>
-            <li><a href="support.html">Destek</a></li>
-          </ul>
-        </li>
+          <li><a href="index.html">Ana Sayfa</a></li>
 
-        <li><a href="referanslarimiz.html">Referanslarımız</a></li>
-        <li><a href="iletisim.html">İletişim</a></li>
-      </ul>
-    </nav>
+          <!-- KURUMSAL -->
+          <li class="has-submenu">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Kurumsal
+            </button>
+            <ul class="submenu">
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="misyonumuz.html">Misyonumuz</a></li>
+              <li><a href="vizyonumuz.html">Vizyonumuz</a></li>
+            </ul>
+          </li>
 
-    <!-- Bayraklar -->
-    <div class="flags">
-      <a href="index.html"><img src="assets/images/flags/tr.png" alt="TR"></a>
-      <a href="index-en.html"><img src="assets/images/flags/en.png" alt="EN"></a>
+          <!-- HİZMETLER -->
+          <li class="has-submenu">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Hizmetlerimiz
+            </button>
+            <ul class="submenu">
+              <li><a href="our-services.html">Our Services</a></li>
+              <li><a href="consulting.html">Danışmanlık</a></li>
+              <li><a href="support.html">Destek</a></li>
+            </ul>
+          </li>
+
+          <li><a href="referanslarimiz.html">Referanslarımız</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+
+        </ul>
+      </nav>
+
+      <!-- DİL SEÇİMİ -->
+      <div class="flags">
+        <a href="index.html">
+          <img src="assets/images/flags/tr.png" alt="Türkçe">
+        </a>
+        <a href="index-en.html">
+          <img src="assets/images/flags/en.png" alt="English">
+        </a>
+      </div>
+
     </div>
   </header>
-  
-  <!-- HEADER SPACER (FIXED HEADER BOŞLUĞU) -->
+
+  <!-- ==================================================
+       HEADER SPACER
+       Fixed header yüksekliği kadar boşluk
+       (Şu an aktif – ileride tekrar ele alacağız)
+  ================================================== -->
   <div class="header-spacer"></div>
-  
-  <!-- Ana içerik -->
-<div class="page-bg">
 
-<!-- HERO -->
-<section class="hero hero-lg debug">
- <div class="hero-inner">
-  <h1>HERO (ANA MESAJ)</h1>
-</section>
+  <!-- ==================================================
+       ANA SAYFA İÇERİK ALANI
+  ================================================== -->
+  <main class="page-bg">
 
-<!-- SERVICES -->
-<section class="services services-compact debug">
-  <h2>HİZMETLER (ÖZET)</h2>
-</section>
+    <!-- HERO / ANA MESAJ -->
+    <section class="hero hero-lg debug">
+      <div class="hero-inner">
+        <h1>HERO (ANA MESAJ)</h1>
+      </div>
+    </section>
 
-<!-- WHY US -->
-<section class="why-us why-us-focus debug">
-  <h2>NEDEN BİZ? (DANIŞMANLIK FARKI)</h2>
-</section>
+    <!-- HİZMETLER (ÖZET) -->
+    <section class="services services-compact debug">
+      <h2>HİZMETLER (ÖZET)</h2>
+    </section>
 
-<!-- REFERENCES -->
-<section class="references references-light debug">
-  <h2>GÜVEN / REFERANSLAR</h2>
-</section>
+    <!-- NEDEN BİZ -->
+    <section class="why-us why-us-focus debug">
+      <h2>NEDEN BİZ? (DANIŞMANLIK FARKI)</h2>
+    </section>
 
-<!-- CTA -->
-<section class="cta cta-strong debug">
-  <h2>İLETİŞİM ÇAĞRISI</h2>
-</section>
+    <!-- REFERANSLAR -->
+    <section class="references references-light debug">
+      <h2>GÜVEN / REFERANSLAR</h2>
+    </section>
 
-</div>
+    <!-- CTA -->
+    <section class="cta cta-strong debug">
+      <h2>İLETİŞİM ÇAĞRISI</h2>
+    </section>
 
+  </main>
+
+  <!-- JAVASCRIPT -->
   <script src="assets/js/main.js"></script>
+
 </body>
 </html>

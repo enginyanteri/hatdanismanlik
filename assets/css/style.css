@@ -180,3 +180,24 @@ body {
   font-weight: bold;
   color: red;
 }
+/* ===== ALAN YÜKSEKLİKLERİ (GEÇİCİ) ===== */
+
+.hero-lg {
+  min-height: 70vh;
+}
+
+.services-compact {
+  min-height: 35vh;
+}
+
+.why-us-focus {
+  min-height: 45vh;
+}
+
+.references-light {
+  min-height: 30vh;
+}
+
+.cta-strong {
+  min-height: 40vh;
+}

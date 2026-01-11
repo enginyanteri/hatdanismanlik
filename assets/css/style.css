@@ -10,6 +10,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
+  padding-top: 140px; /* 👈 TEK GERÇEK OFFSET */
 }
 
 /* =========================
@@ -156,7 +157,6 @@ body {
   min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
-  padding-top: 140px; /* 👈 TEK VE NET OFFSET */
 }
 
 .hero h1 {

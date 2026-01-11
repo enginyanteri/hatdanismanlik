@@ -23,8 +23,6 @@ body {
   left: 0;
   z-index: 1000;          /* 👈 her şeyin üstünde */
   background: transparent;   /* 👈 TAM ŞEFFAF */
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
   display: flex;
   align-items: center;
 }
@@ -156,6 +154,13 @@ body {
 /* =========================
    HERO
 ========================= */
+.hero {
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-inner {
+  padding-top: 140px; /* header yüksekliği */
+}
 .page-bg {
   min-height: calc(100vh - 120px);
   display: flex;

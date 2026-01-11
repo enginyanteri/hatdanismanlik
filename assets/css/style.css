@@ -206,3 +206,6 @@ body {
 .cta-strong {
   min-height: 40vh;
 }
+.header-spacer {
+  height: 140px; /* header ile birebir */
+}

@@ -261,13 +261,12 @@ body {
 }
 
 /* ==================================================
-   TRUST BAR
+   TRUST BAR (UZMANLIK & GÜVEN)
 ================================================== */
+
 .trust-bar {
-  background: #ffffff;
   padding: 60px 0;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255,255,255,0.9);
 }
 
 .trust-container {
@@ -287,11 +286,10 @@ body {
 .trust-item h3 {
   font-size: 18px;
   color: #0A2A66;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .trust-item p {
   font-size: 14px;
   color: #475569;
-  line-height: 1.4;
 }

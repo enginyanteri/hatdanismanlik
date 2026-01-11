@@ -379,3 +379,57 @@ body {
   line-height: 1.6;
   color: #475569;
 }
+/* ==================================================
+   CTA – İLETİŞİME GEÇ
+================================================== */
+
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(
+    90deg,
+    #0A2A66 0%,
+    #123B8A 100%
+  );
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cta h2 {
+  font-size: 34px;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 36px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cta-primary {
+  background: #ffffff;
+  color: #0A2A66;
+  padding: 16px 36px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-cta-primary:hover {
+  background: #e6efff;
+  transform: translateY(-2px);
+}

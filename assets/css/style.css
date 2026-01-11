@@ -272,3 +272,44 @@ body {
   font-size: 14px;
   color: #475569;
 }
+/* ==================================================
+   TRUST BAR – GÜVEN MESAJLARI
+================================================== */
+
+.trust-dark {
+  background: linear-gradient(90deg, #0a2a66, #123b8a);
+  padding: 60px 0;
+}
+
+.trust-dark .trust-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.trust-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: #ffffff;
+}
+
+.trust-box img {
+  width: 48px;
+  height: 48px;
+}
+
+.trust-box h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.trust-box p {
+  font-size: 14px;
+  opacity: 0.9;
+}

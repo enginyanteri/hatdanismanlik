@@ -151,7 +151,7 @@ body {
    HERO
 ========================= */
 .hero {
-  min-height: calc(100vh - 140px);
+  min-height: 70vh; /* veya hero-lg ile zaten geliyor */
 }
 .page-bg {
   padding-top: 140px; /* ✅ HEADER YÜKSEKLİĞİ */

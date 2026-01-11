@@ -347,3 +347,35 @@ body {
   opacity: 0.85;
   filter: grayscale(100%);
 }
+/* ==================================================
+   CTA ÖNCESİ SLOGAN
+================================================== */
+
+.pre-cta-slogan {
+  padding: 90px 0;
+  background: linear-gradient(
+    180deg,
+    #f8fbff 0%,
+    #eef5ff 100%
+  );
+  text-align: center;
+}
+
+.pre-cta-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pre-cta-slogan h2 {
+  font-size: 32px;
+  line-height: 1.35;
+  color: #0A2A66;
+  margin-bottom: 20px;
+}
+
+.pre-cta-slogan p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #475569;
+}

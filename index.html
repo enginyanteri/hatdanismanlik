@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <!-- =====================
-       META & HEAD
-  ====================== -->
+  <!-- ==================================================
+       META & TEMEL AYARLAR
+  ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hat Danışmanlık – Ana Sayfa</title>
 
-  <!-- Ana Stil Dosyası -->
+  <!-- ANA CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
   <!-- ==================================================
-       FIXED HEADER (LOGO + NAV + DİL)
-       Not: Şu an transparan ve sabit
+       SABİT HEADER (LOGO + MENÜ + DİL)
   ================================================== -->
   <header class="top-bar">
-
-    <!-- İç Konteyner (ileride gerekirse genişlik için) -->
     <div class="top-bar-inner">
 
       <!-- LOGO -->
@@ -30,11 +27,9 @@
         </a>
       </div>
 
-      <!-- HAMBURGER (Mobil – şimdilik pasif) -->
+      <!-- HAMBURGER (MOBİL – ŞİMDİLİK PASİF) -->
       <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
 
       <!-- NAVIGATION -->
@@ -45,9 +40,7 @@
 
           <!-- KURUMSAL -->
           <li class="has-submenu">
-            <button class="dropdown-toggle" aria-expanded="false">
-              Kurumsal
-            </button>
+            <button class="dropdown-toggle">Kurumsal</button>
             <ul class="submenu">
               <li><a href="hakkimizda.html">Hakkımızda</a></li>
               <li><a href="misyonumuz.html">Misyonumuz</a></li>
@@ -57,13 +50,11 @@
 
           <!-- HİZMETLER -->
           <li class="has-submenu">
-            <button class="dropdown-toggle" aria-expanded="false">
-              Hizmetlerimiz
-            </button>
+            <button class="dropdown-toggle">Hizmetlerimiz</button>
             <ul class="submenu">
-              <li><a href="our-services.html">Our Services</a></li>
+              <li><a href="our-services.html">Tüm Hizmetler</a></li>
               <li><a href="consulting.html">Danışmanlık</a></li>
-              <li><a href="support.html">Destek</a></li>
+              <li><a href="support.html">Teknik Destek</a></li>
             </ul>
           </li>
 
@@ -75,155 +66,153 @@
 
       <!-- DİL SEÇİMİ -->
       <div class="flags">
-        <a href="index.html">
-          <img src="assets/images/flags/tr.png" alt="Türkçe">
-        </a>
-        <a href="index-en.html">
-          <img src="assets/images/flags/en.png" alt="English">
-        </a>
+        <a href="index.html"><img src="assets/images/flags/tr.png" alt="TR"></a>
+        <a href="index-en.html"><img src="assets/images/flags/en.png" alt="EN"></a>
       </div>
 
     </div>
   </header>
 
-  <!-- ==================================================
-       HEADER SPACER
-       Fixed header yüksekliği kadar boşluk
-       (Şu an aktif – ileride tekrar ele alacağız)
-  ================================================== -->
+  <!-- HEADER YÜKSEKLİĞİ KADAR BOŞLUK -->
   <div class="header-spacer"></div>
 
   <!-- ==================================================
-       ANA SAYFA İÇERİK ALANI
+       ANA İÇERİK
   ================================================== -->
   <main class="page-bg">
 
-    <!-- HERO / ANA MESAJ -->
+    <!-- ==================================================
+         1. HERO ALANI
+    ================================================== -->
     <section class="hero hero-main">
-  <div class="hero-container">
+      <div class="hero-container">
 
-    <div class="hero-content">
-      <h1>
-        Makine Yatırımlarınız<br>
-        ve Teknik Sorunlarınız İçin<br>
-        Doğru Çözüm Ortağınız
-      </h1>
+        <div class="hero-content">
+          <h1>
+            Makine Yatırımlarınız<br>
+            ve Teknik Sorunlarınız İçin<br>
+            Doğru Çözüm Ortağınız
+          </h1>
 
-      <p>
-        Makine alımı, arıza çözümü ve fabrika taşıma süreçlerinde
-        uzman danışmanlık ve eksiksiz çözümler sunuyoruz.
-      </p>
+          <p>
+            Makine alımı, arıza çözümü ve fabrika taşıma süreçlerinde
+            uzman danışmanlık ve eksiksiz çözümler sunuyoruz.
+          </p>
 
-      <a href="our-services.html" class="btn-primary">
-        Hizmetlerimizi İnceleyin →
-      </a>
-    </div>
+          <a href="our-services.html" class="btn-primary">
+            Hizmetlerimizi İnceleyin →
+          </a>
+        </div>
 
-    <div class="hero-image">
-      <img src="assets/images/hero/hero-main.png" alt="Hat Danışmanlık Hero">
-    </div>
+        <div class="hero-image">
+          <img src="assets/images/hero/hero-main.png" alt="Hat Danışmanlık">
+        </div>
 
-  </div>
-</section>
-    
- <!-- ==================================================
-     TRUST BAR – GÜVEN MESAJLARI
-================================================== -->
-<section class="trust-bar trust-dark">
-  <div class="trust-container">
-
-    <div class="trust-box">
-      <img src="assets/images/icons/shield.svg" alt="">
-      <h3>Güvenilir ve Uzman Kadro</h3>
-      <p>Deneyimli mühendis kadromuzla yanınızdayız.</p>
-    </div>
-
-    <div class="trust-box">
-      <img src="assets/images/icons/idea.svg" alt="">
-      <h3>Çözüm Odaklı Hizmet</h3>
-      <p>Her türlü makine sorununa hızlı ve kesin çözümler.</p>
-    </div>
-
-    <div class="trust-box">
-      <img src="assets/images/icons/gear.svg" alt="">
-      <h3>20+ Yıllık Tecrübe</h3>
-      <p>Makine taşımacılığı ve teknik serviste köklü deneyim.</p>
-    </div>
-
-  </div>
-</section>   
-<!-- ==================================================
-     TRUST BAR (3 PRIMARY + 3 SECONDARY)
-================================================== -->
-<section class="services services-summary debug">
-  <div class="services-container">
-
-    <!-- SERVICE-ROW-PRIMARY ROW -->
-   <div class="services-container">
-
-      <div class="service-box">
-        <h3>Uzman Danışmanlık</h3>
-        <p>Makine yatırımlarında doğru kararlar</p>
       </div>
-
-      <div class="service-box">
-        <h3>Makine Taşıma</h3>
-        <p>Fabrika taşıma ve yer değişimi</p>
-      </div>
-
-      <div class="service-box">
-        <h3>Kurulum & Devreye Alma</h3>
-        <p>Sorunsuz ve hızlı devreye alma</p>
-      </div>
-
-    </div>
-
-    <!-- SERVICE-ROW-SECONDARY ROW -->
-    <div class="services-row secondary">
-
-      <div class="service-box">
-        <h3>İkinci El Makine</h3>
-        <p>Alım, satım ve değerlendirme</p>
-      </div>
-
-     <div class="service-box">
-        <h3>Arıza & Teknik Destek</h3>
-        <p>Uzman müdahale, kalıcı çözüm</p>
-      </div>
-
-      <div class="service-box">
-        <h3>Yedek Parça</h3>
-        <p>Hızlı temin, doğru parça</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-    
-    <!-- HİZMETLER (ÖZET) -->
-    <section class="services services-compact debug">
-      <h2>HİZMETLER (ÖZET)</h2>
     </section>
 
-    <!-- NEDEN BİZ -->
-    <section class="why-us why-us-focus debug">
-      <h2>NEDEN BİZ? (DANIŞMANLIK FARKI)</h2>
+    <!-- ==================================================
+         2. TRUST BAR – GÜVEN MESAJLARI (3 KUTU)
+    ================================================== -->
+    <section class="trust-bar trust-dark">
+      <div class="trust-container">
+
+        <div class="trust-box">
+          <img src="assets/images/icons/shield.svg" alt="">
+          <h3>Güvenilir ve Uzman Kadro</h3>
+          <p>Deneyimli mühendis kadromuzla yanınızdayız.</p>
+        </div>
+
+        <div class="trust-box">
+          <img src="assets/images/icons/idea.svg" alt="">
+          <h3>Çözüm Odaklı Hizmet</h3>
+          <p>Her soruna hızlı ve doğru çözümler.</p>
+        </div>
+
+        <div class="trust-box">
+          <img src="assets/images/icons/gear.svg" alt="">
+          <h3>20+ Yıllık Tecrübe</h3>
+          <p>Sektörde kanıtlanmış bilgi birikimi.</p>
+        </div>
+
+      </div>
     </section>
 
-    <!-- REFERANSLAR -->
+    <!-- ==================================================
+         3. HİZMETLERİMİZ – 6 KUTU (3 PRIMARY + 3 SECONDARY)
+    ================================================== -->
+    <section class="services services-summary debug">
+      <div class="services-container">
+
+        <!-- ÜST SATIR – PRIMARY -->
+        <div class="services-row primary">
+
+          <div class="service-box">
+            <h3>Uzman Danışmanlık</h3>
+            <p>Makine yatırımlarında doğru kararlar</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Makine Taşıma</h3>
+            <p>Fabrika taşıma ve yer değişimi</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Kurulum & Devreye Alma</h3>
+            <p>Sorunsuz ve hızlı devreye alma</p>
+          </div>
+
+        </div>
+
+        <!-- ALT SATIR – SECONDARY -->
+        <div class="services-row secondary">
+
+          <div class="service-box">
+            <h3>İkinci El Makine</h3>
+            <p>Alım, satım ve değerlendirme</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Arıza & Teknik Destek</h3>
+            <p>Uzman müdahale, kalıcı çözüm</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Yedek Parça</h3>
+            <p>Hızlı temin, doğru parça</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+         4. REFERANSLAR
+    ================================================== -->
     <section class="references references-light debug">
-      <h2>GÜVEN / REFERANSLAR</h2>
+      <h2>Referanslarımız</h2>
     </section>
 
-    <!-- CTA -->
+    <!-- ==================================================
+         5. CTA ÖNCESİ SLOGAN
+    ================================================== -->
+    <section class="why-us why-us-focus debug">
+      <h2>Neden Hat Danışmanlık?</h2>
+    </section>
+
+    <!-- ==================================================
+         6. CTA – İLETİŞİM
+    ================================================== -->
     <section class="cta cta-strong debug">
-      <h2>İLETİŞİM ÇAĞRISI</h2>
+      <h2>Bizimle İletişime Geçin</h2>
     </section>
 
   </main>
 
-  <!-- JAVASCRIPT -->
+  <!-- ==================================================
+       JS
+  ================================================== -->
   <script src="assets/js/main.js"></script>
 
 </body>

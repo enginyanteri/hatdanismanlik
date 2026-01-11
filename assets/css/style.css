@@ -259,3 +259,39 @@ body {
 @media (max-width: 768px) {
   /* Mobil yapı daha sonra */
 }
+
+/* ==================================================
+   TRUST BAR
+================================================== */
+.trust-bar {
+  background: #ffffff;
+  padding: 60px 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.trust-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.trust-item {
+  text-align: center;
+}
+
+.trust-item h3 {
+  font-size: 18px;
+  color: #0A2A66;
+  margin-bottom: 10px;
+}
+
+.trust-item p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.4;
+}

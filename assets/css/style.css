@@ -1,4 +1,6 @@
-/* GLOBAL RESET */
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,85 +12,112 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #a0d8f3 100%);
 }
 
-/* TOP BAR */
+/* =========================
+   TOP BAR
+========================= */
 .top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 20px;
+  width: 100%;
   height: 140px;
-  background: transparent;
-  z-index: 100;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
 }
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
 .logo img {
-  height: 150px;
-  max-width: 350px;
+  height: 120px;
   width: auto;
 }
 
-/* NAVBAR MENÜ */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 60px;
 }
 
+.nav-links li {
+  position: relative;
+}
+
+/* Menü yazıları */
 .nav-links a,
 .dropdown-toggle {
   text-decoration: none;
   color: #0A2A66;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400; /* KALINLAŞMA YOK */
   cursor: pointer;
+  padding-bottom: 6px;
 }
 
-/* DROPDOWN MENÜLER */
+/* =========================
+   HOVER ALT ÇİZGİ (TEK)
+========================= */
+.nav-links a::after,
+.dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0A2A66;
+  transition: width 0.25s ease;
+}
+
+/* Hover olunca sadece TEK çizgi */
+.nav-links a:hover::after,
+.has-submenu:hover .dropdown-toggle::after {
+  width: 100%;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
 .has-submenu {
   position: relative;
-}
-
-.dropdown-toggle::after {
-  content: "▼";
-  font-size: 10px;
-  margin-left: 4px;
 }
 
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 120%;
   left: 0;
-  background-color: #ffffff;
+  background: #ffffff;
   min-width: 180px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  z-index: 99;
   list-style: none;
-  padding: 0;
 }
 
 .submenu li a {
   display: block;
   padding: 10px 18px;
   color: #0A2A66;
-  text-decoration: none;
 }
 
 .submenu li a:hover {
-  background-color: #f0f4f8;
+  background: #f0f4f8;
 }
 
 .has-submenu:hover .submenu {
   display: block;
 }
 
-/* FLAGS */
+/* =========================
+   FLAGS
+========================= */
 .flags {
   display: flex;
   gap: 10px;
@@ -96,20 +125,34 @@ body {
 
 .flags img {
   width: 18px;
-  height: auto;
   cursor: pointer;
 }
 
-/* PAGE BACKGROUND */
+/* =========================
+   HERO
+========================= */
 .page-bg {
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* HERO */
 .hero h1 {
-  color: #0A2A66;
   font-size: 36px;
+  color: #0A2A66;
+}
+
+/* =========================
+   HAMBURGER (ŞİMDİLİK PASİF)
+========================= */
+.hamburger {
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE (DOKUNMADIK)
+========================= */
+@media (max-width: 768px) {
+  /* Mobili bir sonraki adımda ele alacağız */
 }

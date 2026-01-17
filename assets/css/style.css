@@ -54,7 +54,8 @@ body{
   background-image: url("../images/hero/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;   /* KRİTİK */
+  background-color: #0a2a66;  /* boş kalan yerler */
 }
 
 /* Overlay */
@@ -89,7 +90,6 @@ body{
    4. TRUST BAR
 ================================================== */
 .trust-bar{
-  margin-top:-60px;
   position:relative;
   z-index:5;
 }

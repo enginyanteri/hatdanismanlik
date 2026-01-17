@@ -62,7 +62,7 @@ body{
   height: 510px;                   /* 🔒 SABİT LANDING HERO */
   display: flex;
   align-items: flex-start;
-  padding-top: 90px; /* ← burası ayar noktası */
+  padding-top: 70px; /* ← burası ayar noktası */
   overflow: hidden;
   background: transparent;         /* ❗ Arka plan wrapper’dan */
 }
@@ -89,7 +89,6 @@ body{
 
 .hero-content{
   max-width: 560px;
-  transform: translateY(-10px);
 }
 
 /* BAŞLIK */

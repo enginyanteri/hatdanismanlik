@@ -99,8 +99,7 @@ body{
   max-width: 1320px;
   margin-left: 60px;
   margin-right: auto;
-  padding-left: 10px;
-
+ 
     /* 🔵 DEBUG – GEÇİCİ */
   border: 2px solid blue;
 }

@@ -15,17 +15,16 @@
 <body>
 
   <!-- ==================================================
-       SABİT HEADER (LOGO + MENÜ + DİL)
+       HEADER / NAVBAR
+       (Desktop-first, fixed yapı)
   ================================================== -->
   <header class="top-bar">
     <div class="top-bar-inner">
 
       <!-- LOGO -->
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/logo/logo.png" alt="Hat Danışmanlık Logo">
-        </a>
-      </div>
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo/logo.png" alt="Hat Danışmanlık">
+      </a>
 
       <!-- NAVIGATION -->
       <nav class="navbar">
@@ -33,7 +32,7 @@
           <li><a href="index.html">Ana Sayfa</a></li>
 
           <li class="has-submenu">
-            <button class="dropdown-toggle">Kurumsal</button>
+            <button type="button">Kurumsal</button>
             <ul class="submenu">
               <li><a href="hakkimizda.html">Hakkımızda</a></li>
               <li><a href="misyonumuz.html">Misyonumuz</a></li>
@@ -42,7 +41,7 @@
           </li>
 
           <li class="has-submenu">
-            <button class="dropdown-toggle">Hizmetlerimiz</button>
+            <button type="button">Hizmetlerimiz</button>
             <ul class="submenu">
               <li><a href="our-services.html">Tüm Hizmetler</a></li>
               <li><a href="consulting.html">Danışmanlık</a></li>
@@ -55,110 +54,152 @@
         </ul>
       </nav>
 
-      <!-- DİL SEÇİMİ -->
+      <!-- LANGUAGE SWITCH -->
       <div class="flags">
-        <a href="index.html"><img src="assets/images/flags/tr.png" alt="TR"></a>
-        <a href="index-en.html"><img src="assets/images/flags/en.png" alt="EN"></a>
+        <a href="index.html"><img src="assets/images/flags/tr.png" alt="Türkçe"></a>
+        <a href="index-en.html"><img src="assets/images/flags/en.png" alt="English"></a>
       </div>
 
     </div>
   </header>
 
+  <!-- Fixed header boşluğu -->
   <div class="header-spacer"></div>
 
   <!-- ==================================================
-       ANA İÇERİK
+       MAIN CONTENT
   ================================================== -->
   <main>
 
-    <!-- HERO -->
+    <!-- ==================================================
+         HERO SECTION
+         Background-image + overlay (kurumsal standart)
+    ================================================== -->
     <section class="hero hero-main">
+      <div class="hero-overlay"></div>
+
       <div class="hero-container">
         <div class="hero-content">
-          <h1>Makine Yatırımlarınız<br>ve Teknik Sorunlarınız İçin<br>Doğru Çözüm Ortağınız</h1>
-          <p>Makine alımı, arıza çözümü ve fabrika taşıma süreçlerinde uzman danışmanlık ve eksiksiz çözümler sunuyoruz.</p>
-          <a href="our-services.html" class="btn-primary">Hizmetlerimizi İnceleyin →</a>
+          <h1>
+            Makine Yatırımlarınız<br>
+            ve Teknik Sorunlarınız İçin<br>
+            Doğru Çözüm Ortağınız
+          </h1>
+
+          <p>
+            Makine alımı, arıza çözümü ve fabrika taşıma süreçlerinde
+            uzman danışmanlık ve eksiksiz çözümler sunuyoruz.
+          </p>
+
+          <a href="our-services.html" class="btn-primary">
+            Hizmetlerimizi İnceleyin →
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- TRUST BAR -->
-    <section class="trust-bar trust-dark">
+    <!-- ==================================================
+         TRUST / VALUE BAR
+    ================================================== -->
+    <section class="trust-bar">
       <div class="trust-container">
+
         <div class="trust-box">
           <img src="assets/images/icons/shield.svg" alt="">
           <h3>Güvenilir ve Uzman Kadro</h3>
           <p>Deneyimli mühendis kadromuzla yanınızdayız.</p>
         </div>
+
         <div class="trust-box">
           <img src="assets/images/icons/idea.svg" alt="">
           <h3>Çözüm Odaklı Hizmet</h3>
           <p>Her soruna hızlı ve doğru çözümler.</p>
         </div>
+
         <div class="trust-box">
           <img src="assets/images/icons/gear.svg" alt="">
           <h3>20+ Yıllık Tecrübe</h3>
           <p>Sektörde kanıtlanmış bilgi birikimi.</p>
         </div>
+
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- ==================================================
+         SERVICES
+         (Görsel + overlay için hazır yapı)
+    ================================================== -->
     <section class="services">
       <div class="services-container">
-        <div class="services-row primary">
-          <div class="service-box"><h3>Uzman Danışmanlık</h3><p>Makine yatırımlarında doğru kararlar</p></div>
-          <div class="service-box"><h3>Makine Taşıma</h3><p>Fabrika taşıma ve yer değişimi</p></div>
-          <div class="service-box"><h3>Kurulum & Devreye Alma</h3><p>Sorunsuz ve hızlı devreye alma</p></div>
+
+        <div class="service-card consulting">
+          <h3>Uzman Danışmanlık</h3>
+          <p>Makine yatırımlarında doğru kararlar</p>
         </div>
-        <div class="services-row secondary">
-          <div class="service-box"><h3>İkinci El Makine</h3><p>Alım, satım ve değerlendirme</p></div>
-          <div class="service-box"><h3>Arıza & Teknik Destek</h3><p>Uzman müdahale, kalıcı çözüm</p></div>
-          <div class="service-box"><h3>Yedek Parça</h3><p>Hızlı temin, doğru parça</p></div>
+
+        <div class="service-card transport">
+          <h3>Makine Taşıma</h3>
+          <p>Fabrika taşıma ve yer değişimi</p>
         </div>
+
+        <div class="service-card support">
+          <h3>Arıza & Teknik Destek</h3>
+          <p>Uzman müdahale, kalıcı çözüm</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- REFERENCES -->
+    <!-- ==================================================
+         REFERENCES
+    ================================================== -->
     <section class="references">
       <div class="references-container">
-        <div class="references-header">
+
+        <header class="references-header">
           <h2>Bizi Tercih Eden Firmalar</h2>
-          <p>Yıllar boyunca farklı sektörlerden birçok firma ile başarılı projelere imza attık.</p>
-        </div>
+          <p>
+            Yıllar boyunca farklı sektörlerden birçok firma ile
+            başarılı projelere imza attık.
+          </p>
+        </header>
+
         <div class="references-logos">
-          <div class="reference-item"><img src="assets/images/references/ref-1.png" alt=""></div>
-          <div class="reference-item"><img src="assets/images/references/ref-2.png" alt=""></div>
-          <div class="reference-item"><img src="assets/images/references/ref-3.png" alt=""></div>
-          <div class="reference-item"><img src="assets/images/references/ref-4.png" alt=""></div>
+          <img src="assets/images/references/ref-1.png" alt="">
+          <img src="assets/images/references/ref-2.png" alt="">
+          <img src="assets/images/references/ref-3.png" alt="">
+          <img src="assets/images/references/ref-4.png" alt="">
         </div>
+
       </div>
     </section>
 
-    <!-- PRE CTA -->
-    <section class="pre-cta-slogan">
-      <div class="pre-cta-container">
-        <h2>Makine yatırımlarınızdan tesis taşınmasına kadar her adımda yanınızdayız.</h2>
-        <p>Tüm teknik ve operasyonel ihtiyaçlarınız için bizimle iletişime geçebilirsiniz.</p>
-      </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- ==================================================
+         CTA
+    ================================================== -->
     <section class="cta">
       <div class="cta-container">
-        <h2>Projeniz için doğru çözüm ortağını arıyorsanız şimdi bizimle iletişime geçin</h2>
+        <h2>
+          Projeniz için doğru çözüm ortağını arıyorsanız
+          şimdi bizimle iletişime geçin
+        </h2>
         <p>Uzman ekibimiz ihtiyaçlarınıza özel çözümler sunar.</p>
-        <a href="iletisim.html" class="btn-cta-primary">İletişime Geç</a>
+        <a href="iletisim.html" class="btn-cta-primary">
+          İletişime Geç
+        </a>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
   <footer class="site-footer">
-    <div class="footer-container">
-      <p>© 2026 Hat Danışmanlık. Tüm hakları saklıdır.<span>İzinsiz kopyalanamaz ve kullanılamaz.</span></p>
-    </div>
+    <p>
+      © 2026 Hat Danışmanlık.
+      <span>Tüm hakları saklıdır.</span>
+    </p>
   </footer>
 
 </body>

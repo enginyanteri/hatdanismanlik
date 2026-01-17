@@ -50,7 +50,7 @@ body{
 .hero-wrapper{
   position: relative;
   background-image: url("../images/hero/hero-bg.jpg");
-  background-size: 110%;
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }

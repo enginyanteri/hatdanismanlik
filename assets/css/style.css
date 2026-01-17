@@ -43,50 +43,55 @@ body{
 .header-spacer{height:140px}
 
 /* ==================================================
-   3. HERO
+   3. HERO (SABİT & KONTROLLÜ)
 ================================================== */
 .hero-main{
-  min-height: 60vh;                 /* Hero ekran yüksekliği */
+  height: calc(100vh - 140px); /* header hariç ekran */
+  max-height: 620px;           /* aşırı büyümesin */
+  min-height: 520px;
+
   display: flex;
   align-items: center;
+
   position: relative;
   overflow: hidden;
 
-  /* Arka plan görseli */
   background-image: url("../images/hero/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;           /* Alanı doldurur */
+  background-size: cover;
 }
 
-/* Overlay (okunabilirlik için) */
+/* Overlay */
 .hero-main::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10, 42, 102, 0.35);
+  background: rgba(10,42,102,0.35);
   z-index: 1;
 }
 
-/* İç konteyner */
+/* İç içerik */
 .hero-container{
   position: relative;
   z-index: 2;
+
+  width: 100%;
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
 
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
   align-items: center;
+  gap: 60px;
 }
 
-/* Metin alanı */
+/* Yazılar */
 .hero-content h1{
   font-size: 42px;
   margin-bottom: 24px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-content p{
@@ -96,21 +101,7 @@ body{
   color: rgba(255,255,255,0.9);
 }
 
-/* Buton */
-.btn-primary{
-  background: #1e4ed8;
-  color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-primary:hover{
-  background: #1c3faa;
-}
-
-/* Sağ görsel */
+/* Sağ görsel varsa */
 .hero-image img{
   width: 100%;
   max-width: 520px;

@@ -84,7 +84,7 @@ body{
   max-width: 1320px;
   margin-left: 120px;
   margin-right: auto;
-  padding-left: 0px;
+  padding-left: 10px;
   padding-right: 0;
 }
 
@@ -92,7 +92,7 @@ body{
 
 .hero-content{
   max-width: 520px;  /* ← İŞTE SAĞ SINIR */
-  margin-left: 0;        /* 🔒 sola sabit */
+  margin-left: -50px;        /* 🔒 sola sabit */
 }
 
 /* BAŞLIK */

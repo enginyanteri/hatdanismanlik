@@ -105,9 +105,6 @@ body{
   max-width: 1320px;
   margin-left: 60px;
   margin-right: auto;
- 
-    /* 🔵 DEBUG – GEÇİCİ */
-  border: 2px solid blue;
 }
 
 /* ==================================================
@@ -118,9 +115,6 @@ body{
   max-width: 800px;               /* Okunabilirlik sınırı */
   position: relative;             /* ⚓ CTA referansı */
   margin-left: 0;
-
-  /* 🔴 DEBUG – GEÇİCİ */
-  border: 2px dashed red;
 }
    
 .hero-content .btn-primary{

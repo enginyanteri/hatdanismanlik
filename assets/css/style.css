@@ -48,7 +48,7 @@ body{
 
 .hero-main{
   position: relative;
-  height: 500px;               /* 🔒 SABİT HERO */
+  height: 650px;               /* 🔒 SABİT HERO */
   display: flex;
   align-items: center;
   overflow: hidden;

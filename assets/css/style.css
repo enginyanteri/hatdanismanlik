@@ -110,7 +110,7 @@ body{
 ================================================== */
 .hero-content{
   max-width: 1000px;               /* 🧠 Okunabilirlik sınırı */
-  margin-left: auto;             /* 🔒 İnce sol kaydırma */
+  margin-left: 0;             /* 🔒 İnce sol kaydırma */
 
    /* 🔴 DEBUG – GEÇİCİ */
   border: 2px dashed red;
@@ -141,7 +141,7 @@ body{
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.4px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: #0b2a5c;
 }
 
@@ -151,7 +151,7 @@ body{
 .hero-content p{
   font-size: 16px;
   line-height: 1.58;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   max-width: 500px;
   color: rgba(11,42,92,.88);
 }

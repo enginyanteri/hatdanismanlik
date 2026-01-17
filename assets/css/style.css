@@ -46,41 +46,54 @@ body{
    3. HERO
 ================================================== */
 .hero-main{
-  min-height: 60vh;      /* hero için ayrılan net alan */
+  position: relative;
+  min-height: 60vh;          /* Hero için sabit alan */
   display: flex;
   align-items: center;
-  position: relative;
-
-  /* ARKA PLAN TAMAMEN KAPALI */
-  background: none;
+  overflow: hidden;         /* TAŞMAYI ENGELLER */
 }
 
-/* overlay de kapalı */
+/* HERO ARKA PLAN GÖRSELİ */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* KIRPMADAN ALANI DOLDURUR */
+  z-index: 1;
+}
+
+/* Koyu overlay (okunabilirlik için) */
 .hero-main::before{
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 42, 102, 0.35);
+  z-index: 2;
 }
 
+/* İçerik */
 .hero-container{
+  position: relative;
+  z-index: 3;               /* Görselin ÜSTÜNDE */
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 60px;
 }
 
 .hero-content h1{
   font-size: 42px;
   margin-bottom: 24px;
-  color: #0A2A66;
+  color: #ffffff;
 }
 
 .hero-content p{
   max-width: 520px;
   margin-bottom: 32px;
   line-height: 1.6;
-  color: #334155;
+  color: rgba(255,255,255,0.9);
 }
+
 /* ==================================================
    4. TRUST BAR
 ================================================== */

@@ -110,7 +110,7 @@ body{
    - Metnin sağ sınırı burada belirlenir
 ================================================== */
 .hero-content{
-  max-width: 780px;               /* 🧠 Okunabilirlik sınırı */
+  max-width: 800px;               /* 🧠 Okunabilirlik sınırı */
   margin-left: 0px;             /* 🔒 İnce sol kaydırma */
 
    /* 🔴 DEBUG – GEÇİCİ */

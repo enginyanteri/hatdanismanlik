@@ -97,7 +97,7 @@ body{
   position: relative;
   z-index:2;                      /* Overlay’in üstünde */
   max-width: 1320px;
-  margin-left: 120px;
+  margin-left: 40px;
   margin-right: auto;
   padding-left: 10px;
 
@@ -111,7 +111,7 @@ body{
 ================================================== */
 .hero-content{
   max-width: 750px;               /* 🧠 Okunabilirlik sınırı */
-  margin-left: -70px;             /* 🔒 İnce sol kaydırma */
+  margin-left: -80px;             /* 🔒 İnce sol kaydırma */
 
    /* 🔴 DEBUG – GEÇİCİ */
   border: 2px dashed red;

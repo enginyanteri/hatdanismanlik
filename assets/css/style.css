@@ -84,8 +84,14 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(10,42,102,.25);
-  will-change: opacity;
+
+  /* 🎯 Fotoğrafı boğmayan, canlılık veren overlay */
+  background: linear-gradient(
+    180deg,
+    rgba(10,42,102,.15) 0%,
+    rgba(10,42,102,.32) 100%
+  );
+
   z-index:1;
 }
 

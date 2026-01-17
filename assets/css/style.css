@@ -43,39 +43,31 @@ body{
 .header-spacer{height:140px}
 
 /* ==================================================
-   3. HERO
+   3. HERO (STABİL)
 ================================================== */
 .hero-main{
-  position: relative;
-  min-height: 60vh;          /* Hero için sabit alan */
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  overflow: hidden;         /* TAŞMAYI ENGELLER */
+  position: relative;
+
+  background-image: url("../images/hero/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-/* HERO ARKA PLAN GÖRSELİ */
-.hero-bg{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* KIRPMADAN ALANI DOLDURUR */
-  z-index: 1;
-}
-
-/* Koyu overlay (okunabilirlik için) */
+/* Overlay */
 .hero-main::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 42, 102, 0.35);
-  z-index: 2;
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(10,42,102,.35);
 }
 
-/* İçerik */
 .hero-container{
   position: relative;
-  z-index: 3;               /* Görselin ÜSTÜNDE */
+  z-index: 2;
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
@@ -84,16 +76,15 @@ body{
 .hero-content h1{
   font-size: 42px;
   margin-bottom: 24px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-content p{
   max-width: 520px;
   margin-bottom: 32px;
   line-height: 1.6;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,.9);
 }
-
 /* ==================================================
    4. TRUST BAR
 ================================================== */

@@ -115,18 +115,18 @@ body{
    - Metnin sağ sınırı burada belirlenir
 ================================================== */
 .hero-content{
-  max-width: 800px;               /* 🧠 Okunabilirlik sınırı */
-  position: relative;   /* ⚓ CTA için referans */
-  margin-left: 0;             /* 🔒 İnce sol kaydırma */
+  max-width: 800px;               /* Okunabilirlik sınırı */
+  position: relative;             /* ⚓ CTA referansı */
+  margin-left: 0;
 
-   /* 🔴 DEBUG – GEÇİCİ */
+  /* 🔴 DEBUG – GEÇİCİ */
   border: 2px dashed red;
+}
    
 .hero-content .btn-primary{
   position: absolute;
   left: 0;
-  bottom: -48px;   /* 🔧 GÖZLE AYAR NOKTASI */
-
+  bottom: -48px;   /* Gözle ayar noktası */
 }
 
 /* ==================================================
@@ -187,10 +187,6 @@ body{
 /* ==================================================
    HERO CTA – METİNDEN BAĞIMSIZ
 ================================================== */
-
-.hero-cta{
-  margin-top: 20px;        /* yazıdan kopar */
-}
 
 .hero-main .btn-primary{
   display: inline-flex;

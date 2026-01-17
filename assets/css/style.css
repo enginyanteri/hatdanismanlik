@@ -43,42 +43,42 @@ body{
 .header-spacer{height:140px}
 
 /* ==================================================
-   3. HERO (LANDING PAGE MODE)
+   3. HERO + 4.TRUST BAR (LANDING PAGE – TEK SAHNE)
 ================================================== */
+
+/* GENEL WRAPPER */
+.hero-wrapper{
+  position: relative;
+  background-image: url("../images/hero/hero-bg.jpg");
+  background-size: cover;          /* 🔥 Premium, boşluk yok */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================= HERO ================= */
 
 .hero-main{
   position: relative;
-  height: 610px;               /* 🔒 SABİT HERO */
+  height: 610px;                   /* 🔒 SABİT LANDING HERO */
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: #0A2A66;         /* yedek renk */
+  background: transparent;         /* ❗ Arka plan wrapper’dan */
 }
 
-/* ARKA PLAN GÖRSEL */
-.hero-bg{
-  position: absolute;
-  inset: 0;
-  background-image: url("../images/hero/hero-bg.jpg");
-  background-size: contain;    /* ❗ ZOOM YOK */
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-/* OVERLAY */
+/* HERO OVERLAY */
 .hero-main::before{
   content:"";
   position:absolute;
   inset:0;
   background: rgba(10,42,102,.25);
-  z-index: 2;
+  z-index:1;
 }
 
-/* İÇERİK */
+/* HERO İÇERİK */
 .hero-container{
   position: relative;
-  z-index: 3;
+  z-index:2;
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
@@ -97,17 +97,35 @@ body{
   color: rgba(255,255,255,.9);
 }
 
-/* ==================================================
-   4. TRUST BAR
-================================================== */
+/* ================= TRUST BAR ================= */
+
 .trust-bar{
-  position:relative;
-  z-index:5;
+  position: relative;
+  z-index:2;
+  background: rgba(10,42,102,.5);   /* 🔥 %50 transparan */
+  backdrop-filter: blur(4px);       /* premium cam efekti */
+  padding: 60px 0;
 }
-.trust-dark{background:linear-gradient(90deg,#0a2a66,#123b8a);padding:60px 0}
-.trust-container{max-width:1320px;margin:auto;padding:0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.trust-box{display:flex;gap:16px;color:#fff}
-.trust-box img{width:48px;height:48px}
+
+.trust-container{
+  max-width:1320px;
+  margin:auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.trust-box{
+  display:flex;
+  gap:16px;
+  color:#fff;
+}
+
+.trust-box img{
+  width:48px;
+  height:48px;
+}
 
 /* ==================================================
    5. SERVICES

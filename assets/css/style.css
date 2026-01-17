@@ -20,7 +20,7 @@ body{
   z-index:1000;
 
   /* SADECE HEADER GRADIENT */
-  background:linear-gradient(180deg,#ffffff,#3a7cae);
+  background:linear-gradient(180deg,#ffffff,ebe8e8);
 }
 .top-bar-inner{position:relative;height:100%}
 .logo{position:absolute;left:20px;top:50%;transform:translateY(-50%)}

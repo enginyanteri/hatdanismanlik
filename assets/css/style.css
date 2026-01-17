@@ -88,7 +88,9 @@ body{
 /* ================= HERO CONTENT – PREMIUM TEXT ================= */
 
 .hero-content{
-  max-width: 560px;
+  max-width: 520px;
+  margin-left: 0;        /* 🔒 sola sabit */
+  margin-right: auto;   /* sağ taraf boş */
 }
 
 /* BAŞLIK */

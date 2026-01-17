@@ -163,7 +163,7 @@ body{
 .hero-content p.hero-lead.secondary{
   margin-top: -10px;              /* Paragrafları yaklaştırır */
   margin-bottom: 22px;      /* CTA’ya nefes */
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   color: rgba(11,42,92,.82);       /* Bir tık daha yumuşak */
 }

@@ -82,8 +82,12 @@ body{
   position: relative;
   z-index:2;
   max-width: 1320px;
-  margin: 0 auto;          /* sadece yatay ortala */
-  padding: 0 40px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 0;
+
+  display: flex;
+  justify-content: flex-start; /* 🔒 SOLA KİLİT */
 }
 
 /* ================= HERO CONTENT – PREMIUM TEXT ================= */

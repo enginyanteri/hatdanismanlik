@@ -63,7 +63,7 @@ body{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start; /* 🔒 SOLA SABİT */
-  padding-top: 70px; /* ← burası ayar noktası */
+  padding-top: 95px; /* ← burası ayar noktası */
   overflow: hidden;
   background: transparent;         /* ❗ Arka plan wrapper’dan */
 }
@@ -84,7 +84,7 @@ body{
   max-width: 1320px;
   margin-left: 120px;
   margin-right: auto;
-  padding-left: 60px;
+  padding-left: 24px;
   padding-right: 0;
 }
 

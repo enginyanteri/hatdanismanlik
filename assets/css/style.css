@@ -45,7 +45,8 @@ body{
 /* ==================================================
    3. HERO
 ================================================== */
-.hero-main{
+.hero-main{ 
+  background-image: url("../images/hero/hero-bg.jpg")
   position: relative;
   min-height: 60vh;
   display: flex;

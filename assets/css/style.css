@@ -46,46 +46,75 @@ body{
    3. HERO
 ================================================== */
 .hero-main{
-  min-height: 85vh;           /* SENİN ORİJİNAL DEĞERİN */
+  min-height: 60vh;                 /* Hero ekran yüksekliği */
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
 
+  /* Arka plan görseli */
   background-image: url("../images/hero/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-
-  /* KRİTİK KISIM */
-  background-size: cover;     /* alanı doldurur */
+  background-size: cover;           /* Alanı doldurur */
 }
 
-/* Overlay */
+/* Overlay (okunabilirlik için) */
 .hero-main::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(10,42,102,.35);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 42, 102, 0.35);
+  z-index: 1;
 }
 
+/* İç konteyner */
 .hero-container{
   position: relative;
   z-index: 2;
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
 }
 
+/* Metin alanı */
 .hero-content h1{
   font-size: 42px;
   margin-bottom: 24px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero-content p{
   max-width: 520px;
   margin-bottom: 32px;
   line-height: 1.6;
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,0.9);
+}
+
+/* Buton */
+.btn-primary{
+  background: #1e4ed8;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover{
+  background: #1c3faa;
+}
+
+/* Sağ görsel */
+.hero-image img{
+  width: 100%;
+  max-width: 520px;
+  display: block;
 }
 
 /* ==================================================

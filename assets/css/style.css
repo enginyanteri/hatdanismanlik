@@ -50,15 +50,63 @@ body{
   display:flex;
   align-items:center;
 
-  /* HERO'DA RENK / GRADIENT YOK */
-  background:none;
+  background-image: url("../images/hero/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
 }
-.hero-container{max-width:1320px;margin:auto;padding:0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px}
-.hero-content h1{font-size:42px;margin-bottom:24px}
-.hero-content p{max-width:520px;margin-bottom:32px;line-height:1.6}
-.btn-primary{background:#1e4ed8;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none}
-.btn-primary:hover{background:#1c3faa}
-.hero-image img{width:100%;max-width:520px}
+
+/* OVERLAY */
+.hero-main::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(10,42,102,.45);
+}
+
+/* HERO İÇERİĞİ */
+.hero-container{
+  position: relative;   /* ZORUNLU */
+  z-index: 2;           /* ZORUNLU */
+  max-width:1320px;
+  margin:auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+}
+
+.hero-content h1{
+  font-size:42px;
+  margin-bottom:24px;
+  color:#fff;
+}
+
+.hero-content p{
+  max-width:520px;
+  margin-bottom:32px;
+  line-height:1.6;
+  color:rgba(255,255,255,.9);
+}
+
+.btn-primary{
+  background:#1e4ed8;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.btn-primary:hover{
+  background:#1c3faa;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:520px;
+}
 
 /* ==================================================
    4. TRUST BAR

@@ -62,6 +62,7 @@ body{
   height: 510px;                   /* 🔒 SABİT LANDING HERO */
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start; /* 🔒 SOLA SABİT */
   padding-top: 70px; /* ← burası ayar noktası */
   overflow: hidden;
   background: transparent;         /* ❗ Arka plan wrapper’dan */
@@ -81,7 +82,7 @@ body{
   position: relative;
   z-index:2;
   max-width: 1320px;
-  margin: auto;
+  margin: 0 auto;          /* sadece yatay ortala */
   padding: 0 40px;
 }
 

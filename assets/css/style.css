@@ -43,17 +43,27 @@ body{
 .header-spacer{height:140px}
 
 /* ==================================================
-   HERO
+   3. HERO (LANDING PAGE MODE)
 ================================================== */
 
-.hero-main{ 
+.hero-main{
   position: relative;
-  min-height: 60vh;
+  height: 720px;               /* 🔒 SABİT HERO */
   display: flex;
   align-items: center;
   overflow: hidden;
+  background: #0A2A66;         /* yedek renk */
+}
 
-  background: url("../images/hero/hero-bg.jpg") center / cover no-repeat;
+/* ARKA PLAN GÖRSEL */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/hero/hero-bg.jpg");
+  background-size: contain;    /* ❗ ZOOM YOK */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 /* OVERLAY */
@@ -61,14 +71,14 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(10,42,102,.35);
-  z-index: 1;
+  background: rgba(10,42,102,.25);
+  z-index: 2;
 }
 
 /* İÇERİK */
 .hero-container{
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
@@ -85,15 +95,6 @@ body{
   margin-bottom: 32px;
   line-height: 1.6;
   color: rgba(255,255,255,.9);
-}
-
-.btn-primary{
-  display: inline-block;
-  background: #1e4ed8;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
 }
 
 /* ==================================================

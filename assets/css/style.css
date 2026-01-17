@@ -43,10 +43,14 @@ body{
 .header-spacer{height:100px}
 
 /* ==================================================
-   3. HERO + 4.TRUST BAR (LANDING PAGE – TEK SAHNE)
+   3. HERO + 4. TRUST BAR
+   (Landing Page – Tek Sahne)
 ================================================== */
 
-/* GENEL WRAPPER */
+/* ==================================================
+   HERO WRAPPER
+   - Arka plan görseli burada tanımlanır
+================================================== */
 .hero-wrapper{
   position: relative;
   background-image: url("../images/hero/hero-bg.jpg");
@@ -55,20 +59,26 @@ body{
   background-repeat: no-repeat;
 }
 
-/* ================= HERO ================= */
-
+/* ==================================================
+   HERO ANA ALAN
+   - Yükseklik
+   - Sol hizalama
+================================================== */
 .hero-main{
   position: relative;
-  height: 510px;                   /* 🔒 SABİT LANDING HERO */
+  height: 510px;                  /* 🔒 Sabit landing hero */
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; /* 🔒 SOLA SABİT */
-  padding-top: 95px; /* ← burası ayar noktası */
+  justify-content: flex-start;    /* 🔒 Sola hizalı yapı */
+  padding-top: 95px;              /* 🔧 Dikey konum ayarı */
   overflow: hidden;
-  background: transparent;         /* ❗ Arka plan wrapper’dan */
+  background: transparent;        /* Arka plan wrapper’dan gelir */
 }
 
-/* HERO OVERLAY */
+/* ==================================================
+   HERO OVERLAY
+   - Arka planı hafif karartır
+================================================== */
 .hero-main::before{
   content:"";
   position:absolute;
@@ -77,49 +87,79 @@ body{
   z-index:1;
 }
 
-/* HERO İÇERİK */
+/* ==================================================
+   HERO CONTAINER
+   - Sayfa grid’i ile hizalama
+================================================== */
 .hero-container{
   position: relative;
-  z-index:2;
+  z-index:2;                      /* Overlay’in üstünde */
   max-width: 1320px;
   margin-left: 120px;
   margin-right: auto;
   padding-left: 10px;
-  padding-right: 0;
 }
 
-/* ================= HERO CONTENT – PREMIUM TEXT ================= */
-
+/* ==================================================
+   HERO CONTENT
+   - Metnin sağ sınırı burada belirlenir
+================================================== */
 .hero-content{
-  max-width: 700px;  /* ← İŞTE SAĞ SINIR */
-  margin-left: -70px;        /* 🔒 sola sabit */
+  max-width: 700px;               /* 🧠 Okunabilirlik sınırı */
+  margin-left: -70px;             /* 🔒 İnce sol kaydırma */
 }
 
-/* BAŞLIK */
+/* ==================================================
+   HERO EYEBROW (MİKRO SATIR)
+   - Konumlayıcı ifade
+================================================== */
+.hero-eyebrow{
+  display: inline-block;
+  margin-bottom: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+
+  color: rgba(11,42,92,.65);
+}
+
+/* ==================================================
+   HERO BAŞLIK (H1)
+================================================== */
 .hero-content h1{
   font-size: 42px;
   line-height: 1.26;
   font-weight: 700;
   letter-spacing: -0.35px;
   margin-bottom: 18px;
-  color: #0b2a5c; /* kurumsal koyu mavi */
+  color: #0b2a5c;
 }
 
-/* AÇIKLAMA */
+/* ==================================================
+   HERO PARAGRAF – ANA METİN
+================================================== */
 .hero-content p{
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 32px;
-  color: rgba(11,42,92,.88);
   max-width: 500px;
+  color: rgba(11,42,92,.88);
 }
 
+/* ==================================================
+   HERO PARAGRAF – SECONDARY
+   - Güven pekiştirme metni
+================================================== */
 .hero-content p.hero-lead.secondary{
-  margin-top: -12px;
-  color: rgba(11,42,92,.78);
+  margin-top: -12px;              /* Paragrafları yaklaştırır */
+  color: rgba(11,42,92,.78);       /* Bir tık daha yumuşak */
 }
 
-/* CTA BUTON */
+/* ==================================================
+   HERO CTA BUTON
+================================================== */
 .hero-main .btn-primary{
   display: inline-flex;
   align-items: center;
@@ -142,12 +182,12 @@ body{
   transition: all .25s ease;
 }
 
-/* Buton içindeki ok / span */
+/* Ok animasyonu */
 .hero-main .btn-primary span{
   transition: transform .25s ease;
 }
 
-/* Hover efekti */
+/* Hover */
 .hero-main .btn-primary:hover{
   transform: translateY(-2px);
   box-shadow:
@@ -158,21 +198,6 @@ body{
 .hero-main .btn-primary:hover span{
   transform: translateX(4px);
 }
-
-/* ================= HERO EYEBROW (MIKRO SATIR) ================= */
-
-.hero-eyebrow{
-  display: inline-block;
-  margin-bottom: 12px;
-
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: .6px;
-  text-transform: uppercase;
-
-  color: rgba(11,42,92,.65); /* h1 ile aynı tonun yumuşağı */
-}
-
 /* ================= TRUST BAR ================= */
 
 .trust-bar{

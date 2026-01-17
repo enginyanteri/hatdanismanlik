@@ -84,59 +84,49 @@ body{
   padding: 0 40px;
 }
 
-.hero-content h1{
-  font-size: 42px;
-  margin-bottom: 24px;
-  color: #fff;
-}
-
-.hero-content p{
-  max-width: 520px;
-  margin-bottom: 32px;
-  line-height: 1.6;
-  color: rgba(255,255,255,.9);
-}
 /* ================= HERO CONTENT – PREMIUM TEXT ================= */
 
 .hero-content{
-  max-width: 620px;
+  max-width: 560px;
   transform: translateY(-18px);
 }
 
+/* BAŞLIK */
 .hero-content h1{
   font-size: 44px;
-  line-height: 1.18;
+  line-height: 1.2;
   font-weight: 700;
-  letter-spacing: -0.3px;
-  margin-bottom: 22px;
-  color: #ffffff;
-  text-shadow: 0 6px 22px rgba(0,0,0,.35);
+  letter-spacing: -0.4px;
+  margin-bottom: 20px;
+  color: #0b2a5c; /* kurumsal koyu mavi */
 }
 
+/* AÇIKLAMA */
 .hero-content p{
   font-size: 17px;
   line-height: 1.65;
-  margin-bottom: 36px;
-  color: rgba(255,255,255,.88);
+  margin-bottom: 34px;
+  color: #3a4f6b; /* yumuşak mavi-gri */
+  max-width: 520px;
 }
 
+/* CTA BUTON */
 .hero-main .btn-primary{
   display: inline-block;
-  padding: 16px 36px;
+  padding: 14px 32px;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: .3px;
-  border-radius: 999px;
-  background: linear-gradient(135deg,#2563eb,#1e40af);
+  border-radius: 6px;
+  background: linear-gradient(180deg,#2b5ea8,#1f4f8a);
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 14px 34px rgba(30,64,175,.4);
+  box-shadow: 0 10px 24px rgba(31,79,138,.35);
   transition: all .25s ease;
 }
 
 .hero-main .btn-primary:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 20px 44px rgba(30,64,175,.5);
+  background: linear-gradient(180deg,#1f4f8a,#163e70);
+  transform: translateY(-1px);
 }
 
 /* ================= TRUST BAR ================= */

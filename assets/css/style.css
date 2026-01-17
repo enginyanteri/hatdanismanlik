@@ -131,11 +131,11 @@ body{
    HERO BAŞLIK (H1)
 ================================================== */
 .hero-content h1{
-  font-size: 40px;
-  line-height: 1.22;
+  font-size: 39px;
+  line-height: 1.2;
   font-weight: 700;
-  letter-spacing: -0.35px;
-  margin-bottom: 14px;
+  letter-spacing: -0.4px;
+  margin-bottom: 12px;
   color: #0b2a5c;
 }
 
@@ -144,8 +144,8 @@ body{
 ================================================== */
 .hero-content p{
   font-size: 15.5px;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.58;
+  margin-bottom: 22px;
   max-width: 500px;
   color: rgba(11,42,92,.88);
 }
@@ -155,10 +155,10 @@ body{
    - Güven pekiştirme metni
 ================================================== */
 .hero-content p.hero-lead.secondary{
-  margin-top: -8px;              /* Paragrafları yaklaştırır */
-  margin-bottom: 28px;      /* CTA’ya nefes */
-  font-size: 15px;
-  line-height: 1.55;
+  margin-top: -6px;              /* Paragrafları yaklaştırır */
+  margin-bottom: 22px;      /* CTA’ya nefes */
+  font-size: 14.8px;
+  line-height: 1.5;
   color: rgba(11,42,92,.78);       /* Bir tık daha yumuşak */
 }
 

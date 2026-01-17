@@ -91,8 +91,8 @@ body{
 /* ================= HERO CONTENT – PREMIUM TEXT ================= */
 
 .hero-content{
-  max-width: 680px;  /* ← İŞTE SAĞ SINIR */
-  margin-left: -50px;        /* 🔒 sola sabit */
+  max-width: 750px;  /* ← İŞTE SAĞ SINIR */
+  margin-left: -70px;        /* 🔒 sola sabit */
 }
 
 /* BAŞLIK */

@@ -97,7 +97,7 @@ body{
   position: relative;
   z-index:2;                      /* Overlay’in üstünde */
   max-width: 1320px;
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: auto;
   padding-left: 10px;
 

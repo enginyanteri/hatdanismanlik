@@ -43,71 +43,44 @@ body{
 .header-spacer{height:140px}
 
 /* ==================================================
-   3. HERO (SABİT & KONTROLLÜ)
+   3. HERO
 ================================================== */
 .hero-main{
-  height: calc(100vh - 140px); /* header hariç ekran */
-  max-height: 620px;           /* aşırı büyümesin */
-  min-height: 520px;
-
+  min-height: 60vh;      /* hero için ayrılan net alan */
   display: flex;
   align-items: center;
-
   position: relative;
-  overflow: hidden;
 
-  background-image: url("../images/hero/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  /* ARKA PLAN TAMAMEN KAPALI */
+  background: none;
 }
 
-/* Overlay */
+/* overlay de kapalı */
 .hero-main::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(10,42,102,0.35);
-  z-index: 1;
+  display: none;
 }
 
-/* İç içerik */
 .hero-container{
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
   max-width: 1320px;
   margin: auto;
   padding: 0 40px;
-
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
+  grid-template-columns: 1.1fr .9fr;
   gap: 60px;
 }
 
-/* Yazılar */
 .hero-content h1{
   font-size: 42px;
   margin-bottom: 24px;
-  color: #fff;
+  color: #0A2A66;
 }
 
 .hero-content p{
   max-width: 520px;
   margin-bottom: 32px;
   line-height: 1.6;
-  color: rgba(255,255,255,0.9);
+  color: #334155;
 }
-
-/* Sağ görsel varsa */
-.hero-image img{
-  width: 100%;
-  max-width: 520px;
-  display: block;
-}
-
 /* ==================================================
    4. TRUST BAR
 ================================================== */

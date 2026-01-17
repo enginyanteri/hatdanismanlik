@@ -114,6 +114,11 @@ body{
   max-width: 500px;
 }
 
+.hero-content p.hero-lead.secondary{
+  margin-top: -12px;
+  color: rgba(11,42,92,.8);
+}
+
 /* CTA BUTON */
 .hero-main .btn-primary{
   display: inline-flex;

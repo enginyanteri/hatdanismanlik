@@ -91,7 +91,7 @@ body{
 /* ================= HERO CONTENT – PREMIUM TEXT ================= */
 
 .hero-content{
-  max-width: 520px;
+  max-width: 520px;  /* ← İŞTE SAĞ SINIR */
   margin-left: 0;        /* 🔒 sola sabit */
 }
 

@@ -171,6 +171,15 @@ body{
 /* ==================================================
    HERO CTA BUTON
 ================================================== */
+
+/* ==================================================
+   HERO CTA – METİNDEN BAĞIMSIZ
+================================================== */
+
+.hero-cta{
+  margin-top: 20px;        /* yazıdan kopar */
+}
+
 .hero-main .btn-primary{
   display: inline-flex;
   align-items: center;

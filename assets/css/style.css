@@ -46,7 +46,7 @@ body{
    3. HERO
 ================================================== */
 .hero-main{
-  min-height:85vh;
+  min-height:70vh;
   display:flex;
   align-items:center;
 
@@ -111,6 +111,11 @@ body{
 /* ==================================================
    4. TRUST BAR
 ================================================== */
+.trust-bar{
+  margin-top:-60px;
+  position:relative;
+  z-index:5;
+}
 .trust-dark{background:linear-gradient(90deg,#0a2a66,#123b8a);padding:60px 0}
 .trust-container{max-width:1320px;margin:auto;padding:0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .trust-box{display:flex;gap:16px;color:#fff}

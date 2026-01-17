@@ -82,12 +82,10 @@ body{
   position: relative;
   z-index:2;
   max-width: 1320px;
-  margin: 0 auto;
+  margin-left: 120px;
+  margin-right: auto;
   padding-left: 40px;
   padding-right: 0;
-
-  display: flex;
-  justify-content: flex-start; /* 🔒 SOLA KİLİT */
 }
 
 /* ================= HERO CONTENT – PREMIUM TEXT ================= */
@@ -95,7 +93,6 @@ body{
 .hero-content{
   max-width: 520px;
   margin-left: 0;        /* 🔒 sola sabit */
-  margin-right: auto;   /* sağ taraf boş */
 }
 
 /* BAŞLIK */

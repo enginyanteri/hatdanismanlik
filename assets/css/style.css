@@ -153,6 +153,21 @@ body{
 .hero-main .btn-primary:hover span{
   transform: translateX(4px);
 }
+
+/* ================= HERO EYEBROW (MIKRO SATIR) ================= */
+
+.hero-eyebrow{
+  display: inline-block;
+  margin-bottom: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+
+  color: rgba(11,42,92,.65); /* h1 ile aynı tonun yumuşağı */
+}
+
 /* ================= TRUST BAR ================= */
 
 .trust-bar{

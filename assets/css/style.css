@@ -98,8 +98,19 @@ body{
 }
 
 .hero-main .btn-primary{
+  display: inline-block;
   background: #1e4ed8;
-  color: #fff;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  z-index: 3; /* overlay üstünde kalsın */
+}
+
+.hero-main .btn-primary:hover{
+  background: #1c3faa;
 }
 
 /* ================= TRUST BAR ================= */

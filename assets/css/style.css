@@ -16,7 +16,7 @@ body{
   top:0;
   left:0;
   width:100%;
-  height:110px;
+  height:100px;
   z-index:1000;
 
   /* SADECE HEADER GRADIENT */
@@ -24,7 +24,7 @@ body{
 }
 .top-bar-inner{position:relative;height:100%}
 .logo{position:absolute;left:20px;top:50%;transform:translateY(-50%)}
-.logo img{height:110px}
+.logo img{height:100px}
 .flags{position:absolute;right:20px;top:50%;transform:translateY(-50%);display:flex;gap:10px}
 .flags img{width:18px}
 

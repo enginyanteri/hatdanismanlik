@@ -184,7 +184,7 @@ body{
 
 .hero-main .btn-primary{
   display: inline-flex;
-  margin-top: -8px; /* 🔧 yukarı alır */ 
+  margin-top: -10px; /* 🔧 yukarı alır */ 
   align-items: center;
   gap: 10px;
 

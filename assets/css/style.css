@@ -285,7 +285,7 @@ body{
   stroke-width: 1.4;
   fill: none;
 
-  /* 🔥 DİKEY UZATMA (daha zarif shield) */
+  /* 🔥 DİKEY UZATMA (daha zarif shield / ampul) */
   transform: scaleY(1.18);
 
   /* ✨ Mavi-beyaz parlama */
@@ -294,6 +294,13 @@ body{
     drop-shadow(0 0 16px rgba(120,180,255,.4));
 
   transition: all .3s ease;
+}
+
+/* Hover */
+.trust-box:hover .trust-icon svg{
+  filter:
+    drop-shadow(0 0 8px rgba(160,200,255,.85))
+    drop-shadow(0 0 22px rgba(160,200,255,.45));
 }
 
 /* Hover durumunda hafif güçlenen glow */

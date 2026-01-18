@@ -221,34 +221,73 @@ body{
 .hero-main .btn-primary:hover span{
   transform: translateX(4px);
 }
+
 /* ================= TRUST BAR ================= */
 
+/* Ana alan – hero devamı gibi davranır */
 .trust-bar{
   position: relative;
-  z-index:2;
-  background: rgba(10,42,102,.5);   /* 🔥 %50 transparan */
-    /* backdrop-filter: blur(4px); */
-  padding: 40px 0;
+  z-index: 3;
+  padding: 40px 0 55px;
 }
 
+/* Cam / bant efekti */
+.trust-glass{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 32px 40px;
+
+  background: rgba(11,42,92,.55);
+  backdrop-filter: blur(6px);
+
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    0 10px 40px rgba(0,0,0,.25);
+}
+
+/* İç grid yapı */
 .trust-container{
-  max-width:1320px;
-  margin:auto;
-  padding:0 40px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
 
+/* Tek tek kolonlar */
 .trust-box{
-  display:flex;
-  gap:16px;
-  color:#fff;
+  padding: 0 32px;
+  text-align: center;
+  color: #fff;
 }
 
+/* Dikey ayırıcı çizgiler */
+.trust-box:not(:last-child){
+  border-right: 1px solid rgba(255,255,255,.25);
+}
+
+/* Icon */
 .trust-box img{
-  width:48px;
-  height:48px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  opacity: .95;
+}
+
+/* Başlık */
+.trust-box h3{
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: .2px;
+}
+
+/* Açıklama */
+.trust-box p{
+  font-size: 14px;
+  line-height: 1.45;
+  opacity: .9;
 }
 
 /* ==================================================

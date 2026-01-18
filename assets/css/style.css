@@ -321,6 +321,9 @@ body{
 /* Sadece 2. trust-box (ampul olan) */
 .trust-box:nth-child(2) .trust-icon svg{
   transform: scaleX(1.08); /* camı yatayda biraz tombullaştır */
+   filter:
+    drop-shadow(0 0 7px rgba(140,200,255,.75))
+    drop-shadow(0 0 18px rgba(140,200,255,.45));
 }
 
 /* Işık çizgileri biraz daha ince ve zarif */

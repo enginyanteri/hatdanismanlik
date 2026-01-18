@@ -279,15 +279,15 @@ body{
   height: 52px;
 
   stroke: #ffffff;
-  stroke-width: 1.6;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
 
   /* ✨ IŞIK / PARLAMA */
   filter:
-    drop-shadow(0 0 6px rgba(120,180,255,.65))
-    drop-shadow(0 0 14px rgba(120,180,255,.35));
+    drop-shadow(0 0 6px rgba(120,180,255,.7))
+    drop-shadow(0 0 14px rgba(120,180,255,.45));
 
   transition: all .3s ease;
 }

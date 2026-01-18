@@ -316,6 +316,19 @@ body{
   color: rgba(255,255,255,.78);
 }
 
+/* ================= AMPUL ÖZEL AYAR ================= */
+
+/* Sadece 2. trust-box (ampul olan) */
+.trust-box:nth-child(2) .trust-icon svg{
+  transform: scaleX(1.08); /* camı yatayda biraz tombullaştır */
+}
+
+/* Işık çizgileri biraz daha ince ve zarif */
+.trust-box:nth-child(2) svg path:nth-child(-n+6){
+  stroke-width: 1.2;
+  opacity: .9;
+}
+
 /* ==================================================
    5. SERVICES
 ================================================== */

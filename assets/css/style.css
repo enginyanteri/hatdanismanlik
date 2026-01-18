@@ -235,17 +235,18 @@ body{
 .trust-glass{
   max-width: 1320px;
   margin: 0 auto;
-  padding: 32px 40px;
+  padding: 36px 48px;
 
   background: rgba(11,42,92,.55);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-  border-top: 1px solid rgba(255,255,255,.25);
+  border-top: 1px solid rgba(255,255,255,.28);
   border-bottom: 1px solid rgba(255,255,255,.18);
 
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.25),
-    0 10px 40px rgba(0,0,0,.25);
+    0 14px 40px rgba(0,0,0,.28);
 }
 
 /* İç grid yapı */
@@ -257,23 +258,40 @@ body{
 
 /* Tek tek kolonlar */
 .trust-box{
-  padding: 0 32px;
+  padding: 0 36px;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Dikey ayırıcı çizgiler */
 .trust-box:not(:last-child){
-  border-right: 1px solid rgba(255,255,255,.25);
+  border-right: 1px solid rgba(255,255,255,.22);
 }
 
-/* Icon */
+/* ================= ICON ================= */
+
+/* Inline SVG veya img için ortak alan */
+.trust-icon,
 .trust-box img{
   width: 44px;
   height: 44px;
   margin-bottom: 14px;
-  opacity: .95;
+  display: inline-block;
 }
+
+/* Inline SVG parlaklık */
+.trust-icon svg{
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  color: #ffffff;
+
+  filter:
+    drop-shadow(0 0 6px rgba(255,255,255,.35))
+    drop-shadow(0 0 14px rgba(255,255,255,.18));
+}
+
+/* ================= TEXT ================= */
 
 /* Başlık */
 .trust-box h3{
@@ -281,13 +299,14 @@ body{
   font-weight: 600;
   margin-bottom: 6px;
   letter-spacing: .2px;
+  color: #ffffff;
 }
 
 /* Açıklama */
 .trust-box p{
   font-size: 14px;
-  line-height: 1.45;
-  opacity: .9;
+  line-height: 1.5;
+  color: rgba(255,255,255,.78);
 }
 
 /* ==================================================

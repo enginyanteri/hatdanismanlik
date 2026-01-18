@@ -270,31 +270,37 @@ body{
 
 /* ================= TRUST ICON (GLOW) ================= */
 
+/* Icon sarmalayıcı */
 .trust-icon{
   margin-bottom: 14px;
 }
 
+/* SVG ikon */
 .trust-icon svg{
   width: 48px;
   height: 48px;
 
+  /* Çizim ayarları */
   stroke: #ffffff;
-  stroke-width: 1.6;
+  stroke-width: 1.4;
   fill: none;
 
-  /* ✨ PARLAMA EFEKTİ */
+  /* 🔥 DİKEY UZATMA (daha zarif shield) */
+  transform: scaleY(1.18);
+
+  /* ✨ Mavi-beyaz parlama */
   filter:
-    drop-shadow(0 0 6px rgba(120,180,255,.65))
-    drop-shadow(0 0 14px rgba(120,180,255,.35));
+    drop-shadow(0 0 6px rgba(120,180,255,.6))
+    drop-shadow(0 0 16px rgba(120,180,255,.4));
 
   transition: all .3s ease;
 }
 
-/* Hover olursa hafif güçlensin */
+/* Hover durumunda hafif güçlenen glow */
 .trust-box:hover .trust-icon svg{
   filter:
     drop-shadow(0 0 8px rgba(160,200,255,.85))
-    drop-shadow(0 0 20px rgba(160,200,255,.45));
+    drop-shadow(0 0 22px rgba(160,200,255,.45));
 }
 
 /* ================= TEXT ================= */

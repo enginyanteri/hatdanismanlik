@@ -177,25 +177,27 @@
             <line x1="28" y1="56" x2="36" y2="56" />
       
 <!-- ================= GERÇEK DİŞLİ (6 DİŞ – DOLU FORM) ================= -->
-            
-             <g fill="none" stroke="none">
-            
-              <!-- ANA GÖVDE -->
-              <circle cx="32" cy="23" r="8" fill="currentColor"/>
-            
-              <!-- İÇ DELİK -->
-              <circle cx="32" cy="23" r="4" fill="#000"/>
-            
-              <!-- DİŞLER -->
-              <g transform="rotate(30 32 23)" fill="currentColor">
-            
-                <!-- 6 adet diş -->
-                <rect x="20" y="10"  width="5" height="3" rx="1"/>
-                <rect x="27" y="18"  width="5" height="3" rx="1" transform="rotate(60 32 23)"/>
-                <rect x="27" y="18"  width="5" height="3" rx="1" transform="rotate(120 32 23)"/>
-                <rect x="27" y="18"  width="5" height="3" rx="1" transform="rotate(180 32 23)"/>
-                <rect x="27" y="18"  width="5" height="3" rx="1" transform="rotate(240 32 23)"/>
-                <rect x="27" y="18"  width="5" height="3" rx="1" transform="rotate(300 32 23)"/>
+
+<g fill="none" stroke="none">
+
+  <!-- ANA GÖVDE -->
+  <circle cx="32" cy="23" r="8" fill="currentColor"/>
+
+  <!-- İÇ DELİK (arka plan görünür) -->
+  <circle cx="32" cy="23" r="4" fill="transparent"/>
+
+  <!-- DİŞLER -->
+  <g fill="currentColor">
+
+    <!-- Üst diş (referans) -->
+    <rect x="30" y="13" width="4" height="3" rx="1"/>
+
+    <!-- Diğer 5 diş -->
+    <rect x="30" y="13" width="4" height="3" rx="1" transform="rotate(60 32 23)"/>
+    <rect x="30" y="13" width="4" height="3" rx="1" transform="rotate(120 32 23)"/>
+    <rect x="30" y="13" width="4" height="3" rx="1" transform="rotate(180 32 23)"/>
+    <rect x="30" y="13" width="4" height="3" rx="1" transform="rotate(240 32 23)"/>
+    <rect x="30" y="13" width="4" height="3" rx="1" transform="rotate(300 32 23)"/>
 
                 
           </svg>

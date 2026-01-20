@@ -284,6 +284,11 @@ body{
   stroke-linejoin: round;
   fill: none;
 
+ .trust-icon svg line,
+ .trust-icon svg path{
+     fill: none;
+   }
+
   /* ✨ IŞIK / PARLAMA */
   filter:
     drop-shadow(0 0 6px rgba(120,180,255,.7))

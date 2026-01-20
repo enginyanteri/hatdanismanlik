@@ -179,20 +179,20 @@
 <!-- ================= GERÇEK DİŞLİ (ESKİ FORM – DELİKLİ) ================= -->
 
 <defs>
-  <mask id="gear-hole">
-    <!-- görünen alan -->
+  <mask id="gear-hole" maskUnits="userSpaceOnUse">
+    <!-- Her şeyi görünür yap -->
     <rect x="0" y="0" width="64" height="64" fill="white"/>
-    <!-- delik -->
+    <!-- Göbek deliği -->
     <circle cx="32" cy="25" r="4" fill="black"/>
   </mask>
 </defs>
 
 <g mask="url(#gear-hole)">
 
-  <!-- ANA GÖVDE (AYNI) -->
+  <!-- ANA GÖVDE (ESKİ HAL) -->
   <circle cx="32" cy="25" r="8" fill="currentColor"/>
 
-  <!-- DİŞLER (AYNI) -->
+  <!-- DİŞLER (ESKİ HAL) -->
   <g transform="rotate(30 32 25)" fill="currentColor">
     <rect x="29" y="15" width="5" height="3" rx="1"/>
     <rect x="29" y="15" width="5" height="3" rx="1" transform="rotate(60 32 25)"/>
@@ -200,7 +200,6 @@
     <rect x="29" y="15" width="5" height="3" rx="1" transform="rotate(180 32 25)"/>
     <rect x="29" y="15" width="5" height="3" rx="1" transform="rotate(240 32 25)"/>
     <rect x="29" y="15" width="5" height="3" rx="1" transform="rotate(300 32 25)"/>
-                
           </svg>
         </div>
 

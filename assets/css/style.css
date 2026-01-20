@@ -222,7 +222,10 @@ body{
   transform: translateX(4px);
 }
 
-/* ================= TRUST BAR ================= */
+/* =========================================================
+   TRUST BAR – GENEL ALTYAPI
+   Bu alan: tüm trust bar yapısını taşır
+   ========================================================= */
 
 /* Ana alan – hero devamı gibi davranır */
 .trust-bar{
@@ -231,7 +234,7 @@ body{
   padding: 40px 0 55px;
 }
 
-/* Cam / bant efekti */
+/* Cam / bant efekti (arka plan paneli) */
 .trust-glass{
   max-width: 1320px;
   margin: 0 auto;
@@ -249,14 +252,17 @@ body{
     0 14px 40px rgba(0,0,0,.28);
 }
 
-/* İç grid yapı */
+/* İç grid yapı – 3 kolon */
 .trust-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
 }
 
-/* Tek tek kolonlar */
+/* =========================================================
+   TRUST BOX – ORTAK KUTU STİLİ
+   Box 1, Box 2, Box 3 hepsi bunu kullanır
+   ========================================================= */
+
 .trust-box{
   padding: 0 36px;
   text-align: center;
@@ -268,7 +274,10 @@ body{
   border-right: 1px solid rgba(255,255,255,.22);
 }
 
-/* ================= TRUST ICON – AMPUL + GEAR ================= */
+/* =========================================================
+   ICON – ORTAK AYARLAR
+   TÜM SVG ICONLARIN TEMEL AYARLARI
+   ========================================================= */
 
 .trust-icon{
   margin-bottom: 14px;
@@ -278,13 +287,16 @@ body{
   width: 52px;
   height: 52px;
 
+  /* Çizgi karakteri */
   stroke: #ffffff;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  fill: none; /* ❗ SVG kendi içindeki fill’ler çalışsın */
+  /* ❗ SVG içindeki fill'ler kontrol edilsin diye */
+  fill: none;
 
+  /* Işık / parlama efekti */
   filter:
     drop-shadow(0 0 6px rgba(120,180,255,.7))
     drop-shadow(0 0 14px rgba(120,180,255,.45));
@@ -292,23 +304,16 @@ body{
   transition: all .3s ease;
 }
 
+/* Hover – tüm box’lar için ortak */
 .trust-box:hover .trust-icon svg{
   filter:
     drop-shadow(0 0 8px rgba(160,200,255,.85))
     drop-shadow(0 0 22px rgba(160,200,255,.45));
 }
 
-/* ================= box 3 ================= */
-
-.trust-icon svg {
-  width: 52px;
-  height: 52px;
-  color: #fff;
-}
-
-
-
-/* ================= TEXT ================= */
+/* =========================================================
+   TEXT – ORTAK METİN STİLİ
+   ========================================================= */
 
 /* Başlık */
 .trust-box h3{
@@ -326,21 +331,48 @@ body{
   color: rgba(255,255,255,.78);
 }
 
-/* ================= AMPUL ÖZEL AYAR ================= */
+/* =========================================================
+   BOX 1 – KALKAN (GENEL KORUMA / GÜVEN)
+   ========================================================= */
 
-/* Sadece 2. trust-box (ampul olan) */
+/* Şu an Box 1 için özel CSS yok
+   Gerekirse sadece buraya ekleyeceğiz */
+.trust-box:nth-child(1) {}
+
+/* =========================================================
+   BOX 2 – AMPUL + DİŞLİ (TEKNİK AKIL)
+   ========================================================= */
+
+/* Ampul camını biraz yatay tombullaştır */
 .trust-box:nth-child(2) .trust-icon svg{
-  transform: scaleX(1.08); /* camı yatayda biraz tombullaştır */
-   filter:
+  transform: scaleX(1.08);
+
+  filter:
     drop-shadow(0 0 7px rgba(140,200,255,.75))
     drop-shadow(0 0 18px rgba(140,200,255,.45));
 }
 
-/* Işık çizgileri biraz daha ince ve zarif */
+/* Ampul ışık çizgileri – daha ince */
 .trust-box:nth-child(2) svg path:nth-child(-n+6){
   stroke-width: 1.2;
   opacity: .9;
 }
+
+/* =========================================================
+   BOX 3 – RİSK AZALTMA (DİŞLİ + OK)
+   ========================================================= */
+
+/* Box 3 şu an sade.
+   Dişli + ok animasyonu veya
+   dönüş efekti buraya eklenecek */
+.trust-box:nth-child(3) {}
+
+/* Örnek (ileride):
+.trust-box:nth-child(3) svg {
+  transform: rotate(-10deg);
+}
+*/
+
 
 /* ==================================================
    5. SERVICES

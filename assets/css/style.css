@@ -302,7 +302,9 @@ body{
     drop-shadow(0 0 8px rgba(160,200,255,.85))
     drop-shadow(0 0 22px rgba(160,200,255,.45));
 }
-
+.trust-box {
+  background: red !important;
+}
 /* ================= TEXT ================= */
 
 /* Başlık */

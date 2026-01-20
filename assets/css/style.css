@@ -282,12 +282,8 @@ body{
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  fill: none;
 
- .trust-icon svg line,
- .trust-icon svg path{
-     fill: none;
-   }
+  fill: none;
 
   /* ✨ IŞIK / PARLAMA */
   filter:
@@ -297,14 +293,20 @@ body{
   transition: all .3s ease;
 }
 
+/* SVG içindeki tüm temel şekiller dolu olmasın */
+.trust-icon svg line,
+.trust-icon svg path,
+.trust-icon svg circle,
+.trust-icon svg rect{
+  fill: none;
+}
+
 .trust-box:hover .trust-icon svg{
   filter:
     drop-shadow(0 0 8px rgba(160,200,255,.85))
     drop-shadow(0 0 22px rgba(160,200,255,.45));
 }
-.trust-box {
-  background: red !important;
-}
+
 /* ================= TEXT ================= */
 
 /* Başlık */

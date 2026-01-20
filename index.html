@@ -212,16 +212,23 @@
 
       </div>
 
-<!-- ================= BOX 3 : 4 ÇAPLI REFERANS GÖVDE ================= -->
+<!-- ================= BOX 3 : DİŞLİ GÖVDE (SADECE HALKALAR) ================= -->
 <div class="trust-box">
 
   <div class="trust-icon">
 
     <svg viewBox="0 0 64 64" aria-hidden="true">
 
-      <!-- 4 ÇAPLI GÖVDE (DELİKLER GERÇEK DELİK) -->
+      <!--
+        İSTENEN YAPI:
+        - İç çap 8mm  -> DELİK (arka plan)
+        - 8–10mm      -> BEYAZ HALKA
+        - 10–14mm     -> DELİK (arka plan)
+        - 14–22mm     -> BEYAZ HALKA
+      -->
+
       <path
-        fill="currentColor"
+        fill="#ffffff"
         fill-rule="evenodd"
         d="
           M32 21
@@ -232,12 +239,12 @@
           A7 7 0 1 0 32.001 25
           Z
 
-          M32 27
-          A5 5 0 1 1 31.999 27
+          M32 20
+          A5 5 0 1 1 31.999 20
           Z
 
-          M32 28
-          A4 4 0 1 0 32.001 28
+          M32 25
+          A4 4 0 1 0 32.001 25
           Z
         "
       />

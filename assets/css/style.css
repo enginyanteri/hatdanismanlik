@@ -275,7 +275,7 @@ body{
 }
 
 .trust-icon svg{
-  width: 52px;              /* ince & uzun hissi */
+  width: 52px;
   height: 52px;
 
   stroke: #ffffff;
@@ -283,20 +283,13 @@ body{
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  /* ✨ IŞIK / PARLAMA */
+  fill: none; /* ❗ SVG kendi içindeki fill’ler çalışsın */
+
   filter:
     drop-shadow(0 0 6px rgba(120,180,255,.7))
     drop-shadow(0 0 14px rgba(120,180,255,.45));
 
   transition: all .3s ease;
-}
-
-/* SVG içindeki tüm temel şekiller dolu olmasın */
-.trust-icon svg line,
-.trust-icon svg path,
-.trust-icon svg circle,
-.trust-icon svg rect{
-  fill: none;
 }
 
 .trust-box:hover .trust-icon svg{

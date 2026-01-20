@@ -298,6 +298,16 @@ body{
     drop-shadow(0 0 22px rgba(160,200,255,.45));
 }
 
+/* ================= box 3 ================= */
+
+.trust-icon svg {
+  width: 52px;
+  height: 52px;
+  color: #fff;
+}
+
+
+
 /* ================= TEXT ================= */
 
 /* Başlık */

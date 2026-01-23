@@ -252,40 +252,72 @@
             <rect x="29" y="15" width="5" height="2" transform="rotate(324 32 32)" />
         </g>
 
-<!-- === AŞAMA 1.2 : KIRMIZI DEBUG ÇİZGİLERİ (EN DIŞ KONUM) === -->
-<g
-  stroke="red"
-  stroke-width="1"
-  stroke-linecap="round"
-  fill="none"
->
-  <!-- 15° -->
-  <g transform="rotate(15 32 32)">
-    <line x1="32" y1="2" x2="32" y2="11" />
-  </g>
-
-  <!-- 255° -->
-  <g transform="rotate(255 32 32)">
-    <line x1="32" y1="2" x2="32" y2="11" />
-      </g>
-    </g> <!-- 👈 EKSİK OLAN KAPAMA -->
+          <!-- === AŞAMA 1.2 : KIRMIZI DEBUG ÇİZGİLERİ (EN DIŞ KONUM) === -->
+          <g
+            stroke="red"
+            stroke-width="1"
+            stroke-linecap="round"
+            fill="none"
+          >
+            <!-- 15° -->
+            <g transform="rotate(15 32 32)">
+              <line x1="32" y1="2" x2="32" y2="11" />
+            </g>
+          
+            <!-- 255° -->
+            <g transform="rotate(255 32 32)">
+              <line x1="32" y1="2" x2="32" y2="11" />
+                </g>
+              </g> <!-- 👈 EKSİK OLAN KAPAMA -->
+                
+          <!-- === KIRMIZI DEBUG YAY (ÇAP 56 | 10°–190°) === -->
+          <path
+            d="
+              M 36.8 4.4
+              A 28 28 0 0 0 4.4 36.8
+              A 28 28 0 0 0 4.4 36.8
+            "
+            stroke="red"
+            stroke-width="1.5"
+            fill="none"
+          
+          />
+            
+          <!-- === MM ÖLÇEK ÇİZGİLERİ (ÇAP 50 | YAYLA AYNI DOĞRULTU) === -->
+                <!-- 4 KISA (1 mm) + 1 UZUN (5 mm) -->
+                <g
+                  stroke="currentColor"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  fill="none"
+                >
+                  <!-- 0 mm (uzun) -->
+                  <line x1="32" y1="7" x2="32" y2="13" />
+          
+                  <!-- 1–4 mm (kısa) -->
+                  <g transform="rotate(5 32 32)">
+                    <line x1="32" y1="8" x2="32" y2="11" />
+                  </g>
+                  <g transform="rotate(10 32 32)">
+                    <line x1="32" y1="8" x2="32" y2="11" />
+                  </g>
+                  <g transform="rotate(15 32 32)">
+                    <line x1="32" y1="8" x2="32" y2="11" />
+                  </g>
+                  <g transform="rotate(20 32 32)">
+                    <line x1="32" y1="8" x2="32" y2="11" />
+                  </g>
+          
+                  <!-- 5 mm (uzun) -->
+                  <g transform="rotate(25 32 32)">
+                    <line x1="32" y1="7" x2="32" y2="13" />
+                  </g>
+                </g>
+          
+              </svg>
+            </div>
+          </div>
       
-<!-- === KIRMIZI DEBUG YAY (ÇAP 56 | 10°–190°) === -->
-<path
-  d="
-    M 36.8 4.4
-    A 28 28 0 0 0 4.4 36.8
-    A 28 28 0 0 0 4.4 36.8
-  "
-  stroke="red"
-  stroke-width="1.5"
-  fill="none"
-
-/>
-  
-          </svg>
-        </div>
-
         <div class="trust-text">
           <h3>Yatırım Riski Azaltma</h3>
           <p>Makine ve proses kararlarında teknik risklerin önceden tespiti</p>

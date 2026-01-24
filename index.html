@@ -215,139 +215,109 @@
 <!-- ================= BOX 3 : DİŞLİ GÖVDE (SADECE HALKALAR) ================= -->
 <div class="trust-box">
 
+  <!-- ICON -->
   <div class="trust-icon">
-
     <svg viewBox="0 0 64 64" aria-hidden="true">
 
+      <!-- HALKALAR -->
       <path
         fill="currentColor"
         fill-rule="evenodd"
         d="
           M32 18
-          A14 14 0 1 0 32.001 18
-          Z
+          A14 14 0 1 0 32.001 18 Z
           M32 20
-          A12 12 0 1 0 32.001 20
-          Z
+          A12 12 0 1 0 32.001 20 Z
           M32 24
-          A8 8 0 1 0 32.001 24
-          Z
+          A8 8 0 1 0 32.001 24 Z
           M32 25
-          A7 7 0 1 0 32.001 25
-          Z
-          "
-        />
-          
-          <!-- DİŞLER -->
-          <g fill="currentColor">
-            <rect x="29" y="15" width="5" height="2" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(36 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(72 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(108 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(144 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(180 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(216 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(252 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(288 32 32)" />
-            <rect x="29" y="15" width="5" height="2" transform="rotate(324 32 32)" />
+          A7 7 0 1 0 32.001 25 Z
+        "
+      />
+
+      <!-- DİŞLER -->
+      <g fill="currentColor">
+        <rect x="29" y="15" width="5" height="2" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(36 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(72 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(108 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(144 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(180 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(216 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(252 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(288 32 32)" />
+        <rect x="29" y="15" width="5" height="2" transform="rotate(324 32 32)" />
+      </g>
+
+      <!-- DEBUG ÇİZGİLER -->
+      <g stroke="red" stroke-width="1" stroke-linecap="round" fill="none">
+
+        <!-- 15° -->
+        <g transform="rotate(15 32 32)">
+          <line x1="32" y1="2" x2="32" y2="11" />
         </g>
 
-          <!-- === AŞAMA 1.2 : KIRMIZI DEBUG ÇİZGİLERİ (EN DIŞ KONUM) === -->
-          <g
-            stroke="red"
-            stroke-width="1"
-            stroke-linecap="round"
-            fill="none"
-          >
-            <!-- 15° -->
-            <g transform="rotate(15 32 32)">
-              <line x1="32" y1="2" x2="32" y2="11" />
-            </g>
-          
-            <!-- 255° -->
-            <g transform="rotate(255 32 32)">
-              <line x1="32" y1="2" x2="32" y2="11" />
-                </g>
-              </g> <!-- 👈 EKSİK OLAN KAPAMA -->
-      
-                      <!-- === KIRMIZI DEBUG YAY (ÇAP 56 | 10°–190°) === -->
-                <path
-                  d="
-                    M 36.8 4.4
-                    A 28 28 0 0 0 4.4 36.8
-                    A 28 28 0 0 0 4.4 36.8
-                  "
-                  stroke="red"
-                  stroke-width="1.5"
-                  fill="none"
-                
-                />
+        <!-- 255° -->
+        <g transform="rotate(255 32 32)">
+          <line x1="32" y1="2" x2="32" y2="11" />
+        </g>
 
-                
-                <!-- === CETVEL YAYI (ÇAP 50 | 15°–255°) === -->
-                <g
-                  stroke="red"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  fill="none"
-                >
-                
-                  <!-- 15° → 255° arası her 5° bir çizgi -->
-                  <!-- 5° = 1mm kısa çizgi -->
-                  <!-- 25° = 5mm uzun çizgi -->
-                
-                  <!-- 15 -->
-                  <g transform="rotate(-15 32 32)">
-                    <line x1="32" y1="7" x2="32" y2="10" />
-                  </g>
-                
-                  <!-- 20 -->
-                  <g transform="rotate(-20 32 32)">
-                    <line x1="32" y1="7" x2="32" y2="10" />
-                  </g>
-                
-                  <!-- 25 (UZUN) -->
-                  <g transform="rotate(-25 32 32)">
-                    <line x1="32" y1="6" x2="32" y2="11" />
-                  </g>
-                
-                  <!-- 30 -->
-                  <g transform="rotate(-30 32 32)">
-                    <line x1="32" y1="7" x2="32" y2="10" />
-                  </g>
-                
-                  <!-- 35 -->
-                  <g transform="rotate(-35 32 32)">
-                    <line x1="32" y1="7" x2="32" y2="10" />
-                  </g>
-                
-                  <!-- 40 -->
-                  <g transform="rotate(-40 32 32)">
-                    <line x1="32" y1="7" x2="32" y2="10" />
-                  </g>
-                
-                  <!-- 45 (UZUN) -->
-                  <g transform="rotate(-45 32 32)">
-                    <line x1="32" y1="6" x2="32" y2="11" />
-                  </g>
+      </g>
 
-                </g>
-          
-              </svg>
-            </div>
-          </div>
-      
-        <div class="trust-text">
-          <h3>Yatırım Riski Azaltma</h3>
-          <p>Makine ve proses kararlarında teknik risklerin önceden tespiti</p>
-        </div>
+      <!-- DEBUG YAY (ÇAP 56 | 10°–190°) -->
+      <path
+        d="
+          M 36.8 4.4
+          A 28 28 0 0 0 4.4 36.8
+        "
+        stroke="red"
+        stroke-width="1.5"
+        fill="none"
+      />
 
-      </div>
+      <!-- CETVEL YAYI (ÇAP 50 | 15°–255°) -->
+      <g stroke="red" stroke-width="1" stroke-linecap="round" fill="none">
 
-    </div>
+        <g transform="rotate(-15 32 32)">
+          <line x1="32" y1="7" x2="32" y2="10" />
+        </g>
+
+        <g transform="rotate(-20 32 32)">
+          <line x1="32" y1="7" x2="32" y2="10" />
+        </g>
+
+        <g transform="rotate(-25 32 32)">
+          <line x1="32" y1="6" x2="32" y2="11" />
+        </g>
+
+        <g transform="rotate(-30 32 32)">
+          <line x1="32" y1="7" x2="32" y2="10" />
+        </g>
+
+        <g transform="rotate(-35 32 32)">
+          <line x1="32" y1="7" x2="32" y2="10" />
+        </g>
+
+        <g transform="rotate(-40 32 32)">
+          <line x1="32" y1="7" x2="32" y2="10" />
+        </g>
+
+        <g transform="rotate(-45 32 32)">
+          <line x1="32" y1="6" x2="32" y2="11" />
+        </g>
+
+      </g>
+
+    </svg>
   </div>
-</section>
 
+  <!-- TEXT -->
+  <div class="trust-text">
+    <h3>Yatırım Riski Azaltma</h3>
+    <p>Makine ve proses kararlarında teknik risklerin önceden tespiti</p>
+  </div>
+
+</div>
 </section>
 
     <!-- SERVICES -->

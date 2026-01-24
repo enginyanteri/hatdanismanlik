@@ -212,158 +212,80 @@
 
       </div>
 
-<!-- ================= BOX 3 : DİŞLİ GÖVDE (SADECE HALKALAR) ================= -->
+<!-- ================= BOX 3 : DİŞLİ GÖVDE ================= -->
 <div class="trust-box">
-
-  <!-- ICON -->
   <div class="trust-icon">
+
     <svg viewBox="0 0 64 64" aria-hidden="true">
 
-      <!-- HALKALAR -->
-      <path
-        fill="currentColor"
-        fill-rule="evenodd"
-        d="
-          M32 18
-          A14 14 0 1 0 32.001 18 Z
-          M32 20
-          A12 12 0 1 0 32.001 20 Z
-          M32 24
-          A8 8 0 1 0 32.001 24 Z
-          M32 25
-          A7 7 0 1 0 32.001 25 Z
-        "
-      />
+      <!-- TÜM GÖRSEL -->
+      <g transform="translate(0 3) scale(1.08)">
 
-      <!-- DİŞLER -->
-      <g fill="currentColor">
-        <rect x="29" y="15" width="5" height="2" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(36 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(72 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(108 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(144 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(180 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(216 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(252 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(288 32 32)" />
-        <rect x="29" y="15" width="5" height="2" transform="rotate(324 32 32)" />
-      </g>
+        <!-- HALKALAR -->
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="
+            M32 18
+            A14 14 0 1 0 32.001 18 Z
+            M32 20
+            A12 12 0 1 0 32.001 20 Z
+            M32 24
+            A8 8 0 1 0 32.001 24 Z
+            M32 25
+            A7 7 0 1 0 32.001 25 Z
+          "
+        />
 
-      <!-- DEBUG ÇİZGİLER -->
-      <g stroke="red" stroke-width="1" stroke-linecap="round" fill="none">
-
-        <!-- 15° -->
-        <g transform="rotate(15 32 32)">
-          <line x1="32" y1="2" x2="32" y2="11" />
+        <!-- DİŞLER -->
+        <g fill="currentColor">
+          <rect x="29" y="15" width="5" height="2" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(36 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(72 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(108 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(144 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(180 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(216 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(252 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(288 32 32)" />
+          <rect x="29" y="15" width="5" height="2" transform="rotate(324 32 32)" />
         </g>
 
-        <!-- 275° -->
-        <g transform="rotate(275 32 32)">
-          <line x1="32" y1="2" x2="32" y2="11" />
+        <!-- YAY (ÇAP 56) -->
+        <path
+          d="
+            M 36.8 4.4
+            A 28 28 0 0 0 4.43 27.16
+          "
+          stroke="currentColor"
+          stroke-width="1.2"
+          fill="none"
+        />
+
+        <!-- CETVEL ÇİZGİLERİ -->
+        <g stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none">
+          <g transform="rotate(10 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(5 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(0 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(-5 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(-10 32 32)"><line x1="32" y1="6" x2="32" y2="11" /></g>
+          <g transform="rotate(-15 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(-20 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(-25 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
+          <g transform="rotate(-30 32 32)"><line x1="32" y1="8" x2="32" y2="11" /></g>
         </g>
 
-      </g>
-
-<!-- 10° → 30° YAY | ÇAP 56 -->
-<path
-  d="
-    M 36.8 4.4
-    A 28 28 0 0 0 4.43 27.16
-  "
-  stroke="red"
-  stroke-width="1.2"
-  fill="none"
-/>
-
-      <!-- CETVEL YAYI (ÇAP 50 | 15°–255°) -->
-      <g stroke="red" stroke-width="1" stroke-linecap="round" fill="none">
-
-        <g transform="rotate(10 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(5 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(0 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-5 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-10 32 32)">
-          <line x1="32" y1="6" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-15 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-20 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-25 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-30 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-35 32 32)">
-          <line x1="32" y1="6" x2="32" y2="11" />
-        </g>
-        
-        <g transform="rotate(-40 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-45 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-50 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-55 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-60 32 32)">
-          <line x1="32" y1="6" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-65 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-70 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-75 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>
-
-        <g transform="rotate(-80 32 32)">
-          <line x1="32" y1="8" x2="32" y2="11" />
-        </g>     
-        
-                <!-- MERKEZ + İŞARETİ -->
-        <g class="debug" stroke="red" stroke-width="0.6" stroke-linecap="round">
+        <!-- MERKEZ + -->
+        <g stroke="currentColor" stroke-width="0.6" stroke-linecap="round">
           <line x1="32" y1="29" x2="32" y2="35" />
           <line x1="29" y1="32" x2="35" y2="32" />
         </g>
-      </g>
 
+      </g>
     </svg>
+
   </div>
- </div>
+</div>
       
   <!-- TEXT -->
   <div class="trust-text">

@@ -72,6 +72,7 @@ body{
   align-items: flex-start;
   justify-content: flex-start;    /* 🔒 Sola hizalı yapı */
   padding-top: 70px;              /* 🔧 Dikey konum ayarı */
+  padding-bottom: 90px; /* 🔧 Trust bar alanı */
   overflow: hidden;
   background: transparent;        /* Arka plan wrapper’dan gelir */
 }
@@ -227,11 +228,13 @@ body{
    Bu alan: tüm trust bar yapısını taşır
    ========================================================= */
 
-/* Ana alan – hero devamı gibi davranır */
 .trust-bar{
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: -70px;   /* 🔧 Hero’nun altına taşır */
+  width: 100%;
   z-index: 3;
-  padding: 40px 0 55px;
+  padding: 0;
 }
 
 /* Cam / bant efekti (arka plan paneli) */

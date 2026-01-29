@@ -67,11 +67,11 @@ body{
 ================================================== */
 .hero-main{
   position: relative;
-  height: 470px;                  /* 🔒 Sabit landing hero */
+  height: 485px;                  /* 🔒 Sabit landing hero */
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;    /* 🔒 Sola hizalı yapı */
-  padding-top: 25px;              /* 🔧 Dikey konum ayarı */
+  padding-top: 40px;              /* 🔧 Dikey konum ayarı */
   overflow: hidden;
   background: transparent;        /* Arka plan wrapper’dan gelir */
 }

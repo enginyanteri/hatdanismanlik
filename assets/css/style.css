@@ -240,17 +240,14 @@ body{
 .trust-glass{
   max-width: 1320px;
   margin: 0 auto;
-  padding: 5px 20px;
+  padding: 24px 32px;
 
-   /* ⬇️ RENK YOK */
   background: transparent;
 
-  /* ⬇️ SADECE BULANIKLIK */
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 
-border: none;
-box-shadow: none;
+  box-shadow: none;
 }
 
 /* İç grid yapı – 3 kolon */

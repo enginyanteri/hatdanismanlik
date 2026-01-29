@@ -233,14 +233,14 @@ body{
 .trust-bar{
   position: relative;   /* 🔑 EN KRİTİK SATIR */
   z-index: 2;
-  padding: 0 0 40px;
+  padding: 0 0 1px;
 }
 
 /* Cam / bant efekti (arka plan paneli) */
 .trust-glass{
   max-width: 1320px;
   margin: 0 auto;
-  padding: 36px 48px;
+  padding: 6px 20px;
 
   background: rgba(11,42,92,.55);
   backdrop-filter: blur(8px);

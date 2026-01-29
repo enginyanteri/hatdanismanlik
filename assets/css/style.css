@@ -71,7 +71,7 @@ body{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;    /* 🔒 Sola hizalı yapı */
-  padding-top: 55px;              /* 🔧 Dikey konum ayarı */
+  padding-top: 25px;              /* 🔧 Dikey konum ayarı */
   overflow: hidden;
   background: transparent;        /* Arka plan wrapper’dan gelir */
 }

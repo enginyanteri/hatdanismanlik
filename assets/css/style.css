@@ -54,10 +54,12 @@ body{
 .hero-wrapper{
   position: relative;
   background-image: url("../images/hero/hero-bg.jpg");
-  background-size: cover;
-  background-position: center 25%;
+
+  background-size: 100% auto;   /* 👈 KRİTİK SATIR */
+  background-position: center top;
   background-repeat: no-repeat;
-  background-color:#0b2a5c;
+
+  background-color:#0b2a5c;     /* boşluk kalırsa diye */
 }
 
 /* ==================================================

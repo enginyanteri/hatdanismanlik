@@ -249,12 +249,8 @@ body{
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
-  /* ⬇️ CAM DEĞİL, ÇOK HAFİF AYIRICI */
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.05);
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,.12);
+border: none;
+box-shadow: none;
 }
 
 /* İç grid yapı – 3 kolon */

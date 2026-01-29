@@ -246,8 +246,8 @@ body{
   background: transparent;
 
   /* ⬇️ SADECE BULANIKLIK */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   /* ⬇️ CAM DEĞİL, ÇOK HAFİF AYIRICI */
   border-top: 1px solid rgba(255,255,255,.08);

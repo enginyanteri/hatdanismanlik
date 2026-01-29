@@ -107,11 +107,12 @@ body{
   pointer-events:none;
 
   background: linear-gradient(
-    90deg,
-    rgba(255,255,255,.30) 0%,
-    rgba(255,255,255,.20) 35%,
-    rgba(255,255,255,.10) 60%,
-    rgba(255,255,255,0) 100%
+  90deg,
+  rgba(255,255,255,0) 0%,
+  rgba(255,255,255,.20) 20%,
+  rgba(255,255,255,.12) 45%,
+  rgba(255,255,255,.06) 65%,
+  rgba(255,255,255,0) 100%
   );
 
   border-radius: 12px;

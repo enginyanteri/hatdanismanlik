@@ -76,6 +76,23 @@ body{
   background: transparent;        /* Arka plan wrapper’dan gelir */
 }
 
+/* 👇 YENİ EKLENEN BLOK */
+.hero-main::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(11,42,92,.55) 0%,
+    rgba(11,42,92,.38) 30%,
+    rgba(11,42,92,.18) 48%,
+    rgba(11,42,92,0) 65%
+  );
+}
+
 /* ==================================================
    HERO CONTAINER
    - Sayfa grid’i ile hizalama

@@ -230,7 +230,7 @@ body{
 .trust-bar{
   position: relative;   /* 🔑 EN KRİTİK SATIR */
   z-index: 2;
-  padding: 0 0 5px;
+  padding: 0 0 1px;
 }
 
 /* Cam / bant efekti (arka plan paneli) */

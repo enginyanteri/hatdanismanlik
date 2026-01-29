@@ -80,7 +80,7 @@ body{
    HERO OVERLAY
    - Arka planı hafif karartır
 ================================================== */
-.hero-main::before{
+/* .hero-main::before{
   content:"";
   position:absolute;
   inset:0;
@@ -93,7 +93,7 @@ body{
   );
 
   z-index:1;
-}
+} */
 
 /* ==================================================
    HERO CONTAINER

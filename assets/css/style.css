@@ -67,7 +67,7 @@ body{
 ================================================== */
 .hero-main{
   position: relative;
-  height: 490px;                  /* 🔒 Sabit landing hero */
+  height: 450px;                  /* 🔒 Sabit landing hero */
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;    /* 🔒 Sola hizalı yapı */

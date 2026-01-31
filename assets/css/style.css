@@ -284,12 +284,12 @@ body{
   pointer-events:none;
 
   background: linear-gradient(
-    90deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,.18) 25%,
-    rgba(255,255,255,.12) 50%,
-    rgba(255,255,255,.06) 70%,
-    rgba(255,255,255,0) 100%
+  90deg,
+  rgba(11,42,92,0) 0%,
+  rgba(11,42,92,.18) 25%,
+  rgba(11,42,92,.12) 50%,
+  rgba(11,42,92,.06) 70%,
+  rgba(11,42,92,0) 100%
   );
 
   border-radius: 8px;

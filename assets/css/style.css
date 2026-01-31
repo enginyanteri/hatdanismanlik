@@ -532,6 +532,30 @@ body{
   to{transform:rotate(360deg) scale(1.15);}
 }
 
+/* ========================================
+   TRUST BAR – COLOR BALANCE OVERRIDE
+   Efektler korunur, renkler dengelenir
+   ======================================== */
+
+.trust-box:hover .trust-icon svg{
+  stroke: #2f6fd6 !important;
+}
+
+.trust-box:hover h3{
+  color: #2f6fd6 !important;
+}
+
+.trust-box:hover p{
+  color: rgba(255,255,255,.95) !important;
+}
+
+
+/* Canlılık için hafif kontrast */
+.trust-box:hover{
+  filter: saturate(1.15) brightness(1.05);
+}
+
+
 /* ==================================================
    5. SERVICES
 ================================================== */

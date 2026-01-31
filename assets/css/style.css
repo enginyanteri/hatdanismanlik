@@ -324,8 +324,8 @@ body{
 
   /* Işık / parlama efekti */
   filter:
-  drop-shadow(0 0 6px rgba(234,242,255,.35))
-  drop-shadow(0 0 14px rgba(234,242,255,.25));
+   drop-shadow(0 0 4px rgba(234,242,255,.25))
+   drop-shadow(0 0 10px rgba(234,242,255,.18));
 
   transition: all .3s ease;
 }

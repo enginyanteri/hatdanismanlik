@@ -440,6 +440,76 @@ body{
     0 0 24px rgba(180,220,255,.35);
 }
 
+/* =========================================================
+   TRUST BAR – ICON MASTER EFFECT (1+2+3 PAKET)
+   ========================================================= */
+
+/* 1️⃣ + 2️⃣ → Idle Glow + Smooth Transition */
+.trust-icon svg{
+  transition: 
+    transform .35s ease,
+    filter .35s ease;
+    
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+/* Hafif sürekli parıltı */
+@keyframes softGlow{
+  0%,100%{
+    filter: drop-shadow(0 0 6px rgba(234,242,255,.25));
+  }
+  50%{
+    filter: drop-shadow(0 0 14px rgba(234,242,255,.5));
+  }
+}
+
+/* Hover → Güçlü glow + büyüme */
+.trust-box:hover .trust-icon svg{
+  transform: scale(1.18);
+  filter:
+    drop-shadow(0 0 12px rgba(234,242,255,.9))
+    drop-shadow(0 0 28px rgba(234,242,255,.6));
+}
+
+
+/* =========================================================
+   3️⃣ BOX’A ÖZEL KARAKTER ANİMASYONLARI
+   ========================================================= */
+
+/* 🛡 BOX 1 – Pulse (Güven hissi) */
+.trust-box:nth-child(1):hover svg{
+  animation: pulseShield .9s ease infinite;
+}
+
+@keyframes pulseShield{
+  0%{transform:scale(1.05);}
+  50%{transform:scale(1.22);}
+  100%{transform:scale(1.05);}
+}
+
+
+/* 💡 BOX 2 – Hafif Tilt + Bounce */
+.trust-box:nth-child(2):hover svg{
+  animation: smartBounce .8s ease infinite;
+}
+
+@keyframes smartBounce{
+  0%{transform:scale(1.15) rotate(0);}
+  50%{transform:scale(1.22) rotate(6deg);}
+  100%{transform:scale(1.15) rotate(0);}
+}
+
+
+/* ⚙ BOX 3 – Slow Spin */
+.trust-box:nth-child(3):hover svg{
+  animation: gearSpin 1.4s linear infinite;
+}
+
+@keyframes gearSpin{
+  from{transform:rotate(0) scale(1.15);}
+  to{transform:rotate(360deg) scale(1.15);}
+}
+
 /* ==================================================
    5. SERVICES
 ================================================== */

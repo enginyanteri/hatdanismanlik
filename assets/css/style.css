@@ -419,7 +419,7 @@ body{
 
 /* Hover olunca tüm kutu büyüsün */
 .trust-box:hover{
-  transform: scale(1.25);
+  transform: scale(1.10);
   z-index: 5;
 }
 

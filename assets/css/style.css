@@ -463,15 +463,10 @@ body{
 }
 
 /* =========================================================
-   TRUST BAR – ICON MASTER EFFECT (1+2+3 PAKET)
+   TRUST BAR – ICON MASTER EFFECT
    ========================================================= */
 
-/* 1️⃣ + 2️⃣ → Idle Glow + Smooth Transition */
 .trust-icon svg{
-  transition: 
-    transform .35s ease,
-    filter .35s ease;
-    
   animation: softGlow 4s ease-in-out infinite;
 }
 
@@ -484,15 +479,6 @@ body{
     filter: drop-shadow(0 0 14px rgba(234,242,255,.5));
   }
 }
-
-/* Hover → Güçlü glow + büyüme */
-.trust-box:hover .trust-icon svg{
-  transform: scale(1.18);
-  filter:
-    drop-shadow(0 0 12px rgba(234,242,255,.9))
-    drop-shadow(0 0 28px rgba(234,242,255,.6));
-}
-
 
 /* =========================================================
    3️⃣ BOX’A ÖZEL KARAKTER ANİMASYONLARI

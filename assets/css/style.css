@@ -490,9 +490,9 @@ body{
 }
 
 @keyframes pulseShield{
-  0%{transform:scale(1.05);}
+  0%{transform:scale(1.15);}
   50%{transform:scale(1.22);}
-  100%{transform:scale(1.05);}
+  100%{transform:scale(1.15);}
 }
 
 
@@ -503,7 +503,7 @@ body{
 
 @keyframes smartBounce{
   0%{transform:scale(1.15) rotate(0);}
-  50%{transform:scale(1.22) rotate(6deg);}
+  50%{transform:scale(1.22) rotate(5deg);}
   100%{transform:scale(1.15) rotate(0);}
 }
 
@@ -518,29 +518,28 @@ body{
   to{transform:rotate(360deg) scale(1.15);}
 }
 
+
 /* ========================================
-   TRUST BAR – COLOR BALANCE OVERRIDE
-   Efektler korunur, renkler dengelenir
+   TRUST BAR – COLOR BALANCE
    ======================================== */
 
 .trust-box:hover .trust-icon svg{
-  stroke: #2f6fd6 !important;
+  stroke: #2f6fd6;
 }
 
 .trust-box:hover h3{
-  color: #2f6fd6 !important;
+  color: #2f6fd6;
 }
 
 .trust-box:hover p{
-  color: rgba(255,255,255,.95) !important;
+  color: rgba(255,255,255,.95);
 }
 
 
-/* Canlılık için hafif kontrast */
+/* Canlılık – hafif kontrast */
 .trust-box:hover{
-  filter: saturate(1.15) brightness(1.05);
+  filter: saturate(1.12) brightness(1.04);
 }
-
 
 /* ==================================================
    5. SERVICES

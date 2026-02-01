@@ -464,8 +464,8 @@ body{
 
 /* Icon rengi */
 .trust-box:hover .trust-icon svg{
-  stroke: var(--cta-blue-1);
-  color: var(--cta-blue-1);
+  stroke: var(--cta-blue-2);
+  color: var(--cta-blue-2);
 
   filter:
     drop-shadow(0 0 6px rgba(47,111,214,.45));

@@ -273,6 +273,7 @@ body{
   text-align: center;
   color: #eaf2ff;
   text-shadow: 0 1px 3px rgba(11,42,92,.35);
+  will-change: transform; /* 🔥 bunu ekle */   
 }
 
 /* 👇 TRUST BAR OKUNURLUK DESTEĞİ */

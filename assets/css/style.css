@@ -439,6 +439,71 @@ body{
   to{transform:rotate(360deg) scale(1.15);}
 }
 
+/* =========================================
+   TRUST BOX – CTA UYUMLU PREMIUM HOVER
+========================================= */
+
+/* CTA gradient rengi değişken yapalım */
+:root{
+  --cta-grad: linear-gradient(180deg,#2f6fd6,#1f4f8a);
+  --cta-blue: #2f6fd6;
+}
+
+
+/* BOX genel animasyon */
+.trust-box{
+  transition: all .35s ease;
+}
+
+
+/* ICON + TEXT birlikte büyüsün */
+.trust-box:hover{
+  transform: scale(1.08);
+}
+
+
+/* ICON renk + glow */
+.trust-box:hover .trust-icon svg{
+  stroke: var(--cta-blue);
+  color: var(--cta-blue);
+
+  filter:
+    drop-shadow(0 0 8px rgba(47,111,214,.7))
+    drop-shadow(0 0 18px rgba(31,79,138,.6));
+}
+
+
+/* Başlık CTA rengine geçsin */
+.trust-box:hover h3{
+  background: var(--cta-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Açıklama yazısı maviye yakın */
+.trust-box:hover p{
+  color: rgba(210,225,255,.95);
+}
+
+
+/* Hafif kart hissi */
+.trust-box:hover::before{
+  background: linear-gradient(
+    90deg,
+    rgba(47,111,214,.25),
+    rgba(31,79,138,.18),
+    rgba(47,111,214,.25)
+  );
+}
+
+
+/* Hover sırasında daha premium gölge */
+.trust-box:hover{
+  box-shadow:
+    0 12px 32px rgba(31,79,138,.45),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
 
 /* ==================================================
    5. SERVICES

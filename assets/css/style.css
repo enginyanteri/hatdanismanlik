@@ -519,28 +519,6 @@ body{
 }
 
 
-/* ========================================
-   TRUST BAR – COLOR BALANCE
-   ======================================== */
-/* 
-.trust-box:hover .trust-icon svg{
-  stroke: #2f6fd6;
-}
-
-.trust-box:hover h3{
-  color: #2f6fd6;
-}
-
-.trust-box:hover p{
-  color: rgba(255,255,255,.95);
-}
-
-
-/* Canlılık – hafif kontrast */
-.trust-box:hover{
-  filter: saturate(1.12) brightness(1.04);
-}
-*/
 /* ==================================================
    5. SERVICES
 ================================================== */

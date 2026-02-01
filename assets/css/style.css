@@ -430,7 +430,7 @@ body{
 }
 
 
-/* Hover → ikon büyüsün + rengi değişsin */
+/* /* Hover → ikon büyüsün + rengi değişsin */
 .trust-box:hover .trust-icon svg{
   transform: scale(1.15);
 
@@ -461,7 +461,7 @@ body{
 .trust-box:hover p{
   text-shadow: 0 0 6px rgba(127,178,255,.25);
 }
-
+*/
 /* =========================================================
    TRUST BAR – ICON MASTER EFFECT
    ========================================================= */

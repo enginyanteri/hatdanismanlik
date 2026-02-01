@@ -482,16 +482,6 @@ body{
 .trust-box:hover p{
   color: rgba(220,230,255,.95);
 }
-
-
-/* Arka planı hafif canlandır */
-.trust-box:hover::before{
-  background: linear-gradient(
-    90deg,
-    rgba(47,111,214,.15),
-    rgba(31,79,138,.08),
-    rgba(47,111,214,.15)
-  );
 }
 
 /* ==================================================

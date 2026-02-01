@@ -402,85 +402,6 @@ body{
 */
 
 /* =========================================================
-   TRUST BAR – HOVER SÜPER EFEKT
-   ========================================================= */
-
-/* Box genel animasyon */
-.trust-box{
-  transition: transform .3s ease;
-}
-
-
-/* Yazı + ikon animasyon */
-.trust-box h3,
-.trust-box p,
-.trust-icon svg{
-  transition: 
-    transform .3s ease,
-    color .3s ease,
-    stroke .3s ease,
-    filter .3s ease;
-}
-
-
-/* Hover → hafif büyüme */
-.trust-box:hover{
-  transform: scale(1.015) translateY(-2px);
-  z-index: 5;
-}
-
-
-/* /* Hover → ikon büyüsün + rengi değişsin */
-.trust-box:hover .trust-icon svg{
-  transform: scale(1.15);
-
-  /* Lacivert-mavi arası premium renk */
-  stroke: #7fb2ff;
-
-  /* Hafif glow (abartısız) */
-  filter:
-    drop-shadow(0 0 6px rgba(127,178,255,.45))
-    drop-shadow(0 0 14px rgba(127,178,255,.25));
-}
-
-
-/* Hover → başlık rengi değişsin */
-.trust-box:hover h3{
-  color: #7fb2ff;
-}
-
-
-/* Hover → açıklama biraz açısın */
-.trust-box:hover p{
-  color: rgba(234,242,255,.95);
-}
-
-
-/* Hover → yazıya hafif ışık */
-.trust-box:hover h3,
-.trust-box:hover p{
-  text-shadow: 0 0 6px rgba(127,178,255,.25);
-}
-*/
-/* =========================================================
-   TRUST BAR – ICON MASTER EFFECT
-   ========================================================= */
-
-.trust-icon svg{
-  animation: softGlow 4s ease-in-out infinite;
-}
-
-/* Hafif sürekli parıltı */
-@keyframes softGlow{
-  0%,100%{
-    filter: drop-shadow(0 0 6px rgba(234,242,255,.25));
-  }
-  50%{
-    filter: drop-shadow(0 0 14px rgba(234,242,255,.5));
-  }
-}
-
-/* =========================================================
    3️⃣ BOX’A ÖZEL KARAKTER ANİMASYONLARI
    ========================================================= */
 
@@ -516,28 +437,6 @@ body{
 @keyframes gearSpin{
   from{transform:rotate(0) scale(1.15);}
   to{transform:rotate(360deg) scale(1.15);}
-}
-
-/* ========================================
-   TRUST BAR – COLOR BALANCE
-   ======================================== */
-
-.trust-box:hover .trust-icon svg{
-  stroke: #2f6fd6;
-}
-
-.trust-box:hover h3{
-  color: #2f6fd6;
-}
-
-.trust-box:hover p{
-  color: rgba(255,255,255,.95);
-}
-
-
-/* Canlılık – hafif kontrast */
-.trust-box:hover{
-  filter: saturate(1.12) brightness(1.04);
 }
 
 

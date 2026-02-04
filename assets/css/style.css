@@ -648,7 +648,7 @@ body{
 
 .references{
   padding:60px 0;
-  background:#f8fafc;
+  background:rgba(0, 128, 255, 0.15); /* MAVİ */
 }
 
 .references-container{
@@ -690,7 +690,7 @@ body{
 
 .pre-cta-slogan{
   padding:40px 0;
-  background:linear-gradient(180deg,#f8fbff,#eef5ff);
+  background:rgba(0, 200, 120, 0.18); /* YEŞİL */
   text-align:center;
 }
 
@@ -709,7 +709,7 @@ body{
 
 .cta{
   padding:40px 0;
-  background:linear-gradient(90deg,#0A2A66,#123B8A);
+  background:rgba(255, 140, 0, 0.22); /* TURUNCU */
   color:#fff;
   text-align:center;
 }

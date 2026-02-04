@@ -687,8 +687,7 @@ body{
 
 /* 2. SAHNE : SERVICES */
 .services-section{
-  min-height: calc(100vh - var(--header-height));
-
-  display: flex;
-  align-items: center;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  display: block;
 }

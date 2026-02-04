@@ -651,7 +651,7 @@ body{
   background:rgba(0, 128, 255, 0.15);
 
   flex: 1;           /* 🔑 3. scroll'u taşıyan ana alan */
-  min-height: 55vh;  /* 🔑 ilk girişte ekran doluluğu */
+  min-height: 40vh;  /* 🔑 ilk girişte ekran doluluğu */
 }
 
 .references-container{

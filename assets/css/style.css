@@ -645,28 +645,121 @@ body{
 /* ==================================================
    6. REFERENCES
 ================================================== */
-.references{padding:80px 0;background:#f8fafc}
-.references-container{max-width:1320px;margin:auto;padding:0 40px;display:flex;flex-direction:column;gap:50px}
-.references-header{text-align:center;max-width:720px;margin:auto}
-.references-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
-.reference-item{text-align:center}
-.reference-item img{max-width:140px;filter:grayscale(100%)}
+
+.references{
+  padding:60px 0;
+  background:#f8fafc;
+}
+
+.references-container{
+  max-width:1320px;
+  margin:auto;
+  padding:0 40px;
+
+  display:flex;
+  flex-direction:column;
+  gap:60px;
+}
+
+.references-header{
+  text-align:center;
+  max-width:720px;
+  margin:auto;
+}
+
+.references-logos{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:36px;
+}
+
+.reference-item{
+  text-align:center;
+}
+
+.reference-item img{
+  max-width:130px;
+  filter:grayscale(100%);
+}
+
+
 
 /* ==================================================
    7. PRE CTA & CTA
 ================================================== */
-.pre-cta-slogan{padding:90px 0;background:linear-gradient(180deg,#f8fbff,#eef5ff);text-align:center}
-.pre-cta-slogan h2{font-size:32px;margin-bottom:20px}
-.pre-cta-slogan p{color:#475569}
 
-.cta{padding:100px 0;background:linear-gradient(90deg,#0A2A66,#123B8A);color:#fff;text-align:center}
-.btn-cta-primary{background:#fff;color:#0A2A66;padding:16px 36px;border-radius:6px;text-decoration:none}
+.pre-cta-slogan{
+  padding:60px 0;
+  background:linear-gradient(180deg,#f8fbff,#eef5ff);
+  text-align:center;
+}
+
+.pre-cta-slogan h2{
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.pre-cta-slogan p{
+  color:#475569;
+  max-width:720px;
+  margin:auto;
+  line-height:1.5;
+}
+
+
+.cta{
+  padding:70px 0;
+  background:linear-gradient(90deg,#0A2A66,#123B8A);
+  color:#fff;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:26px;
+  margin-bottom:14px;
+}
+
+.cta p{
+  margin-bottom:20px;
+}
+
+.btn-cta-primary{
+  background:#fff;
+  color:#0A2A66;
+  padding:14px 32px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+
 
 /* ==================================================
    8. FOOTER
 ================================================== */
-.site-footer{background:#0a1f44;padding:28px 0}
-.site-footer p{font-size:13px;color:rgba(255,255,255,.75);text-align:center}
+
+.site-footer{
+  background:#0a1f44;
+  padding:22px 0;
+}
+
+.site-footer p{
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+  text-align:center;
+}
+
+
+
+/* ==================================================
+   9. SCENE 3 (REFERENCES + CTA + FOOTER)
+================================================== */
+
+.scene-3{
+  min-height: calc(100vh - var(--header-height));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
 /* ================= FULLPAGE SYSTEM ================= */
 
@@ -697,11 +790,3 @@ body{
   background: rgba(255,0,0,0.08);
 }
 
-/* ==================================================
-   9. SCENE 3 (REFERENCES + CTA + FOOTER)
-================================================== */
-
-.scene-3{
-  min-height: calc(100vh - var(--header-height));
-  display: block;
-}

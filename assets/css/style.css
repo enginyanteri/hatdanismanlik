@@ -675,15 +675,16 @@ body{
   --header-height: 100px;
 }
 
-/* 1. SAHNE : HERO + TRUST */
+/* HERO + TRUST GERÇEK FULLSCREEN */
+
 .hero-wrapper{
-  min-height: 100vh;
-  padding-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
+
 /* 2. SAHNE : SERVICES */
 .services-section{
   min-height: 100vh;

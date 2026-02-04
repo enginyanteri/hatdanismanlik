@@ -668,3 +668,19 @@ body{
 .site-footer{background:#0a1f44;padding:28px 0}
 .site-footer p{font-size:13px;color:rgba(255,255,255,.75);text-align:center}
 
+/* ================= FULLPAGE SYSTEM ================= */
+
+/* Header yüksekliği (sende ~100px) */
+:root{
+  --header-height: 100px;
+}
+
+/* 1. SAHNE : HERO + TRUST */
+.hero-wrapper{
+  min-height: 100vh;
+  padding-top: var(--header-height);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

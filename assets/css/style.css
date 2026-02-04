@@ -703,9 +703,5 @@ body{
 
 .scene-3{
   min-height: calc(100vh - var(--header-height));
-  padding-top: 60px;
-
-  /* düzenli akış */
-  display: flex;
-  flex-direction: column;
+  display: block;
 }

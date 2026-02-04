@@ -684,3 +684,10 @@ body{
   flex-direction: column;
   justify-content: center;
 }
+/* 2. SAHNE : SERVICES */
+.services-section{
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  display: flex;
+  align-items: center;
+}

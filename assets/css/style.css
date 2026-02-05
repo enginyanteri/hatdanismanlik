@@ -688,52 +688,79 @@ body{
 
 
 /* ==================================================
-   7. PRE CTA & CTA
+   7. FINAL CTA (PRE-CTA + CTA BİRLEŞTİ)
 ================================================== */
 
-.pre-cta-slogan{
-  padding:40px 0;
-  background:rgba(0, 200, 120, 0.18); /* YEŞİL */
-  text-align:center;
+.final-cta{
+  min-height: calc(100vh - var(--header-height)); /* 3. scroll sahnesi */
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 200, 120, 0.18),   /* üst (eski pre-cta) */
+    rgba(255, 140, 0, 0.22)   /* alt (eski cta) */
+  );
+
+  text-align: center;
 }
 
-.pre-cta-slogan h2{
-  font-size:28px;
-  margin-bottom:14px;
+.final-cta-container{
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 30px;
 }
 
-.pre-cta-slogan p{
-  color:#475569;
-  max-width:720px;
-  margin:auto;
-  line-height:1.5;
+/* === PRE-CTA ROLÜ === */
+
+.final-cta-title{
+  font-size: 34px;
+  margin-bottom: 16px;
+  color: #0A2A66;
 }
 
-
-.cta{
-  padding:40px 0;
-  background:rgba(255, 140, 0, 0.22); /* TURUNCU */
-  color:#fff;
-  text-align:center;
+.final-cta-desc{
+  font-size: 16px;
+  line-height: 1.55;
+  color: #475569;
+  margin-bottom: 60px;
 }
 
-.cta h2{
-  font-size:26px;
-  margin-bottom:14px;
+/* === CTA ROLÜ === */
+
+.final-cta-action h3{
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #0A2A66;
 }
 
-.cta p{
-  margin-bottom:20px;
+.final-cta-action p{
+  margin-bottom: 26px;
+  color: #334155;
 }
+
+/* BUTON */
 
 .btn-cta-primary{
-  background:#fff;
-  color:#0A2A66;
-  padding:14px 32px;
-  border-radius:6px;
-  text-decoration:none;
+  display: inline-block;
+
+  background: #0A2A66;
+  color: #ffffff;
+
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .4px;
+
+  transition: all .25s ease;
 }
 
+.btn-cta-primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(10,42,102,.35);
+}
 
 
 /* ==================================================

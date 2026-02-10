@@ -18,41 +18,113 @@ body{
 /* ==================================================
    2. HEADER
 ================================================== */
+
 .top-bar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100px;
-  z-index:1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
 
-  /* SADECE HEADER GRADIENT */
-  background:linear-gradient(180deg,#ffffff,#ebe8e8);
+  background: linear-gradient(180deg,#ffffff,#ebe8e8);
 }
-.top-bar-inner{position:relative;height:100%}
-.logo{position:absolute;left:20px;top:50%;transform:translateY(-50%)}
-.logo img{height:100px}
-.flags{position:absolute;right:20px;top:50%;transform:translateY(-50%);display:flex;gap:10px}
-.flags img{width:18px}
 
-.navbar{position:absolute;top:50%;left:auto;right:120px;transform:translateY(-50%);display:flex;justify-content:flex-end}
-.nav-links{list-style:none;display:flex;gap:60px}
-.nav-links li{position:relative}
-.nav-links a,.dropdown-toggle{background:none;border:none;color:#0A2A66;text-decoration:none;font-size:18px;cursor:pointer;padding-bottom:8px}
-.nav-links li::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:#0A2A66;transition:.25s}
-.nav-links li:hover::after{width:100%}
+.top-bar-inner{
+  position: relative;
+  height: 100%;
+}
 
-/* Dropdown ana li */
+/* LOGO */
+
+.logo{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo img{
+  max-height: 80px;
+}
+
+/* FLAGS */
+
+.flags{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  gap: 10px;
+}
+
+.flags img{
+  width: 18px;
+}
+
+/* NAV */
+
+.navbar{
+  position: absolute;
+  top: 50%;
+  right: 120px;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+
+.nav-links li{
+  position: relative;
+}
+
+.nav-links a,
+.dropdown-toggle{
+  background: none;
+  border: none;
+  color: #0A2A66;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+
+/* Hover line */
+
+.nav-links li::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:#0A2A66;
+  transition:.25s;
+}
+
+.nav-links li:hover::after{
+  width:100%;
+}
+
+/* DROPDOWN */
+
 .has-submenu{
   position: relative;
 }
 
-/* Alt Menü */
 .submenu{
   display: none;
 
   position: absolute;
-  top: 100%;          /* BOŞLUK YOK */
+  top: 100%;
   left: 0;
 
   background: #fff;
@@ -61,17 +133,15 @@ body{
 
   box-shadow: 0 6px 18px rgba(0,0,0,.12);
 
-  padding-top: 8px;   /* Hover güven alanı */
-  z-index: 999;
+  padding-top: 8px;
+  z-index: 1100;
 }
 
-/* Hover + Focus */
 .has-submenu:hover .submenu,
 .has-submenu:focus-within .submenu{
   display: block;
 }
 
-/* Görünmez köprü (mouse kopmasın diye) */
 .submenu::before{
   content:"";
   position:absolute;
@@ -81,7 +151,6 @@ body{
   height:10px;
 }
 
-/* Linkler */
 .submenu li a{
   display:block;
   padding:10px 18px;
@@ -89,24 +158,43 @@ body{
   white-space: nowrap;
 }
 
-/* Hover */
 .submenu li a:hover{
   background:#f0f4f8;
 }
 
-.header-spacer{height:100px}
+/* SPACER */
+
+.header-spacer{
+  height: 100px;
+}
 
 /* ==================================================
-   3. HERO + 4. TRUST BAR
-   (Landing Page – Tek Sahne)
+   3. HERO + TRUST BAR (TEK SAHNE)
 ================================================== */
 
 /* ==================================================
-   HERO WRAPPER
-   - Arka plan görseli burada tanımlanır
+   ROOT VARS
 ================================================== */
+
+:root{
+  --cta-blue-1:#2f6fd6;
+  --cta-blue-2:#1f4f8a;
+}
+
+
+/* ==================================================
+   HERO WRAPPER (BACKGROUND)
+================================================== */
+
 .hero-wrapper{
   position: relative;
+
+  min-height: calc(100vh - var(--header-height));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-image: url("../images/hero/hero-bg.jpg");
   background-size: cover;
   background-position: center 25%;
@@ -116,75 +204,80 @@ body{
 
 
 /* ==================================================
-   HERO ANA ALAN
-   - Yükseklik
-   - Sol hizalama
+   HERO MAIN AREA
 ================================================== */
+
 .hero-main{
   position: relative;
-  height: 485px;                  /* 🔒 Sabit landing hero */
+
+  height: 485px;
+
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;    /* 🔒 Sola hizalı yapı */
-  padding-top: 40px;              /* 🔧 Dikey konum ayarı */
+  justify-content: flex-start;
+
+  padding-top: 40px;
+
   overflow: hidden;
-  background: transparent;        /* Arka plan wrapper’dan gelir */
 }
+
 
 /* ==================================================
    HERO CONTAINER
-   - Sayfa grid’i ile hizalama
 ================================================== */
+
 .hero-container{
   position: relative;
-  z-index:2;                      /* Overlay’in üstünde */
+  z-index: 2;
+
   max-width: 1320px;
+
   margin-left: 60px;
   margin-right: auto;
 }
 
+
 /* ==================================================
    HERO CONTENT
-   - Metnin sağ sınırı burada belirlenir
 ================================================== */
+
 .hero-content{
-  max-width: 800px;               /* Okunabilirlik sınırı */
-  position: relative;             /* ⚓ CTA referansı */
-  margin-left: 0;
+  position: relative;
+
+  max-width: 800px;
 }
-   
-/* 👇 YAZI OKUNURLUK DESTEĞİ */
+
+
+/* Readability Layer */
+
 .hero-content::before{
   content:"";
+
   position:absolute;
   inset:-20px -36px;
+
   z-index:-1;
-  pointer-events:none;
 
   background: linear-gradient(
-  90deg,
-  rgba(255,255,255,0) 0%,
-  rgba(255,255,255,.20) 20%,
-  rgba(255,255,255,.12) 45%,
-  rgba(255,255,255,.06) 65%,
-  rgba(255,255,255,0) 100%
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.20) 20%,
+    rgba(255,255,255,.12) 45%,
+    rgba(255,255,255,.06) 65%,
+    rgba(255,255,255,0) 100%
   );
 
   border-radius: 12px;
-}   
-   
-.hero-content .btn-primary{
-  position: absolute;
-  left: 0;
-  bottom: -48px;   /* Gözle ayar noktası */
 }
 
+
 /* ==================================================
-   HERO EYEBROW (MİKRO SATIR)
-   - Konumlayıcı ifade
+   HERO TEXT
 ================================================== */
+
 .hero-eyebrow{
   display: inline-block;
+
   margin-bottom: 16px;
 
   font-size: 19px;
@@ -195,62 +288,69 @@ body{
   color: rgba(11,42,92,.65);
 }
 
-/* ==================================================
-   HERO BAŞLIK (H1)
-================================================== */
+
 .hero-content h1{
   font-size: 39px;
   line-height: 1.2;
   font-weight: 700;
+
   letter-spacing: -0.4px;
+
   margin-bottom: 16px;
+
   color: #0b2a5c;
 }
 
-/* ==================================================
-   HERO PARAGRAF – ANA METİN
-================================================== */
+
 .hero-content p{
   font-size: 16px;
   line-height: 1.58;
+
   margin-bottom: 20px;
-  max-width: 800px;
+
   color: rgba(11,42,92,.94);
 }
 
-/* ==================================================
-   HERO PARAGRAF – SECONDARY
-   - Güven pekiştirme metni
-================================================== */
+
 .hero-content p.hero-lead.secondary{
-  margin-top: -10px;              /* Paragrafları yaklaştırır */
-  margin-bottom: 28px;      /* CTA’ya nefes */
+  margin-top: -10px;
+  margin-bottom: 28px;
+
   font-size: 16px;
   line-height: 1.5;
-  color: rgba(11,42,92,.94);       /* Bir tık daha yumuşak */
+
+  color: rgba(11,42,92,.94);
 }
 
-/* ==================================================
-   HERO CTA BUTON
-================================================== */
 
 /* ==================================================
-   HERO CTA – METİNDEN BAĞIMSIZ
+   HERO CTA
 ================================================== */
 
-.hero-main .btn-primary{
+.hero-content .btn-primary{
+  position: absolute;
+
+  left: 0;
+  bottom: -48px;
+
   display: inline-flex;
-  margin-top: -10px; /* 🔧 yukarı alır */ 
   align-items: center;
   gap: 10px;
 
   padding: 15px 34px;
+
   font-size: 14.5px;
   font-weight: 600;
   letter-spacing: .4px;
 
   border-radius: 8px;
-  background: linear-gradient(180deg,#2f6fd6,#1f4f8a);
+
+  background: linear-gradient(
+    180deg,
+    var(--cta-blue-1),
+    var(--cta-blue-2)
+  );
+
   color: #fff;
   text-decoration: none;
 
@@ -261,104 +361,117 @@ body{
   transition: all .25s ease;
 }
 
-/* Ok animasyonu */
-.hero-main .btn-primary span{
+
+/* Arrow */
+
+.hero-content .btn-primary span{
   transition: transform .25s ease;
 }
 
+
 /* Hover */
-.hero-main .btn-primary:hover{
+
+.hero-content .btn-primary:hover{
   transform: translateY(-2px);
+
   box-shadow:
     0 18px 40px rgba(31,79,138,.45),
     inset 0 1px 0 rgba(255,255,255,.35);
 }
 
-.hero-main .btn-primary:hover span{
+.hero-content .btn-primary:hover span{
   transform: translateX(4px);
 }
 
 
-/* =========================================================
-   TRUST BAR – GENEL ALTYAPI
-   Bu alan: tüm trust bar yapısını taşır
-   ========================================================= */
+/* ==================================================
+   TRUST BAR
+================================================== */
 
 .trust-bar{
-  position: relative;   /* 🔑 EN KRİTİK SATIR */
+  position: relative;
   z-index: 2;
-  padding: 0 0 1px;
 }
 
-/* Cam / bant efekti (arka plan paneli) */
+
+/* Glass Panel */
+
 .trust-glass{
   position: relative;
-  overflow: hidden;
-   
+
   max-width: 1320px;
   margin: 0 auto;
-  padding: 5px 20px;
 
-  background: transparent;
+  padding: 8px 20px;
 
-  border-top: none;
+  overflow: hidden;
+
   border-bottom: 1px solid rgba(255,255,255,.08);
-
-  box-shadow: none;
 }
 
-/* İç grid yapı – 3 kolon */
+
+/* Grid */
+
 .trust-container{
-  position: relative;
-  z-index: 2;
-   
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
-/* =========================================================
-   TRUST BOX – ORTAK KUTU STİLİ
-   Box 1, Box 2, Box 3 hepsi bunu kullanır
-   ========================================================= */
+
+/* ==================================================
+   TRUST BOX
+================================================== */
 
 .trust-box{
-  position: relative; /* 🔑 ZORUNLU */
-  padding: 2px 14px;
+  position: relative;
+
+  padding: 6px 14px;
+
   text-align: center;
+
   color: #eaf2ff;
+
   text-shadow: 0 1px 3px rgba(11,42,92,.35);
-  will-change: transform; /* 🔥 bunu ekle */   
+
+  transition: all .35s cubic-bezier(.25,.8,.25,1);
+
+  will-change: transform;
 }
 
-/* 👇 TRUST BAR OKUNURLUK DESTEĞİ */
+
+/* Background Layer */
+
 .trust-box::before{
   content:"";
+
   position:absolute;
   inset:-6px -10px;
+
   z-index:-1;
-  pointer-events:none;
 
   background: linear-gradient(
-  90deg,
-  rgba(11,42,92,0) 0%,
-  rgba(11,42,92,.36) 25%,
-  rgba(11,42,92,.26) 50%,
-  rgba(11,42,92,.17) 70%,
-  rgba(11,42,92,0) 100%
+    90deg,
+    rgba(11,42,92,0) 0%,
+    rgba(11,42,92,.36) 25%,
+    rgba(11,42,92,.26) 50%,
+    rgba(11,42,92,.17) 70%,
+    rgba(11,42,92,0) 100%
   );
 
   border-radius: 8px;
 }
 
-/* Dikey ayırıcı çizgiler */
+
+/* Divider */
+
 .trust-box:not(:last-child){
   border-right: 1px solid rgba(255,255,255,.18);
 }
 
-/* =========================================================
-   ICON – ORTAK AYARLAR
-   TÜM SVG ICONLARIN TEMEL AYARLARI
-   ========================================================= */
+
+/* ==================================================
+   ICON
+================================================== */
 
 .trust-icon{
   margin-bottom: 6px;
@@ -368,99 +481,72 @@ body{
   width: 38px;
   height: 38px;
 
-  /* Çizgi karakteri */
   stroke: #eaf2ff;
   stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-
-  /* ❗ SVG içindeki fill'ler kontrol edilsin diye */
   fill: none;
 
-  /* Işık / parlama efekti */
   filter:
-   drop-shadow(0 0 4px rgba(234,242,255,.25))
-   drop-shadow(0 0 10px rgba(234,242,255,.18));
+    drop-shadow(0 0 4px rgba(234,242,255,.25))
+    drop-shadow(0 0 10px rgba(234,242,255,.18));
 
   transition: all .3s ease;
 }
 
-/* Hover – tüm box’lar için ortak */
-.trust-box:hover .trust-icon svg{
-  filter:
-    drop-shadow(0 0 8px rgba(234,242,255,.75))
-    drop-shadow(0 0 22px rgba(234,242,255,.45));
-}
 
-/* =========================================================
-   TEXT – ORTAK METİN STİLİ
-   ========================================================= */
+/* ==================================================
+   TRUST TEXT
+================================================== */
 
-/* Başlık */
 .trust-box h3{
   font-size: 16px;
   font-weight: 600;
+
   margin-bottom: 4px;
-  letter-spacing: .2px;
 }
 
-/* Açıklama */
+
 .trust-box p{
   font-size: 13px;
   line-height: 1.25;
 
-  max-width: 260px;        /* ⬅ satır kırılım kontrolü */
+  max-width: 260px;
   margin: 0 auto;
 
   display: -webkit-box;
-  -webkit-line-clamp: 2;   /* 🔒 EN FAZLA 2 SATIR */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+
   overflow: hidden;
 }
 
-/* =========================================================
-   BOX 1 – KALKAN (GENEL KORUMA / GÜVEN)
-   ========================================================= */
 
-/* Şu an Box 1 için özel CSS yok
-   Gerekirse sadece buraya ekleyeceğiz */
-.trust-box:nth-child(1) {}
+/* ==================================================
+   TRUST HOVER
+================================================== */
 
-/* =========================================================
-   BOX 2 – AMPUL + DİŞLİ (TEKNİK AKIL)
-   ========================================================= */
-
-/* Ampul camını biraz yatay tombullaştır */
-.trust-box:nth-child(2) .trust-icon svg{
-  transform: scaleX(1.08);
+.trust-box:hover{
+  transform: translateY(-4px);
 }
 
-/* Ampul ışık çizgileri – daha ince */
-.trust-box:nth-child(2) svg path:nth-child(-n+6){
-  stroke-width: 1.2;
-  opacity: .9;
+.trust-box:hover .trust-icon svg{
+  stroke: var(--cta-blue-2);
+
+  filter:
+    drop-shadow(0 0 6px rgba(47,111,214,.45));
 }
 
-/* =========================================================
-   BOX 3 – RİSK AZALTMA (DİŞLİ + OK)
-   ========================================================= */
-
-/* Box 3 şu an sade.
-   Dişli + ok animasyonu veya
-   dönüş efekti buraya eklenecek */
-.trust-box:nth-child(3) {}
-
-/* Örnek (ileride):
-.trust-box:nth-child(3) svg {
-  transform: rotate(-10deg);
+.trust-box:hover h3,
+.trust-box:hover p{
+  color: rgba(220,230,255,.95);
 }
-*/
 
-/* =========================================================
-   3️⃣ BOX’A ÖZEL KARAKTER ANİMASYONLARI
-   ========================================================= */
 
-/* 🛡 BOX 1 – Pulse (Güven hissi) */
+/* ==================================================
+   TRUST ANIMATIONS
+================================================== */
+
+/* Shield */
+
 .trust-box:nth-child(1):hover svg{
   animation: pulseShield .9s ease infinite;
 }
@@ -472,19 +558,21 @@ body{
 }
 
 
-/* 💡 BOX 2 – Hafif Tilt + Bounce */
+/* Bulb */
+
 .trust-box:nth-child(2):hover svg{
   animation: smartBounce .8s ease infinite;
 }
 
 @keyframes smartBounce{
-  0%{transform:scale(1.15) rotate(0);}
+  0%{transform:scale(1.15);}
   50%{transform:scale(1.22) rotate(5deg);}
-  100%{transform:scale(1.15) rotate(0);}
+  100%{transform:scale(1.15);}
 }
 
 
-/* ⚙ BOX 3 – Slow Spin */
+/* Gear */
+
 .trust-box:nth-child(3):hover svg{
   animation: gearSpin 1.4s linear infinite;
 }
@@ -492,50 +580,6 @@ body{
 @keyframes gearSpin{
   from{transform:rotate(0) scale(1.15);}
   to{transform:rotate(360deg) scale(1.15);}
-}
-
-/* =========================================
-   TRUST BOX – KURUMSAL PREMIUM HOVER
-========================================= */
-
-:root{
-  --cta-blue-1:#2f6fd6;
-  --cta-blue-2:#1f4f8a;
-}
-
-
-/* Yumuşak geçiş */
-.trust-box,
-.trust-box *{
-  transition: all .35s cubic-bezier(.25,.8,.25,1);
-}
-
-
-/* Hafif yükselme */
-.trust-box:hover{
-  transform: translateY(-4px);
-}
-
-
-/* Icon rengi */
-.trust-box:hover .trust-icon svg{
-  stroke: var(--cta-blue-2);
-  color: var(--cta-blue-2);
-
-  filter:
-    drop-shadow(0 0 6px rgba(47,111,214,.45));
-}
-
-
-/* Başlık */
-.trust-box:hover h3{
-  color: rgba(220,230,255,.95);
-}
-
-
-/* Açıklama */
-.trust-box:hover p{
-  color: rgba(220,230,255,.95);
 }
 
 /* ==================================================

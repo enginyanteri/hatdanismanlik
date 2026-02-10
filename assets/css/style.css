@@ -651,7 +651,7 @@ body{
   background:rgba(0, 128, 255, 0.15);
 
   flex: 1;           /* 🔑 3. scroll'u taşıyan ana alan */
-  min-height: 40vh;  /* 🔑 ilk girişte ekran doluluğu */
+   
 }
 
 .references-container{
@@ -692,7 +692,7 @@ body{
 ================================================== */
 
 .final-cta{
-  min-height: calc(100vh - var(--header-height)); /* 3. scroll sahnesi */
+
   display: flex;
   align-items: center;
 
@@ -819,3 +819,34 @@ body{
   background: rgba(255,0,0,0.08);
 }
 
+/* ==================================================
+   SCENE 3 HEIGHT & ORAN DÜZELTME
+================================================== */
+
+/* Scene 3 ana taşıyıcı */
+.scene-3{
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+/* REFERENCES → biraz büyüsün */
+.scene-3 .references{
+  flex: 1.5;
+  min-height: auto;
+  padding: 60px 0;
+}
+
+/* PRE-CTA → kalan alanı doldursun */
+.scene-3 .final-cta{
+  flex: 1;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* FOOTER → sabit kalsın */
+.scene-3 .site-footer{
+  flex: 0 0 auto;
+}

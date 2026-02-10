@@ -17,12 +17,16 @@ body {
 /* ==================================================
    2. HEADER
 ================================================== */
+:root {
+  --header-height: 100px;
+}
+
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: var(--header-height);
   z-index: 1000;
   background: linear-gradient(180deg, #ffffff, #ebe8e8);
 }
@@ -101,6 +105,7 @@ body {
   width: 100%;
 }
 
+/* Dropdown */
 .has-submenu {
   position: relative;
 }
@@ -144,24 +149,15 @@ body {
 }
 
 .header-spacer {
-  height: 100px;
+  height: var(--header-height);
 }
 
 /* ==================================================
    3. HERO
 ================================================== */
-:root {
-  --cta-blue-1: #2f6fd6;
-  --cta-blue-2: #1f4f8a;
-  --header-height: 100px;
-}
-
 .hero-wrapper {
   position: relative;
-  min-height: calc(100vh - var(--header-height));
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 485px; /* Sabit landing hero */
   background-image: url("../images/hero/hero-bg.jpg");
   background-size: cover;
   background-position: center 25%;
@@ -211,41 +207,6 @@ body {
   border-radius: 12px;
 }
 
-.hero-content .btn-primary {
-  position: absolute;
-  left: 0;
-  bottom: -48px;
-  display: inline-flex;
-  margin-top: -10px;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 34px;
-  font-size: 14.5px;
-  font-weight: 600;
-  letter-spacing: .4px;
-  border-radius: 8px;
-  background: linear-gradient(180deg,#2f6fd6,#1f4f8a);
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 12px 28px rgba(31,79,138,.35),
-              inset 0 1px 0 rgba(255,255,255,.25);
-  transition: all .25s ease;
-}
-
-.hero-main .btn-primary span {
-  transition: transform .25s ease;
-}
-
-.hero-main .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(31,79,138,.45),
-              inset 0 1px 0 rgba(255,255,255,.35);
-}
-
-.hero-main .btn-primary:hover span {
-  transform: translateX(4px);
-}
-
 .hero-eyebrow {
   display: inline-block;
   margin-bottom: 16px;
@@ -253,7 +214,7 @@ body {
   font-weight: 600;
   letter-spacing: .6px;
   text-transform: uppercase;
-  color: rgba(11, 42, 92, .65);
+  color: rgba(11,42,92,.65);
 }
 
 .hero-content h1 {
@@ -281,6 +242,39 @@ body {
   color: rgba(11,42,92,.94);
 }
 
+.hero-content .btn-primary {
+  position: absolute;
+  left: 0;
+  bottom: -48px;
+  display: inline-flex;
+  margin-top: -10px;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#2f6fd6,#1f4f8a);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(31,79,138,.35), inset 0 1px 0 rgba(255,255,255,.25);
+  transition: all .25s ease;
+}
+
+.hero-main .btn-primary span {
+  transition: transform .25s ease;
+}
+
+.hero-main .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(31,79,138,.45), inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+.hero-main .btn-primary:hover span {
+  transform: translateX(4px);
+}
+
 /* ==================================================
    4. TRUST BAR
 ================================================== */
@@ -297,6 +291,7 @@ body {
   margin: 0 auto;
   padding: 5px 20px;
   background: transparent;
+  border-top: none;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
@@ -314,7 +309,6 @@ body {
   color: #eaf2ff;
   text-shadow: 0 1px 3px rgba(11,42,92,.35);
   will-change: transform;
-  transition: all .35s cubic-bezier(.25,.8,.25,1);
 }
 
 .trust-box::before {
@@ -350,16 +344,12 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  filter: drop-shadow(0 0 4px rgba(234,242,255,.25))
-          drop-shadow(0 0 10px rgba(234,242,255,.18));
+  filter: drop-shadow(0 0 4px rgba(234,242,255,.25)) drop-shadow(0 0 10px rgba(234,242,255,.18));
   transition: all .3s ease;
 }
 
 .trust-box:hover .trust-icon svg {
-  filter: drop-shadow(0 0 8px rgba(234,242,255,.75))
-          drop-shadow(0 0 22px rgba(234,242,255,.45));
-  stroke: var(--cta-blue-2);
-  color: var(--cta-blue-2);
+  filter: drop-shadow(0 0 8px rgba(234,242,255,.75)) drop-shadow(0 0 22px rgba(234,242,255,.45));
 }
 
 .trust-box h3 {
@@ -367,7 +357,6 @@ body {
   font-weight: 600;
   margin-bottom: 4px;
   letter-spacing: .2px;
-  transition: color .35s;
 }
 
 .trust-box p {
@@ -379,11 +368,15 @@ body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: color .35s;
 }
 
-.trust-box:hover {
-  transform: translateY(-4px);
+.trust-box:nth-child(2) .trust-icon svg {
+  transform: scaleX(1.08);
+}
+
+.trust-box:nth-child(2) svg path:nth-child(-n+6) {
+  stroke-width: 1.2;
+  opacity: .9;
 }
 
 .trust-box:nth-child(1):hover svg {
@@ -394,15 +387,6 @@ body {
   0% { transform: scale(1.15); }
   50% { transform: scale(1.22); }
   100% { transform: scale(1.15); }
-}
-
-.trust-box:nth-child(2) .trust-icon svg {
-  transform: scaleX(1.08);
-}
-
-.trust-box:nth-child(2) svg path:nth-child(-n+6) {
-  stroke-width: 1.2;
-  opacity: .9;
 }
 
 .trust-box:nth-child(2):hover svg {
@@ -424,11 +408,38 @@ body {
   to { transform: rotate(360deg) scale(1.15); }
 }
 
+:root {
+  --cta-blue-1:#2f6fd6;
+  --cta-blue-2:#1f4f8a;
+}
+
+.trust-box, .trust-box * {
+  transition: all .35s cubic-bezier(.25,.8,.25,1);
+}
+
+.trust-box:hover {
+  transform: translateY(-4px);
+}
+
+.trust-box:hover .trust-icon svg {
+  stroke: var(--cta-blue-2);
+  color: var(--cta-blue-2);
+  filter: drop-shadow(0 0 6px rgba(47,111,214,.45));
+}
+
+.trust-box:hover h3 {
+  color: rgba(220,230,255,.95);
+}
+
+.trust-box:hover p {
+  color: rgba(220,230,255,.95);
+}
+
 /* ==================================================
    5. SERVICES
 ================================================== */
 .services-section {
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100vh;
   padding: 120px 0 80px;
   background: linear-gradient(180deg,#f8fafc,#ffffff);
   display: flex;
@@ -509,26 +520,17 @@ body {
   line-height: 1.6;
 }
 
+/* Responsive */
 @media (max-width: 1100px) {
-  .services-groups {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .services-section {
-    padding: 90px 0 60px;
-  }
-
-  .services-main-title {
-    font-size: 34px;
-  }
+  .services-groups { grid-template-columns: 1fr; gap: 35px; }
+  .services-section { padding: 90px 0 60px; }
+  .services-main-title { font-size: 34px; }
 }
 
 /* ==================================================
    6. REFERENCES
 ================================================== */
 .references {
-  flex: 1.5;
   padding: 60px 0;
   background: rgba(0,128,255,.15);
 }
@@ -567,11 +569,11 @@ body {
    7. FINAL CTA
 ================================================== */
 .final-cta {
-  flex: 1;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   background: linear-gradient(180deg, rgba(0,200,120,.18), rgba(255,140,0,.22));
+  text-align: center;
 }
 
 .final-cta-container {
@@ -637,7 +639,7 @@ body {
 }
 
 /* ==================================================
-   9. SCENE SYSTEM
+   9. SCENE 3 FULLPAGE
 ================================================== */
 .scene-3 {
   min-height: calc(100vh - var(--header-height));
@@ -646,11 +648,11 @@ body {
 }
 
 .scene-3 .references {
-  flex: 1.5;
+  flex: 0;
 }
 
 .scene-3 .final-cta {
-  flex: 1;
+  flex: 0;
 }
 
 .scene-3 .site-footer {

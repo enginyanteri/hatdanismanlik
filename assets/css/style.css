@@ -385,6 +385,7 @@ body {
    
   transform: translateX(-50%);   /* TAM ORTA */
   pointer-events: none;
+  z-index: 5;   /* EKLE */
 }
 
 /* 1. çizgi */

@@ -157,11 +157,13 @@ body {
 /* ==================================================
    3. HERO
 ================================================== */
+
 :root {
   --cta-blue-1: #2f6fd6;
   --cta-blue-2: #1f4f8a;
   --header-height: 100px;
 }
+
 
 .hero-wrapper {
   position: relative;
@@ -169,6 +171,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   background-image: url("../images/hero/hero-bg.jpg");
   background-size: cover;
   background-position: center 25%;
@@ -176,25 +179,35 @@ body {
   background-color: #0b2a5c;
 }
 
+
 .hero-main {
   position: relative;
-  height: 485px;
-  height: auto;
+
+  height: auto; /* duplicate height removed */
+
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
   padding-top: 40px;
+
   overflow: hidden;
   background: transparent;
+
+  will-change: transform;
 }
+
 
 .hero-container {
   position: relative;
   z-index: 2;
+
   max-width: 1320px;
+
   margin-left: 60px;
   margin-right: auto;
 }
+
 
 .hero-content {
   max-width: 800px;
@@ -202,12 +215,14 @@ body {
   margin-left: 0;
 }
 
+
 .hero-content::before {
   content: "";
   position: absolute;
   inset: -20px -36px;
   z-index: -1;
   pointer-events: none;
+
   background: linear-gradient(
     90deg,
     rgba(255,255,255,0) 0%,
@@ -216,119 +231,173 @@ body {
     rgba(255,255,255,.06) 65%,
     rgba(255,255,255,0) 100%
   );
+
   border-radius: 12px;
 }
 
+
 .hero-content .btn-primary {
   display: inline-flex;
-  margin-top: 10px;   /* Yazı ile buton arası boşluk */
-  margin-bottom: 28px;   /* ⬅️ ASIL AYAR BU */
+
+  margin-top: 10px;
+  margin-bottom: 28px;
+
   align-items: center;
   gap: 10px;
+
   padding: 15px 34px;
+
   font-size: 14.5px;
   font-weight: 600;
   letter-spacing: .4px;
+
   border-radius: 8px;
+
   background: linear-gradient(180deg,#2f6fd6,#1f4f8a);
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 12px 28px rgba(31,79,138,.35),
-              inset 0 1px 0 rgba(255,255,255,.25);
+
+  box-shadow:
+    0 12px 28px rgba(31,79,138,.35),
+    inset 0 1px 0 rgba(255,255,255,.25);
+
   transition: all .25s ease;
+
+  will-change: transform;
 }
+
 
 .hero-main .btn-primary span {
   transition: transform .25s ease;
 }
 
+
 .hero-main .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(31,79,138,.45),
-              inset 0 1px 0 rgba(255,255,255,.35);
+
+  box-shadow:
+    0 18px 40px rgba(31,79,138,.45),
+    inset 0 1px 0 rgba(255,255,255,.35);
 }
+
 
 .hero-main .btn-primary:hover span {
   transform: translateX(4px);
 }
 
+
 .hero-eyebrow {
   display: inline-block;
   margin-bottom: 16px;
+
   font-size: 19px;
   font-weight: 600;
   letter-spacing: .6px;
   text-transform: uppercase;
+
   color: rgba(11, 42, 92, .65);
 }
+
 
 .hero-content h1 {
   font-size: 39px;
   line-height: 1.2;
+
   font-weight: 700;
   letter-spacing: -0.4px;
+
   margin-bottom: 16px;
+
   color: #0b2a5c;
 }
+
 
 .hero-content p {
   font-size: 16px;
   line-height: 1.58;
+
   margin-bottom: 20px;
   max-width: 800px;
+
   color: rgba(11,42,92,.94);
 }
+
 
 .hero-content p.hero-lead.secondary {
   margin-top: -10px;
   margin-bottom: 6px;
+
   font-size: 16px;
   line-height: 1.5;
+
   color: rgba(11,42,92,.94);
 }
+
+
 
 /* ==================================================
    4. TRUST BAR
 ================================================== */
+
+
 .trust-bar {
   position: relative;
   z-index: 2;
   padding: 0 0 1px;
 }
 
+
 .trust-glass {
   position: relative;
   overflow: hidden;
+
   max-width: 1320px;
   margin: 0 auto;
+
   padding: 5px 20px;
+
   background: transparent;
+
   border-bottom: 1px solid rgba(255,255,255,.08);
+
+  will-change: transform;
 }
+
 
 .trust-container {
   position: relative;
   z-index: 2;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
+
 .trust-box {
   position: relative;
+
   padding: 2px 14px;
+
   text-align: center;
+
   color: #eaf2ff;
   text-shadow: 0 1px 3px rgba(11,42,92,.35);
+
   will-change: transform;
+
   transition: all .35s cubic-bezier(.25,.8,.25,1);
 }
 
+
 .trust-box::before {
   content: "";
+
   position: absolute;
   inset: -6px -10px;
+
   z-index: -1;
   pointer-events: none;
+
   background: linear-gradient(
     90deg,
     rgba(11,42,92,0) 0%,
@@ -337,97 +406,128 @@ body {
     rgba(11,42,92,.17) 70%,
     rgba(11,42,92,0) 100%
   );
+
   border-radius: 8px;
 }
+
 
 .trust-box:not(:last-child) {
   border-right: 1px solid rgba(255,255,255,.18);
 }
 
+
 .trust-icon {
   margin-bottom: 6px;
 }
 
+
 .trust-icon svg {
   width: 38px;
   height: 38px;
+
   stroke: #eaf2ff;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+
   fill: none;
-  filter: drop-shadow(0 0 4px rgba(234,242,255,.25))
-          drop-shadow(0 0 10px rgba(234,242,255,.18));
+
+  filter:
+    drop-shadow(0 0 4px rgba(234,242,255,.25))
+    drop-shadow(0 0 10px rgba(234,242,255,.18));
+
   transition: all .3s ease;
+
+  will-change: transform;
 }
 
+
 .trust-box:hover .trust-icon svg {
-  filter: drop-shadow(0 0 8px rgba(234,242,255,.75))
-          drop-shadow(0 0 22px rgba(234,242,255,.45));
+  filter:
+    drop-shadow(0 0 8px rgba(234,242,255,.75))
+    drop-shadow(0 0 22px rgba(234,242,255,.45));
+
   stroke: var(--cta-blue-2);
   color: var(--cta-blue-2);
 }
 
+
 .trust-box h3 {
   font-size: 16px;
   font-weight: 600;
+
   margin-bottom: 4px;
   letter-spacing: .2px;
+
   transition: color .35s;
 }
+
 
 .trust-box p {
   font-size: 13px;
   line-height: 1.25;
+
   max-width: 260px;
   margin: 0 auto;
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+
   overflow: hidden;
+
   transition: color .35s;
 }
+
 
 .trust-box:hover {
   transform: translateY(-4px);
 }
 
+
 .trust-box:nth-child(1):hover svg {
   animation: pulseShield .9s ease infinite;
 }
 
+
 @keyframes pulseShield {
-  0% { transform: scale(1.15); }
-  50% { transform: scale(1.22); }
+  0%   { transform: scale(1.15); }
+  50%  { transform: scale(1.22); }
   100% { transform: scale(1.15); }
 }
+
 
 .trust-box:nth-child(2) .trust-icon svg {
   transform: scaleX(1.08);
 }
+
 
 .trust-box:nth-child(2) svg path:nth-child(-n+6) {
   stroke-width: 1.2;
   opacity: .9;
 }
 
+
 .trust-box:nth-child(2):hover svg {
   animation: smartBounce .8s ease infinite;
 }
 
+
 @keyframes smartBounce {
-  0% { transform: scale(1.15) rotate(0); }
-  50% { transform: scale(1.22) rotate(5deg); }
+  0%   { transform: scale(1.15) rotate(0); }
+  50%  { transform: scale(1.22) rotate(5deg); }
   100% { transform: scale(1.15) rotate(0); }
 }
+
 
 .trust-box:nth-child(3):hover svg {
   animation: gearSpin 1.4s linear infinite;
 }
 
+
 @keyframes gearSpin {
   from { transform: rotate(0) scale(1.15); }
-  to { transform: rotate(360deg) scale(1.15); }
+  to   { transform: rotate(360deg) scale(1.15); }
 }
 
 /* ==================================================

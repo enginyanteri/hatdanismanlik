@@ -429,16 +429,17 @@ body {
 ================================================== */
 .services-section {
   min-height: calc(100vh - var(--header-height));
-  padding: 120px 0 80px;
+  padding: 60px 0 40px;
   background: linear-gradient(180deg,#f8fafc,#ffffff);
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Ortalamayı kaldır */
 }
 
 .services-wrapper {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px; /* Biraz dar */
   margin: auto;
+  margin-top: 20px; /* Yukarıdan boşluk */
   padding: 0 30px;
 }
 

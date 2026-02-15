@@ -377,25 +377,24 @@ body {
   content: "";
   position: absolute;
   top: 15%;
-  width: 2px;                 /* kalınlık */
-  height: 70%;                /* yukarıdan aşağı uzunluk */
+  height: 70%;
+  width: 2px;
 
   background: rgba(255,255,255,.45);
-  box-shadow: 0 0 12px rgba(255,255,255,.35);
-   
-  transform: translateX(-50%);   /* TAM ORTA */
+  box-shadow: 0 0 10px rgba(255,255,255,.35);
+
   pointer-events: none;
-  z-index: 5;   /* EKLE */
+  z-index: 5;
 }
 
-/* 1. çizgi */
+/* TAM 1. GRID ÇİZGİSİ */
 .trust-container::before {
-  left: 33.3333%;
+  left: calc(100% / 3);
 }
 
-/* 2. çizgi */
+/* TAM 2. GRID ÇİZGİSİ */
 .trust-container::after {
-  left: 66.6666%;
+  left: calc(100% / 3 * 2);
 }
 
 .trust-box {

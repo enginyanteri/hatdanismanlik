@@ -372,6 +372,30 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.trust-container::before,
+.trust-container::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  width: 2px;                 /* kalınlık */
+  height: 70%;                /* yukarıdan aşağı uzunluk */
+
+  background: rgba(255,255,255,.45);
+  box-shadow: 0 0 12px rgba(255,255,255,.35);
+   
+  transform: translateX(-50%);   /* TAM ORTA */
+  pointer-events: none;
+}
+
+/* 1. çizgi */
+.trust-container::before {
+  left: 33.3333%;
+}
+
+/* 2. çizgi */
+.trust-container::after {
+  left: 66.6666%;
+}
 
 .trust-box {
   position: relative;
@@ -408,12 +432,6 @@ body {
   );
 
   border-radius: 8px;
-}
-
-
-.trust-box:not(:last-child) {
-  border-right: 2px solid rgba(255,255,255,.35);
-  box-shadow: 2px 0 8px rgba(255,255,255,.25);
 }
 
 

@@ -222,7 +222,7 @@ body {
 .hero-content .btn-primary {
   display: inline-flex;
   margin-top: 10px;   /* Yazı ile buton arası boşluk */
-  margin-bottom: 30px;   /* ⬅️ ASIL AYAR BU */
+  margin-bottom: 28px;   /* ⬅️ ASIL AYAR BU */
   align-items: center;
   gap: 10px;
   padding: 15px 34px;

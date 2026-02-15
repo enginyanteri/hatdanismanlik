@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #0A2A66;
@@ -162,6 +167,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  scroll-snap-align: start; 
   background-image: url("../images/hero/hero-bg.jpg");
   background-size: cover;
   background-position: center 25%;
@@ -430,6 +436,7 @@ body {
 .services-section {
   min-height: calc(100vh - var(--header-height));
   padding: 60px 0 40px;
+  scroll-snap-align: start; /* SNAP */
   background: linear-gradient(180deg,#f8fafc,#ffffff);
   display: flex;
   align-items: flex-start; /* Ortalamayı kaldır */
@@ -644,6 +651,7 @@ body {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start; /* SNAP */ 
 }
 
 .scene-3 .references {
@@ -656,4 +664,14 @@ body {
 
 .scene-3 .site-footer {
   flex: 0 0 auto;
+}
+
+/* ==================================================
+   MOBILE: SNAP KAPATMA
+================================================== */
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
 }

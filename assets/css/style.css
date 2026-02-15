@@ -381,13 +381,16 @@ body {
   height: 70%;
   width: 4px;
 
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255,255,255,.95),
-    transparent
-  );
-
+background: linear-gradient(
+  to bottom,
+  transparent 0%,
+  rgba(255,255,255,.15) 15%,
+  rgba(255,255,255,1) 40%,
+  rgba(255,255,255,1) 60%,
+  rgba(255,255,255,.15) 85%,
+  transparent 100%
+);
+   
   box-shadow:
     0 0 14px rgba(255,255,255,1),
     0 0 30px rgba(255,255,255,.6),

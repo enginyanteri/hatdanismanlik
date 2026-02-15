@@ -372,42 +372,41 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* ORTA ÇİZGİLER */
+/* ORTA ÇİZGİLER – STABİL VERSİYON */
 .trust-container::before,
 .trust-container::after {
   content: "";
   position: absolute;
   top: 15%;
   height: 70%;
-  width: 3px; /* KALINLIK */
+  width: 4px;
 
   background: linear-gradient(
     to bottom,
-    rgba(255,255,255,0),
-    rgba(255,255,255,.9),
-    rgba(255,255,255,0)
+    transparent,
+    rgba(255,255,255,.95),
+    transparent
   );
 
-  filter: blur(0.4px);
   box-shadow:
-    0 0 8px rgba(255,255,255,.9),
-    0 0 18px rgba(255,255,255,.6),
-    0 0 28px rgba(255,255,255,.4);
+    0 0 14px rgba(255,255,255,1),
+    0 0 30px rgba(255,255,255,.6),
+    0 0 50px rgba(255,255,255,.35);
 
-  transform: translateX(-50%);
   pointer-events: none;
-  z-index: 10;
+  z-index: 5;
 }
 
-/* TAM ORTA HESAP */
+/* 1. grid çizgisi */
 .trust-container::before {
-  left: 50%;
-  margin-left: -33.333%;
+  left: calc(100% / 3);
+  transform: translateX(-2px); /* width/2 */
 }
 
+/* 2. grid çizgisi */
 .trust-container::after {
-  left: 50%;
-  margin-left: 33.333%;
+  left: calc(100% / 3 * 2);
+  transform: translateX(-2px);
 }
 
 .trust-box {

@@ -378,23 +378,22 @@ body {
   position: absolute;
   top: 15%;
   height: 70%;
-  width: 2px;
+  width: 1px; /* 2px değil */
 
-  background: rgba(255,255,255,.45);
-  box-shadow: 0 0 10px rgba(255,255,255,.35);
+  background: rgba(255,255,255,.6);
 
   pointer-events: none;
   z-index: 5;
 }
 
-/* TAM 1. GRID ÇİZGİSİ */
+/* 1. çizgi */
 .trust-container::before {
-  left: calc(100% / 3);
+  left: 33.3333%;
 }
 
-/* TAM 2. GRID ÇİZGİSİ */
+/* 2. çizgi */
 .trust-container::after {
-  left: calc(100% / 3 * 2);
+  left: 66.6666%;
 }
 
 .trust-box {

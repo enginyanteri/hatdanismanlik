@@ -385,8 +385,8 @@ background: linear-gradient(
   to bottom,
   transparent 0%,
   rgba(255,255,255,.15) 15%,
-  rgba(255,255,255,1) 40%,
-  rgba(255,255,255,1) 60%,
+  rgba(255,255,255,1) 30%,
+  rgba(255,255,255,1) 70%,
   rgba(255,255,255,.15) 85%,
   transparent 100%
 );

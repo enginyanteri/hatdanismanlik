@@ -179,6 +179,7 @@ body {
 .hero-main {
   position: relative;
   height: 485px;
+  height: auto;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -279,7 +280,7 @@ body {
 
 .hero-content p.hero-lead.secondary {
   margin-top: -10px;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(11,42,92,.94);

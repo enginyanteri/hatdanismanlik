@@ -573,7 +573,7 @@ background: linear-gradient(
 
   background:
     linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)),
-    url("assets/images/services/services-bg.jpeg") center/cover no-repeat;
+    url("../images/services/services-bg.jpeg") center/cover no-repeat;
 
   display: flex;
   align-items: center;

@@ -569,7 +569,7 @@ background: linear-gradient(
 ================================================== */
 .services-section {
   min-height: calc(100vh - var(--header-height));
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
   background: linear-gradient(180deg,#f8fafc,#ffffff);
   display: flex;
   align-items: flex-start; /* Ortalamayı kaldır */

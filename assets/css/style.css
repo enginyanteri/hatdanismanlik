@@ -570,9 +570,13 @@ background: linear-gradient(
 .services-section {
   min-height: calc(100vh - var(--header-height));
   padding: 40px 0 40px;
-  background: linear-gradient(180deg,#f8fafc,#ffffff);
+
+  background:
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)),
+    url("assets/images/services/services-bg.jpeg") center/cover no-repeat;
+
   display: flex;
-  align-items: flex-start; /* Ortalamayı kaldır */
+  align-items: center;
 }
 
 .services-wrapper {

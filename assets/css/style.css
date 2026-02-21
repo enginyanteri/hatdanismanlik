@@ -587,6 +587,9 @@ background: linear-gradient(
 
   background: url("../images/services/services-bg.jpeg") center/cover no-repeat;
 
+  filter: blur(4px) brightness(0.9);
+  transform: scale(1.05); /* blur kenar kesilmesini önler */
+
   z-index: 0;
 }
 

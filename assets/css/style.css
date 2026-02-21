@@ -570,20 +570,31 @@ background: linear-gradient(
 .services-section {
   min-height: calc(100vh - var(--header-height));
   padding: 40px 0 40px;
-
-  background:
-    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)),
-    url("../images/services/services-bg.jpeg") center/cover no-repeat;
-
   display: flex;
   align-items: center;
+  position: relative;   /* önemli */
+  overflow: hidden;     /* önemli */
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("../images/services/services-bg.jpeg") center/cover no-repeat;
+
+  opacity: 0.6;   /* sadece buradan ayarlayacaksın */
+  z-index: 0;
 }
 
 .services-wrapper {
   width: 100%;
-  max-width: 1200px; /* Biraz dar */
+  max-width: 1200px;
   margin: auto;
   padding: 0 30px;
+
+  position: relative;   /* EKLENDİ */
+  z-index: 1;           /* EKLENDİ */
 }
 
 .services-main-title {

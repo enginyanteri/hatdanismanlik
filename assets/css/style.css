@@ -587,7 +587,6 @@ background: linear-gradient(
 
   background: url("../images/services/services-bg.jpeg") center/cover no-repeat;
 
-  opacity: 0.4;  /* buradan ayarla */
   z-index: 0;
 }
 

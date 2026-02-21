@@ -579,7 +579,6 @@ background: linear-gradient(
   width: 100%;
   max-width: 1200px; /* Biraz dar */
   margin: auto;
-  margin-top: 20px; /* Yukarıdan boşluk */
   padding: 0 30px;
 }
 

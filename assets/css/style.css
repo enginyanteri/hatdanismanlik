@@ -567,13 +567,17 @@ background: linear-gradient(
 /* ==================================================
    5. SERVICES
 ================================================== */
+
 .services-section {
   min-height: calc(100vh - var(--header-height));
   padding: 40px 0 40px;
   display: flex;
   align-items: center;
-  position: relative;   /* önemli */
-  overflow: hidden;     /* önemli */
+
+  position: relative;
+  overflow: hidden;
+
+  background: none; /* ÖNEMLİ */
 }
 
 .services-section::before {
@@ -583,7 +587,7 @@ background: linear-gradient(
 
   background: url("../images/services/services-bg.jpeg") center/cover no-repeat;
 
-  opacity: 0.6;   /* sadece buradan ayarlayacaksın */
+  opacity: 1;  /* buradan ayarla */
   z-index: 0;
 }
 

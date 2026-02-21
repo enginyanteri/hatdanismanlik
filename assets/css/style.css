@@ -603,16 +603,15 @@ background: linear-gradient(
 
 .service-group {
   background: #ffffff;
-  padding: 45px 40px;   /* artırdık */
-  border-radius: 14px;  /* biraz daha keskin */
-  box-shadow: 0 15px 40px rgba(15,23,42,.06);
-  border: 1px solid #f1f5f9;  /* yeni */
-  transition: .35s ease;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+  transition: .3s;
 }
 
 .service-group:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(15,23,42,.10);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.12);
 }
 
 .group-title {

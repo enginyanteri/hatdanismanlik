@@ -621,23 +621,27 @@ background: linear-gradient(
 }
 
 .service-group {
-  background: #ffffff;
-  padding: 35px 30px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.07);
-  transition: .3s;
+  background: rgba(255,255,255,0.92);
+  padding: 38px 32px;
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(8px);
+
+  transition: all .35s ease;
 }
 
 .service-group:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,.12);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0,0,0,.15);
 }
 
 .group-title {
   font-size: 20px;
-  margin-bottom: 25px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e2e8f0;
+  font-weight: 600;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(15,23,42,0.1);
 }
 
 .group-items {
@@ -647,23 +651,30 @@ background: linear-gradient(
 }
 
 .service-card {
-  padding: 18px 20px;
-  border-radius: 12px;
-  background: #f8fafc;
-  transition: .3s;
+  padding: 22px 22px;
+  border-radius: 14px;
+
+  background: rgba(248,250,252,0.9);
+  border: 1px solid rgba(15,23,42,0.05);
+
+  transition: all .3s ease;
 }
 
 .service-card:hover {
-  background: #eef2f7;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  background: #ffffff;
 }
 
 .service-card h4 {
-  font-size: 16px;
-  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0f172a;
 }
 
 .service-card p {
-  font-size: 13px;
+  font-size: 14px;
   color: #475569;
   line-height: 1.6;
 }

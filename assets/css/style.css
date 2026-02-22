@@ -565,59 +565,77 @@ background: linear-gradient(
 }
 
 /* ==================================================
-   5. SERVICES (TEMEL YAPI)
+   5. SERVICES – ORANLI LAYOUT
 ================================================== */
 
 .services-section {
   min-height: calc(100vh - var(--header-height));
-  padding: 40px 0;
-  display: flex;
-  align-items: center;
-
   position: relative;
   overflow: hidden;
-
   background: none;
+  padding: 0;
 }
 
 .services-section::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background: url("../images/services/services-bg.jpeg") center/cover no-repeat;
   filter: brightness(1.15) contrast(1.05);
-
   z-index: 0;
 }
 
 .services-wrapper {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  height: calc(100vh - var(--header-height));
   max-width: 1200px;
   margin: auto;
   padding: 0 30px;
 
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+/* =========================
+   ÜST BAŞLIK ALANI (%35)
+========================= */
+
+.services-header-area {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   ALT KART ALANI (%65)
+========================= */
+
+.services-cards-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Başlık stilleri */
+
 .services-main-title {
-  text-align: center;
   font-size: 42px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .services-main-desc {
-  text-align: center;
-  color: #64748b;
-  margin-bottom: 70px;
   font-size: 16px;
+  color: #64748b;
+  text-align: center;
+  max-width: 600px;
 }
 
-/* Kart yapısı şimdilik devre dışı */
-.services-groups {
-  display: none;
-}
 /* ==================================================
    6. REFERENCES
 ================================================== */

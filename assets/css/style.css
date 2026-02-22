@@ -599,7 +599,7 @@ background: linear-gradient(
 }
 
 /* =========================
-   ÜST BAŞLIK ALANI (%35)
+   ÜST BAŞLIK ALANI (%25)
 ========================= */
 
 .services-header-area {
@@ -611,7 +611,7 @@ background: linear-gradient(
 }
 
 /* =========================
-   ALT KART ALANI (%65)
+   ALT KART ALANI (%75)
 ========================= */
 
 .services-cards-area {
@@ -625,7 +625,7 @@ background: linear-gradient(
 
 .services-main-title {
   font-size: 42px;
-  color: #ffffff;
+  color: #1e3a8a;
   margin-bottom: 12px;
   text-align: center;
 }
@@ -635,6 +635,15 @@ background: linear-gradient(
   color: #ffffff;
   text-align: center;
   max-width: 600px;
+}
+
+/* DEBUG – alan ayırıcı */
+.services-header-area {
+  border-bottom: 2px solid red;
+}
+
+.services-cards-area {
+  border-top: 2px solid red;
 }
 
 /* ==================================================

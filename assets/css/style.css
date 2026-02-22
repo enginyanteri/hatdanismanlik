@@ -619,7 +619,7 @@ background: linear-gradient(
 .services-cards-area {
   flex: 0 0 75%;
   display: flex;
-  align-items: stretch;   /* kritik */
+  align-items: center;   /* kritik */
   justify-content: center;
 
   border-top: 2px solid red; /* DEBUG */

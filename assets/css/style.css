@@ -652,7 +652,7 @@ background: linear-gradient(
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 
-  width: 90%;
+  width: 85%;
   height: 80%;
 }
 

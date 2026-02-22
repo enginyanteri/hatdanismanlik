@@ -619,7 +619,7 @@ background: linear-gradient(
 .services-cards-area {
   flex: 0 0 75%;
   display: flex;
-  align-items: center;   /* kritik */
+  align-items: center;
   justify-content: center;
 
   border-top: 2px solid red; /* DEBUG */
@@ -663,7 +663,10 @@ background: linear-gradient(
 .service-group {
   position: relative;
   overflow: visible;
-  padding: 50px 30px 30px; /* altıgen için üst padding artırıldı */
+
+  /* Altıgen yarısı dışarı çıktığı için üst padding arttırıldı */
+  padding: 90px 30px 30px;
+
   border-radius: 20px;
 
   display: flex;
@@ -673,7 +676,9 @@ background: linear-gradient(
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(12px);
 
+  /* ÜST BORDER KALDIRILDI – birleşim için kritik */
   border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: none;
 
   box-shadow:
     0 0 20px rgba(59, 130, 246, 0.25),
@@ -684,24 +689,25 @@ background: linear-gradient(
 }
 
 /* =========================
-   ALTIGEN – KARTIN PARÇASI
+   ALTIGEN – KARTLA TEK PARÇA
 ========================= */
 
 .service-group::before {
   content: "";
 
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
 
-  top: 0;
+  /* Yüksekliğin yarısı kadar yukarı */
+  top: -60px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
-  background: inherit;        /* kartla birebir aynı */
-  backdrop-filter: inherit;
-  border: inherit;
-  box-shadow: inherit;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   clip-path: polygon(
     25% 6%,
@@ -711,6 +717,7 @@ background: linear-gradient(
     25% 94%,
     0% 50%
   );
+
   z-index: 2;
 }
 
@@ -742,10 +749,10 @@ background: linear-gradient(
 ========================= */
 
 .group-items {
-  flex: 1;   /* kritik */
+  flex: 1;
 
   display: grid;
-  grid-template-rows: 1fr 1fr;  /* eşit 2 kart */
+  grid-template-rows: 1fr 1fr;
   gap: 18px;
 }
 
@@ -789,7 +796,6 @@ background: linear-gradient(
   color: #cbd5e1;
   line-height: 1.5;
 }
-
 /* ==================================================
    6. REFERENCES
 ================================================== */

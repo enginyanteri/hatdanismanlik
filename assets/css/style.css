@@ -715,34 +715,6 @@ background: linear-gradient(
 }
 
 /* =========================
-   İKON (ALTIGEN MERKEZİ)
-========================= */
-
-.service-group::after {
-  content: "\f013"; /* Font Awesome gear örnek */
-
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 200px;
-  height: 110px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 38px;
-  color: #ffffff;
-
-  z-index: 3;
-}
-
-/* =========================
    HOVER
 ========================= */
 

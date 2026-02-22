@@ -593,12 +593,9 @@ background: linear-gradient(
 
 .services-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px; /* Biraz dar */
   margin: auto;
   padding: 0 30px;
-
-  position: relative;
-  z-index: 1;
 }
 
 .services-main-title {
@@ -616,29 +613,21 @@ background: linear-gradient(
 
 .services-groups {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
-  justify-content: center;
-  gap: 60px;
-
-  transform: translateY(-40px); /* ✅ Güvenli yukarı taşıma */
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
 }
 
 .service-group {
-  position: relative;
-
-  background: rgba(255,255,255,0.92);
-  padding: 70px 32px 38px; /* ikon alanı için */
-  border-radius: 20px;
-
-  border: 1px solid rgba(255,255,255,0.4);
-  backdrop-filter: blur(8px);
-
-  transition: all .35s ease;
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+  transition: .3s;
 }
 
 .service-group:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 55px rgba(0,0,0,.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.12);
 }
 
 .group-title {

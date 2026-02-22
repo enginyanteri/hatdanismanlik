@@ -688,20 +688,18 @@ background: linear-gradient(
 
 .service-group::before {
   content: "";
-  position: absolute;
 
-  width: 95px;
-  height: 95px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
 
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background: linear-gradient(
-    145deg,
-    rgba(59,130,246,0.9),
-    rgba(30,64,175,0.9)
-  );
+  /* inherit KULLANMA */
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   clip-path: polygon(
     25% 6%,
@@ -712,11 +710,7 @@ background: linear-gradient(
     0% 50%
   );
 
-  box-shadow:
-    0 0 25px rgba(59,130,246,0.8),
-    0 0 60px rgba(59,130,246,0.5);
-
-  z-index: 3;
+  z-index: 2;
 }
 
 /* =========================

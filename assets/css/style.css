@@ -595,7 +595,6 @@ background: linear-gradient(
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  margin-top: -70px; /* ✅ GERÇEK yukarı taşıma buraya alındı */
   padding: 0 30px;
 
   position: relative;
@@ -620,14 +619,15 @@ background: linear-gradient(
   grid-template-columns: repeat(3, 320px);
   justify-content: center;
   gap: 60px;
-  /* ❌ margin-top BURADAN KALDIRILDI */
+
+  transform: translateY(-40px); /* ✅ Güvenli yukarı taşıma */
 }
 
 .service-group {
-  position: relative; /* ✅ Hexagon için gerekli */
+  position: relative;
 
   background: rgba(255,255,255,0.92);
-  padding: 70px 32px 38px; /* ✅ üst padding arttı (ikon için alan) */
+  padding: 70px 32px 38px; /* ikon alanı için */
   border-radius: 20px;
 
   border: 1px solid rgba(255,255,255,0.4);

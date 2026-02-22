@@ -663,7 +663,7 @@ background: linear-gradient(
 .service-group {
   position: relative;
   overflow: visible;
-  padding: 40px 30px 30px; /* altıgen için üst padding artırıldı */
+  padding: 50px 30px 30px; /* altıgen için üst padding artırıldı */
   border-radius: 20px;
 
   display: flex;

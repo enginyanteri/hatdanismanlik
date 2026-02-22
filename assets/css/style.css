@@ -652,8 +652,8 @@ background: linear-gradient(
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
 }
 
 /* =========================
@@ -663,7 +663,7 @@ background: linear-gradient(
 .service-group {
   position: relative;
   overflow: visible;
-  padding: 90px 30px 30px; /* altıgen için üst padding artırıldı */
+  padding: 40px 30px 30px; /* altıgen için üst padding artırıldı */
   border-radius: 20px;
 
   display: flex;

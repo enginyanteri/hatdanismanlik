@@ -662,6 +662,7 @@ background: linear-gradient(
 
 .service-group {
   position: relative;
+  overflow: visible;   /* kritik */
   padding: 40px 30px 30px;
   border-radius: 20px;
 
@@ -698,19 +699,23 @@ background: linear-gradient(
 ========================= */
 
 .group-icon {
-  width: 70px;
-  height: 70px;
+  position: absolute;
 
-  margin: 0 auto 25px;
+  width: 120px;
+  height: 120px;
+
+  left: 50%;
+  top: 0;
+
+  transform: translate(-50%, -50%);  /* merkez kesişim */
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-
   color: #ffffff;
-  font-size: 26px;
+  font-size: 40px;
 
   clip-path: polygon(
     25% 6%,
@@ -721,7 +726,9 @@ background: linear-gradient(
     0% 50%
   );
 
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+
+  z-index: 5;
 }
 
 /* =========================

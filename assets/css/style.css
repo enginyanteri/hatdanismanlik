@@ -589,7 +589,7 @@ background: linear-gradient(
   position: relative;
   z-index: 1;
 
-  height: 100%;
+  height: calc(100vh - var(--header-height));
   max-width: 1200px;
   margin: auto;
   padding: 0 30px;

@@ -615,56 +615,40 @@ background: linear-gradient(
 ========================= */
 
 .services-cards-area {
-  flex: 1;
+  flex: 0 0 75%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Başlık stilleri */
-
-.services-main-title {
-  font-size: 42px;
-  color: #1e3a8a;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.services-main-desc {
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  max-width: 600px;
-}
-
-/* DEBUG – alan ayırıcı */
-.services-header-area {
-  border-bottom: 2px solid red;
-}
-
-.services-cards-area {
-  border-top: 2px solid red;
+  padding: 40px 0;
 }
 
 /* =========================
-   KART GRID
+   KART GRID (SABİT YÜKSEKLİK)
 ========================= */
 
 .services-groups {
+  flex: 1;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  width: 100%;
+
+  height: 100%;
 }
 
 /* =========================
    CAM KART TABANI
+   (YÜKSEKLİK SABİT)
 ========================= */
 
 .service-group {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   padding: 40px 30px 30px;
   border-radius: 20px;
+
+  height: 100%;
 
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(12px);
@@ -676,12 +660,11 @@ background: linear-gradient(
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
   color: #ffffff;
-
   transition: all 0.3s ease;
 }
 
 /* =========================
-   HOVER GLOW
+   HOVER
 ========================= */
 
 .service-group:hover {
@@ -692,13 +675,12 @@ background: linear-gradient(
 }
 
 /* =========================
-   ÜST ALTIGEN IKON
+   ALTIGEN IKON
 ========================= */
 
 .group-icon {
   width: 70px;
   height: 70px;
-
   margin: 0 auto 25px;
 
   display: flex;
@@ -706,7 +688,6 @@ background: linear-gradient(
   justify-content: center;
 
   background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-
   color: #ffffff;
   font-size: 26px;
 
@@ -723,7 +704,7 @@ background: linear-gradient(
 }
 
 /* =========================
-   IC KART YAPISI
+   BAŞLIK
 ========================= */
 
 .group-title {
@@ -735,34 +716,36 @@ background: linear-gradient(
 }
 
 /* =========================
-   IC KART ALANI
+   İÇ KART ALANI
+   (2 EŞİT SATIR)
 ========================= */
 
 .group-items {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   gap: 18px;
 }
 
 /* =========================
-   IC KART KUCUK KART
+   İÇ KÜÇÜK KART
 ========================= */
 
 .service-card {
-  padding: 18px 18px;
+  padding: 18px;
   border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
 
   backdrop-filter: blur(6px);
-
   transition: all 0.3s ease;
 }
-
-/* =========================
-   IC KART KUCUK KART HOVER
-========================= */
 
 .service-card:hover {
   background: rgba(255, 255, 255, 0.12);
@@ -770,8 +753,9 @@ background: linear-gradient(
 }
 
 /* =========================
-   IC KART YAZILARI
+   YAZILAR
 ========================= */
+
 .service-card h4 {
   font-size: 15px;
   font-weight: 600;
@@ -784,7 +768,6 @@ background: linear-gradient(
   color: #cbd5e1;
   line-height: 1.5;
 }
-
 
 
 /* ==================================================

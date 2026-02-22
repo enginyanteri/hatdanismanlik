@@ -653,7 +653,7 @@ background: linear-gradient(
   gap: 40px;
 
   width: 80%;
-  height: 80%;  /* kritik */
+  height: 80%;
 }
 
 /* =========================
@@ -662,13 +662,13 @@ background: linear-gradient(
 
 .service-group {
   position: relative;
-  overflow: visible;   /* kritik */
-  padding: 40px 30px 30px;
+  overflow: visible;
+  padding: 90px 30px 30px; /* altıgen için üst padding artırıldı */
   border-radius: 20px;
 
   display: flex;
   flex-direction: column;
-  height: 100%;   /* kritik */
+  height: 100%;
 
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(12px);
@@ -684,38 +684,24 @@ background: linear-gradient(
 }
 
 /* =========================
-   HOVER
+   ALTIGEN – KARTIN PARÇASI
 ========================= */
 
-.service-group:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 0 35px rgba(59, 130, 246, 0.6),
-    inset 0 0 40px rgba(255, 255, 255, 0.08);
-}
+.service-group::before {
+  content: "";
 
-/* =========================
-   İKON
-========================= */
-
-.group-icon {
   position: absolute;
+  width: 110px;
+  height: 110px;
 
-  width: 90px;
-  height: 90px;
-
-  left: 50%;
   top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  transform: translate(-50%, -50%);  /* merkez kesişim */
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-  color: #ffffff;
-  font-size: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   clip-path: polygon(
     25% 6%,
@@ -726,9 +712,50 @@ background: linear-gradient(
     0% 50%
   );
 
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.25),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 
-  z-index: 5;
+  z-index: 2;
+}
+
+/* =========================
+   İKON (ALTIGEN MERKEZİ)
+========================= */
+
+.service-group::after {
+  content: "\f013"; /* Font Awesome gear örnek */
+
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 110px;
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+  color: #ffffff;
+
+  z-index: 3;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.service-group:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 35px rgba(59, 130, 246, 0.6),
+    inset 0 0 40px rgba(255, 255, 255, 0.08);
 }
 
 /* =========================

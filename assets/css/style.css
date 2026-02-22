@@ -662,25 +662,24 @@ background: linear-gradient(
 
 .service-group {
   position: relative;
-  overflow: visible;
-  padding: 50px 30px 30px; /* altıgen için üst padding artırıldı */
-  border-radius: 20px;
+  padding: 80px 30px 30px;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
-  height: 100%;
 
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(14px);
 
+  border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 
   box-shadow:
-    0 0 20px rgba(59, 130, 246, 0.25),
-    inset 0 0 30px rgba(255, 255, 255, 0.05);
+    0 0 25px rgba(59, 130, 246, 0.35),
+    inset 0 0 35px rgba(255, 255, 255, 0.05);
 
-  color: #ffffff;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  overflow: visible;
 }
 
 /* =========================
@@ -689,19 +688,20 @@ background: linear-gradient(
 
 .service-group::before {
   content: "";
-
   position: absolute;
-  width: 80px;
-  height: 80px;
+
+  width: 95px;
+  height: 95px;
 
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background: inherit;        /* kartla birebir aynı */
-  backdrop-filter: inherit;
-  border: inherit;
-  box-shadow: inherit;
+  background: linear-gradient(
+    145deg,
+    rgba(59,130,246,0.9),
+    rgba(30,64,175,0.9)
+  );
 
   clip-path: polygon(
     25% 6%,
@@ -711,18 +711,29 @@ background: linear-gradient(
     25% 94%,
     0% 50%
   );
-  z-index: 2;
+
+  box-shadow:
+    0 0 25px rgba(59,130,246,0.8),
+    0 0 60px rgba(59,130,246,0.5);
+
+  z-index: 3;
 }
 
 /* =========================
-   HOVER
+   HOVER EFFECT
 ========================= */
 
 .service-group:hover {
-  transform: translateY(-8px);
+  transform: translateY(-12px);
   box-shadow:
-    0 0 35px rgba(59, 130, 246, 0.6),
-    inset 0 0 40px rgba(255, 255, 255, 0.08);
+    0 0 45px rgba(59, 130, 246, 0.75),
+    inset 0 0 45px rgba(255, 255, 255, 0.08);
+}
+
+.service-group:hover::before {
+  box-shadow:
+    0 0 40px rgba(59,130,246,1),
+    0 0 80px rgba(59,130,246,0.8);
 }
 
 /* =========================

@@ -701,8 +701,8 @@ background: linear-gradient(
 .group-icon {
   position: absolute;
 
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 
   left: 50%;
   top: 0;

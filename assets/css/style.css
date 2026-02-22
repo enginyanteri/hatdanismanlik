@@ -616,8 +616,10 @@ background: linear-gradient(
 
 .services-groups {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 50px;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  gap: 60px;
+  margin-top: -40px; /* yukarı taşıma */
 }
 
 .service-group {

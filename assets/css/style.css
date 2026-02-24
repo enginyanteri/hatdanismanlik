@@ -650,7 +650,7 @@ background: linear-gradient(
 .services-groups {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 75px;
 
   width: 85%;
   height: 80%;

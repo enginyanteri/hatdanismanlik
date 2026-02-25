@@ -683,7 +683,7 @@ background: linear-gradient(
   z-index: -1;
 
   /* Tek transparan layer */
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
 
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -713,7 +713,7 @@ background: linear-gradient(
   transform: translate(-50%, -50%);
 
   /* AYNI TRANSPARAN KATMAN */
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
 
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);

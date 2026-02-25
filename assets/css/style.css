@@ -670,17 +670,31 @@ background: linear-gradient(
   flex-direction: column;
   height: 100%;
 
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  box-shadow:
-    0 0 20px rgba(59, 130, 246, 0.25),
-    inset 0 0 30px rgba(255, 255, 255, 0.05);
-
+  background: transparent; /* TAM ŞEFFAF */
+   
   color: #ffffff;
   transition: all 0.3s ease;
+}
+
+.service-group::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  /* Tek transparan layer */
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.25),
+    inset 0 0 20px rgba(255,255,255,.05);
 }
 
 /* =========================
@@ -698,10 +712,17 @@ background: linear-gradient(
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background: inherit;        /* kartla birebir aynı */
-  backdrop-filter: inherit;
-  border: inherit;
-  box-shadow: inherit;
+  /* AYNI TRANSPARAN KATMAN */
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+
+  border: 1px solid rgba(255,255,255,.25);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.25),
+    inset 0 0 20px rgba(255,255,255,.05);
 
   clip-path: polygon(
     25% 6%,
@@ -711,6 +732,7 @@ background: linear-gradient(
     25% 94%,
     0% 50%
   );
+
   z-index: 2;
 }
 
